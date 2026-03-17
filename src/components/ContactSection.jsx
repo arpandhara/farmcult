@@ -1,0 +1,113 @@
+import React from 'react';
+
+const ContactSection = () => {
+  return (
+    <section id="contact" className="contact-section relative min-h-[85vh] flex items-center py-20 lg:py-32 px-[5%] overflow-hidden bg-black">
+      {/* Background Image with Overlay */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-60"
+        style={{ backgroundImage: 'url("/contactFromimg.jpg")' }}
+      />
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent lg:to-black/10" />
+
+      <div className="container relative z-10 mx-auto max-w-[1400px]">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch">
+
+          {/* Left Side: Info */}
+          <div className="lg:w-1/2 text-white flex flex-col justify-between py-2">
+            <div>
+              <h2 className="text-6xl font-medium font-outfit mb-8 leading-[1.1] tracking-tight">
+                Build a Farm with Us
+              </h2>
+              <p className="text-lg text-white/90 mb-12 leading-relaxed font-inter">
+                We work closely with landowners and investors to build sustainable hydroponic farms. From planning to operations, our team supports you at every stage.
+              </p>
+            </div>
+
+            {/* Location & Contact Info: Aligned to Bottom of Card */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-10">
+              <div className="info-group">
+                <span className="block text-xl font-medium mb-4">Location</span>
+                <p className="text-md leading-[29px] opacity-100">
+                  Ground Floor, T1, E-328, Sector 75, <br />Sahibzada Ajit Singh Nagar, Punjab
+                </p>
+              </div>
+              <div className="info-group">
+                <span className="block text-xl font-medium mb-4">Contact</span>
+                <p className="text-md leading-[29px] opacity-100">
+                  farmcult.company@gmail.com<br />
+                  +91 9041104230
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Form Card */}
+          <div className="lg:w-[45%] w-full h-full">
+            <div className="bg-white rounded-[12px] p-8 lg:p-12 shadow-2xl">
+              <h3 className="text-2xl lg:text-3xl font-semibold text-[#1A1A1A] mb-10">Send us a message</h3>
+
+              <form className="flex flex-col gap-8" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+                  <div className="form-group flex flex-col gap-2 group">
+                    <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">First Name</label>
+                    <input
+                      type="text"
+                      placeholder="John"
+                      className="bg-transparent border-b border-[#DEDEDE] py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-inter text-[#1A1A1A]/60 focus:text-black"
+                    />
+                  </div>
+                  <div className="form-group flex flex-col gap-2 group">
+                    <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">Last Name</label>
+                    <input
+                      type="text"
+                      placeholder="Doe"
+                      className="bg-transparent border-b border-[#DEDEDE] py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-inter text-[#1A1A1A]/60 focus:text-black placeholder:text-[#1A1A1A]/30"
+                    />
+                  </div>
+
+                  <div className="form-group flex flex-col gap-2 group">
+                    <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">Email</label>
+                    <input
+                      type="email"
+                      placeholder=" "
+                      className="bg-transparent border-b border-[#DEDEDE] py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-inter text-[#1A1A1A]/60 focus:text-black"
+                    />
+                  </div>
+                  <div className="form-group flex flex-col gap-2 group">
+                    <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">Phone Number</label>
+                    <input
+                      type="tel"
+                      placeholder="+1 012 3456 789"
+                      className="bg-transparent border-b border-[#1A1A1A]/60 py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-bold font-inter text-[#1A1A1A]/60 focus:text-black"
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group flex flex-col gap-2 group">
+                  <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">Message</label>
+                  <textarea
+                    placeholder="Write your message.."
+                    className="bg-transparent border-b border-[#DEDEDE] py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-inter text-[#1A1A1A]/60 focus:text-black resize-none min-h-[50px] placeholder:text-[#1A1A1A]/50"
+                    rows={1}
+                  />
+                </div>
+
+                <div className="flex justify-end mt-4">
+                  <button
+                    type="submit"
+                    className="bg-accent text-white px-10 py-4 rounded-full text-lg font-bold hover:brightness-110 active:scale-95 transition-all shadow-lg"
+                  >
+                    Send
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
