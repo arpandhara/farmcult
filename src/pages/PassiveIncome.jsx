@@ -5,7 +5,6 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '../components/Footer';
 import ContactSection from '../components/ContactSection';
-import Navbar from '../components/Navbar';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,8 +72,6 @@ const PassiveIncome = () => {
       onAnimationComplete={() => ScrollTrigger.refresh()}
       className="bg-[#FAFAFA]"
     >
-      <Navbar />
-
       {/* Hero Section */}
       <section className="pi-hero-container relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-20">
         <div
