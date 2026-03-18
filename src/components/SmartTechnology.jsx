@@ -54,45 +54,45 @@ const SmartTechnology = () => {
   ];
 
   return (
-    <section className="smart-tech-section flex flex-col lg:flex-row bg-[#F7F7F7] px-[5%] py-[60px] lg:py-[100px] min-h-[70vh] gap-12 lg:gap-[5%] items-center" ref={sectionRef}>
-      
+    <section className="smart-tech-section flex flex-col lg:flex-row bg-[#F7F7F7] px-[16px] md:px-[5%] pt-[40px] md:py-[80px] lg:py-[100px] min-h-[70vh] gap-[32px] md:gap-12 lg:gap-[5%] items-center" ref={sectionRef}>
+
       {/* Left Content */}
-      <div className="smart-tech-left flex-1 lg:max-w-[450px]">
-        <h2 className="smart-tech-title text-[clamp(2.2rem,4vw,3rem)] mb-8 text-text-primary leading-[1.1] tracking-tight">
-          Built on Smart <br /> Technology
+      <div className="smart-tech-left w-full lg:w-[40%] lg:max-w-[450px] text-left lg:mr-4">
+        <h2 className="smart-tech-title font-inter text-[32px] md:text-[32px] font-medium md:font-[500] leading-[48px] md:leading-[48px] text-text-primary mb-[24px] md:mb-8 m-0 w-full tracking-normal">
+          Built on Smart <br className="hidden sm:block" /> Technology
         </h2>
-        <p className="smart-tech-desc text-[1.05rem] text-[#343434] opacity-90 leading-[2] mb-10 max-w-[400px]">
+        <p className="smart-tech-desc font-inter text-[15px] md:text-[16px] font-normal leading-[29px] md:leading-[1.8] text-text-secondary mb-[24px] md:mb-10 w-full m-0">
           Smart systems run quietly in the background to keep farms operating smoothly. Technology helps reduce effort, improve consistency, and support better outcomes.
         </p>
 
-        <div className="smart-tech-link-container">
-          <a href="#technology" className="smart-tech-link group font-medium text-[clamp(0.95rem,1.2vw,1.1rem)] text-text-primary relative inline-block pb-[4px] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-text-primary after:origin-bottom-right after:transition-transform after:duration-[350ms] after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left">
-            Learn more about how we use technology &rarr;
+        <div className="smart-tech-link-container md:mt-[74px]">
+          <a href="#technology" className="smart-tech-link font-inter font-normal md:font-medium text-[16px] md:text-[16px] leading-[1.5] md:leading-normal text-text-primary underline md:no-underline md:relative inline-block md:pb-[4px] md:after:content-[''] md:after:absolute md:after:w-full md:after:scale-x-0 md:after:h-[1px] md:after:bottom-0 md:after:left-0 md:after:bg-text-primary md:after:origin-bottom-right md:after:transition-transform md:after:duration-[350ms] md:after:ease-out md:hover:after:scale-x-100 md:hover:after:origin-bottom-left m-0">
+            Learn more about how we use technology <span className="inline-block ml-1">&rarr;</span>
           </a>
         </div>
       </div>
 
       {/* Right Image Card */}
-      <div className="smart-tech-right flex-[1.5] w-full relative">
-        <div className="smart-tech-card relative w-full aspect-[16/7.5] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] group">
+      <div className="smart-tech-right w-full lg:w-[60%] flex justify-center lg:justify-end mt-[16px] md:mt-0">
+        <div className="smart-tech-card relative w-[370px] md:w-full max-w-none md:max-w-[704px] h-[218px] md:h-[327px] md:aspect-[16/7.5] rounded-[16px] md:rounded-2xl overflow-hidden shadow-none md:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group mx-auto lg:mx-0">
           {/* Background Image */}
-          <img 
-            src="/builtonSmartimg1.jpg" 
-            alt="Farm Technology" 
+          <img
+            src="/builtonSmartimg1.jpg"
+            alt="Farm Technology"
             className="w-full h-full object-cover"
           />
-          
-          {/* Intense Black Overlay for better icon/text contrast as requested */}
+
+          {/* Intense Black Overlay for better icon/text contrast */}
           <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-500"></div>
 
           {/* Features Overlay */}
-          <div className="absolute inset-0 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 px-8 py-10">
+          <div className="absolute inset-0 flex flex-row justify-between md:justify-center items-center gap-[10px] md:gap-8 lg:gap-16 px-[16px] md:px-8 py-0 md:py-10">
             {features.map((feature, index) => (
-              <div key={index} className="smart-tech-feature flex flex-col items-center text-center gap-4 max-w-[180px]">
-                <div className="feature-icon-wrapper w-16 h-16 flex items-center justify-center transition-all duration-300">
-                  <img src={feature.icon} alt={feature.text} className="w-10 h-10 object-contain drop-shadow-lg" />
+              <div key={index} className="smart-tech-feature flex flex-col items-center justify-start text-center gap-[12px] md:gap-4 w-[85px] md:w-auto md:max-w-[180px]">
+                <div className="feature-icon-wrapper w-[25px] h-[25px] md:w-16 md:h-16 flex items-center justify-center transition-all duration-300">
+                  <img src={feature.icon} alt={feature.text} className="w-full h-full object-contain drop-shadow-lg" />
                 </div>
-                <p className="feature-text text-white text-[0.95rem] font-semibold leading-tight drop-shadow-md">
+                <p className="feature-text font-inter text-white text-[14px] md:text-[0.95rem] font-semibold leading-[20px] md:leading-snug drop-shadow-md m-0 w-full">
                   {feature.text}
                 </p>
               </div>

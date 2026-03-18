@@ -2,24 +2,24 @@ import React from 'react';
 
 const RiseOfFarming = () => {
   return (
-    <section className="rise-container w-full min-h-screen flex items-center justify-center bg-bg-color py-16 px-[5%]" id="technology">
-      <div className="rise-content-wrapper w-full max-w-[1400px] flex flex-col gap-16">
+    <section className="rise-container w-full min-h-screen flex items-center justify-center bg-bg-color py-12 md:py-16 px-4 md:px-[5%]" id="technology">
+      <div className="rise-content-wrapper w-full max-w-[1400px] flex flex-col gap-[40px] md:gap-16">
         
         {/* Top Split Area */}
-        <div className="rise-top-split grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="rise-top-split flex flex-col lg:grid lg:grid-cols-[1fr_1.2fr] gap-[48px] lg:gap-16 items-start">
           
           {/* Left Text & Capsules */}
-          <div className="rise-info-side max-w-[550px] flex flex-col justify-between gap-16">
-            <h2 className="rise-title text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.2] text-text-primary">
+          <div className="rise-info-side flex flex-col gap-[28px] w-full max-w-[370px] md:max-w-[550px] mx-auto lg:mx-0">
+            <h2 className="rise-title font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-text-primary w-full md:h-auto m-0">
               The Rise of Modern<br />Farming in India
             </h2>
-            <p className="rise-desc text-[clamp(1rem,1.2vw,1.15rem)] text-text-secondary leading-[2]">
+            <p className="rise-desc font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[2] text-text-secondary w-full md:h-auto m-0 md:w-[382px]">
               Rapid urban demand, water stress, and government support are accelerating hydroponic adoption across key Indian states.
             </p>
             
-            <div className="states-capsule-grid flex flex-wrap gap-4">
+            <div className="states-capsule-grid flex flex-wrap gap-[10px] md:gap-4 md:mt-5 md:w-[362px] w-full">
               {['Maharashtra', 'Karnataka', 'Telangana', 'Punjab', 'Gujarat', 'Tamil Nadu', 'Haryana', 'Rajasthan'].map((state) => (
-                <span key={state} className="state-capsule inline-flex items-center justify-center py-2 px-4 bg-accent/25 text-text-primary text-[0.95rem] rounded-full font-medium">
+                <span key={state} className="state-capsule font-inter inline-flex items-center justify-center py-[2px] md:py-2 px-[12px] md:px-4 bg-accent/25 text-text-primary text-[15px] md:text-[0.95rem] leading-[29px] md:leading-normal rounded-[16px] md:rounded-full font-normal">
                   {state}
                 </span>
               ))}
@@ -27,39 +27,49 @@ const RiseOfFarming = () => {
           </div>
           
           {/* Right Map Visual Area */}
-          <div className="rise-map-side w-full">
-            <div className="impact-map-card w-full aspect-[4/3] bg-[#8D8D8D] rounded-2xl relative overflow-hidden flex items-center justify-center">
-               <img src="/riseOfModernFarming.jpg" alt="India Hydroponics Impact Map" className="impact-map-img w-full h-full object-fill" />
+          <div className="rise-map-side w-full flex justify-center lg:justify-end">
+            <div className="impact-map-card w-[370px] h-[300px] md:w-[669px] md:h-[472px] md:aspect-video bg-[#8D8D8D] rounded-[16px] md:rounded-2xl relative overflow-hidden flex items-center justify-center">
+               <img src="/riseOfModernFarming.jpg" alt="India Hydroponics Impact Map" className="impact-map-img w-full h-full object-cover md:object-fill" />
             </div>
           </div>
 
         </div>
 
         {/* Bottom Stats Grid */}
-        <div className="rise-stats-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-[#DEDEDE] pt-12 gap-y-12 lg:gap-y-0">
+        <div className="rise-stats-wrapper relative flex flex-col w-full max-w-[372px] md:max-w-none h-auto md:h-auto mx-auto">
           
-          <div className="stat-card flex flex-col gap-[53px] px-0 sm:px-8 border-r-0 sm:border-r border-[#DEDEDE]">
-            <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">Over 30%</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">ROI on projects with hydroponics / modern farming</p>
-          </div>
+          {/* The unifying vertical timeline bar for mobile - strictly 336px to not stick out past bottom dot */}
+          <div className="absolute left-[3px] top-[16px] w-[2px] h-[336px] bg-[#8DC83A] block md:hidden z-0"></div>
           
-          {/* Note: This card specifically drops its border at the Tablet breakpoint just like your media query */}
-          <div className="stat-card flex flex-col gap-[53px] px-0 sm:px-8 border-r-0 lg:border-r border-[#DEDEDE]">
-            <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">80–90%</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">Less water usage compared to soil farming</p>
-          </div>
-          
-          <div className="stat-card flex flex-col gap-[53px] px-0 sm:px-8 border-r-0 sm:border-r border-[#DEDEDE]">
-            <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">Up to 5x</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">Higher yield per acre in controlled systems</p>
-          </div>
-          
-          {/* Completely borderless on the right */}
-          <div className="stat-card borderless-right flex flex-col gap-[53px] px-0 sm:px-8 border-r-0">
-            <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">Up to 50%</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">Capital subsidy for eligible projects</p>
-          </div>
+          <div className="rise-stats-grid flex flex-col md:grid md:grid-cols-4 gap-[20px] md:gap-y-0 pt-0 md:pt-12 md: border-[#DEDEDE]">
+            
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">Over 30%</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">ROI on projects with hydroponics / modern farming</p>
+            </div>
+            
+            {/* Note: This card specifically drops its border at the Tablet breakpoint just like your media query */}
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 lg:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">80–90%</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">Less water usage compared to soil farming</p>
+            </div>
+            
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">Up to 5x</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">Higher yield per acre in controlled systems</p>
+            </div>
+            
+            {/* Completely borderless on the right */}
+            <div className="stat-card borderless-right relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 border-r-0 border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">Up to 50%</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">Capital subsidy for eligible projects</p>
+            </div>
 
+          </div>
         </div>
       </div>
     </section>
