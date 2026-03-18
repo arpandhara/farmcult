@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,9 +92,9 @@ const Solutions = () => {
               <p className="solution-card-desc text-[0.95rem] leading-[29px] mb-6 text-[#F7F7F7]">
                 Invest in a hydroponic farm while Farmcult manages operations end-to-end.
               </p>
-              <button className="solution-btn w-full flex justify-between items-center bg-white text-text-primary border-none py-[0.85rem] px-6 rounded-[30px] text-[0.9rem] font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group">
+              <Link to="/passive-income" className="solution-btn w-full flex justify-between items-center bg-white text-text-primary border-none py-[0.85rem] px-6 rounded-[30px] text-[0.9rem] font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group">
                 <span>Learn More</span> <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-              </button>
+              </Link>
             </div>
           </div>
 

@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import WhyFarmcult from './pages/WhyFarmcult';
 import Technology from './pages/Technology';
+import PassiveIncome from './pages/PassiveIncome';
+import TurnkeySolution from './pages/TurnkeySolution';
 import './index.css';
 import Blogs from './pages/Blogs';
 import CaseStudies from './pages/CaseStudies';
@@ -35,6 +37,8 @@ const AnimatedRoutes = () => {
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
+        <Route path="/passive-income" element={<PassiveIncome />} />
+        <Route path="/turnkey-solution" element={<TurnkeySolution />} />
         <Route path="/why-farmcult" element={<WhyFarmcult />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="/blogs" element={<Blogs />} />
