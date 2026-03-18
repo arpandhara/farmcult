@@ -33,73 +33,93 @@ const Home = () => {
   const homeRef = useRef();
 
   useGSAP(() => {
-    // Hero text — begins as navbar finishes its stagger for a seamless 2nd beat
-    gsap.fromTo('.hero-title, .hero-subtitle, .btn-filled', 
-      { y: 30, autoAlpha: 0 },
-      { y: 0, autoAlpha: 1, duration: 1.1, stagger: 0.12, ease: 'power3.out', delay: 0.4 }
-    );
+    let mm = gsap.matchMedia();
 
-    // Hero image — 3rd beat, rises as the text settles
-    gsap.fromTo('.hero-image-wrapper',
-      { y: 60, autoAlpha: 0 },
-      { y: 0, autoAlpha: 1, duration: 1.4, ease: 'power3.out', delay: 0.65 }
-    );
+    mm.add({
+      // Define breakpoints
+      isDesktop: "(min-width: 1024px)",
+      isTablet: "(min-width: 768px) and (max-width: 1023px)",
+      isMobile: "(max-width: 767px)"
+    }, (context) => {
+      let { isTablet, isMobile } = context.conditions;
 
-    // Parallax Effect on Hero Image
-    gsap.to('.hero-bg-img', {
-      scrollTrigger: {
-        trigger: '.hero-container',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true,
-      },
-      y: 150,
-      scale: 1.05,
-      ease: 'none', // FIX 2: Added ease: 'none' so the parallax doesn't lag behind the scrollbar
+      // Adjust animation values based on breakpoint
+      let yVal = isMobile ? 15 : isTablet ? 25 : 30;
+      let heroYVal = isMobile ? 30 : isTablet ? 45 : 60;
+      let durationVal = isMobile ? 0.8 : 1.1;
+      let staggerVal = isMobile ? 0.08 : 0.12;
+      let staggerFast = isMobile ? 0.1 : 0.15;
+
+      // Hero text — begins as navbar finishes its stagger for a seamless 2nd beat
+      gsap.fromTo('.hero-title, .hero-subtitle, .btn-filled', 
+        { y: yVal, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: durationVal, stagger: staggerVal, ease: 'power3.out', delay: 0.4 }
+      );
+
+      // Hero image — 3rd beat, rises as the text settles
+      gsap.fromTo('.hero-image-wrapper',
+        { y: heroYVal, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: isMobile ? 1 : 1.4, ease: 'power3.out', delay: 0.65 }
+      );
+
+      // Parallax Effect on Hero Image
+      // Scale down parallax on mobile or simplify it for better performance
+      if (!isMobile) {
+        gsap.to('.hero-bg-img', {
+          scrollTrigger: {
+            trigger: '.hero-container',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+          },
+          y: isTablet ? 100 : 150,
+          scale: 1.05,
+          ease: 'none', // FIX 2: Added ease: 'none' so the parallax doesn't lag behind the scrollbar
+        });
+      }
+
+      // About Section Animations
+      gsap.fromTo('.about-header-text, .about-header-link',
+        { y: yVal, autoAlpha: 0 },
+        {
+          scrollTrigger: { trigger: '.about-container', start: 'top 80%' },
+          y: 0, autoAlpha: 1, duration: isMobile ? 0.8 : 1, stagger: staggerVal, ease: 'power3.out'
+        }
+      );
+
+      gsap.fromTo('.feature-item',
+        { y: isMobile ? 15 : 20, autoAlpha: 0 },
+        {
+          scrollTrigger: { trigger: '.about-features-panel', start: 'top 85%' },
+          y: 0, autoAlpha: 1, duration: isMobile ? 0.6 : 0.8, stagger: staggerFast, ease: 'power2.out'
+        }
+      );
+
+      // Rise of Farming Animations
+      gsap.fromTo('.rise-title, .rise-desc',
+        { y: yVal, autoAlpha: 0 },
+        {
+          scrollTrigger: { trigger: '.rise-container', start: 'top 75%' },
+          y: 0, autoAlpha: 1, duration: isMobile ? 0.8 : 1, stagger: staggerVal, ease: 'power3.out'
+        }
+      );
+
+      gsap.fromTo('.state-capsule',
+        { scale: isMobile ? 0.9 : 0.8, autoAlpha: 0 },
+        {
+          scrollTrigger: { trigger: '.states-capsule-grid', start: 'top 85%' },
+          scale: 1, autoAlpha: 1, duration: isMobile ? 0.4 : 0.6, stagger: isMobile ? 0.03 : 0.05, ease: 'back.out(1.5)'
+        }
+      );
+
+      gsap.fromTo('.stat-card',
+        { y: heroYVal, autoAlpha: 0 },
+        {
+          scrollTrigger: { trigger: '.rise-stats-grid', start: 'top 90%' },
+          y: 0, autoAlpha: 1, duration: isMobile ? 0.6 : 0.8, stagger: staggerFast, ease: 'power3.out'
+        }
+      );
     });
-
-    // About Section Animations
-    gsap.fromTo('.about-header-text, .about-header-link',
-      { y: 30, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.about-container', start: 'top 80%' },
-        y: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power3.out'
-      }
-    );
-
-    gsap.fromTo('.feature-item',
-      { y: 20, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.about-features-panel', start: 'top 85%' },
-        y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out'
-      }
-    );
-
-    // Rise of Farming Animations
-    gsap.fromTo('.rise-title, .rise-desc',
-      { y: 30, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.rise-container', start: 'top 75%' },
-        y: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power3.out'
-      }
-    );
-
-    gsap.fromTo('.state-capsule',
-      { scale: 0.8, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.states-capsule-grid', start: 'top 85%' },
-        scale: 1, autoAlpha: 1, duration: 0.6, stagger: 0.05, ease: 'back.out(1.5)'
-      }
-    );
-
-    gsap.fromTo('.stat-card',
-      { y: 40, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.rise-stats-grid', start: 'top 90%' },
-        y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out'
-      }
-    );
-
   }, { scope: homeRef });
 
   return (
@@ -109,6 +129,7 @@ const Home = () => {
       animate="animate"
       exit="exit"
       ref={homeRef}
+      className="relative w-full overflow-hidden" // Prevents horizontal scrolling across components
       // FIX 3: Accurately recalculates trigger positions once the entrance fade is totally finished
       onAnimationComplete={() => ScrollTrigger.refresh()}
     >
