@@ -7,13 +7,25 @@ const Navbar = () => {
   const navRef = useRef();
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
   const scrollThreshold = 10; // Buffer to prevent jitter
 
   useEffect(() => {
+    // Prevent scrolling when mobile menu is open
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
+      if (mobileMenuOpen) return; // Don't hide navbar when menu is open
+
       const currentScrollY = window.scrollY;
-      
+
       // Background and blur effect after 50px
       if (currentScrollY > 50) {
         setIsScrolled(true);
@@ -34,7 +46,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mobileMenuOpen]);
 
   useGSAP(() => {
     // Initial entrance animation
@@ -47,18 +59,17 @@ const Navbar = () => {
   useGSAP(() => {
     // Visibility toggle animation - Refined for "fluidity"
     gsap.to(navRef.current, {
-      y: isVisible ? 0 : -110, // Hide a bit further to ensure shadow is gone
+      y: isVisible || mobileMenuOpen ? 0 : -110, // Hide a bit further to ensure shadow is gone, don't hide if menu open
       duration: 0.6,
       ease: 'expo.out', // Premium, decelerating feel
       overwrite: true
     });
-  }, { dependencies: [isVisible] });
+  }, { dependencies: [isVisible, mobileMenuOpen] });
 
   return (
-    <nav 
-      className={`nav-container fixed top-0 w-full flex justify-between items-center z-[100] transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] left-0 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4 px-[5%]' : 'bg-transparent py-8 px-[5%]'
-      }`} 
+    <nav
+      className={`nav-container fixed top-0 w-full flex justify-between items-center z-[100] transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] left-0 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4 px-[5%]' : 'bg-transparent py-8 px-[5%]'
+        }`}
       ref={navRef}
     >
       {/* Wrapper to maintain max-width behavior on fixed element */}
@@ -69,20 +80,13 @@ const Navbar = () => {
             <img src="/logo.svg" alt="Farmcult Logo" className="nav-logo h-12" />
           </Link>
         </div>
-        
+
         {/* Links Column */}
         <div className="nav-col nav-links-col flex-1 flex justify-center">
           <div className="nav-links flex gap-10">
-            <div className="nav-item group relative">
-              <Link to="/solutions" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent inline-block pb-6 -mb-6">
-                Solutions
-              </Link>
-              <div className="absolute top-full left-0 mt-[1.5rem] w-[220px] bg-white border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] z-50 transform origin-top translate-y-2 group-hover:translate-y-0">
-                <Link to="/passive-income" className="block px-5 py-2.5 text-[0.95rem] text-text-primary hover:bg-gray-50 hover:text-accent transition-colors">Passive Income</Link>
-                <Link to="/turnkey-solution" className="block px-5 py-2.5 text-[0.95rem] text-text-primary hover:bg-gray-50 hover:text-accent transition-colors">Turnkey Solution</Link>
-                <Link to="/education-and-training" className="block px-5 py-2.5 text-[0.95rem] text-text-primary hover:bg-gray-50 hover:text-accent transition-colors">Education & Training</Link>
-              </div>
-            </div>
+            <Link to="/solutions" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent">
+              Solutions
+            </Link>
             <Link to="/why-farmcult" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent">
               Why Farmcult
             </Link>
@@ -94,17 +98,17 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        
+
         {/* Button Column */}
         <div className="nav-col nav-btn-col flex-1 flex justify-end">
-        <a 
-          href="#contact" 
-          onClick={(e) => {
-            e.preventDefault();
-            window.lenis?.scrollTo('#contact');
-          }}
-          className="btn-outline group border border-border-color rounded-[40px] py-[0.6rem] px-6 font-medium text-[0.95rem] text-text-primary bg-transparent whitespace-nowrap transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-text-primary hover:text-bg-color hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(52,52,52,0.15)]"
-        >
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              window.lenis?.scrollTo('#contact');
+            }}
+            className="btn-outline group border border-border-color rounded-[40px] py-[0.6rem] px-6 font-medium text-[0.95rem] text-text-primary bg-transparent whitespace-nowrap transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-text-primary hover:text-bg-color hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(52,52,52,0.15)]"
+          >
             <span className="btn-text-wrapper relative inline-block overflow-hidden align-top">
               <span className="btn-text-inner block transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:-translate-y-full">
                 Get Started

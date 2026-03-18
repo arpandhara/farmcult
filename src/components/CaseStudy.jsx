@@ -39,10 +39,11 @@ const CaseStudy = () => {
 
   return (
     <section
-      className="case-study-section w-full px-[5%] py-12 lg:py-20 bg-[#F7F7F7]"
+      className="case-study-section w-full py-10 md:py-16 lg:py-20 bg-white md:px-[5%] flex justify-center"
       ref={sectionRef}
     >
-      <div className="case-study-container relative w-full h-[65vh] min-h-[500px] lg:h-[80vh] rounded-2xl overflow-hidden shadow-xl group">
+      {/* Edge-to-edge on mobile, rounded max-width on tablet/desktop */}
+      <div className="case-study-container relative w-full max-w-9xl h-[550px] md:h-[500px] lg:h-[600px] rounded-none md:rounded-[16px] overflow-hidden shadow-none md:shadow-xl group">
 
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -55,29 +56,35 @@ const CaseStudy = () => {
           <div className="absolute inset-0 bg-black/10"></div>
         </div>
 
-        {/* FIXED CARD: 
-          Adjusted padding to ensure the top and bottom visual spacing feels uniform.
-          Using 'pt' and 'pb' separately gives finer control.
-        */}
-        <div className="case-study-card absolute top-1/2 -translate-y-1/2 right-6 left-6 lg:right-12 lg:left-auto bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-12 w-auto lg:w-[480px] max-h-[calc(100%-3rem)] lg:max-h-[calc(100%-6rem)] shadow-2xl z-10 flex flex-col items-start border border-white/20 overflow-y-auto">
+        {/* Safe GSAP Flex Wrapper - Centers on mobile, right-aligns on desktop */}
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center md:justify-end p-5 lg:pr-16 z-10 pointer-events-none">
+          
+          {/* The Card - Fluid width on mobile, bounded max-width */}
+          <div className="case-study-card pointer-events-auto bg-[#F7F7F7] md:bg-white/95 backdrop-blur-sm rounded-2xl p-7 md:p-24 lg:p-12 w-[92%] max-w-[380px] md:max-w-[420px] lg:max-w-[480px] min-h-[440px] md:min-h-[480px] lg:min-h-[520px] shadow-2xl flex flex-col justify-start items-start">
 
-          <span className="case-study-tag shrink-0 px-4 py-1.5 bg-[#8DC83A]/25 text-[#343434] text-sm font-normal rounded-full mb-6 lg:mb-8 tracking-wide">
-            Case Study
-          </span>
+            {/* Capsule */}
+            <div className="case-study-tag px-[16px] py-[6px] bg-[#E3F0D3] text-[#343434] rounded-full mb-6 md:mb-8">
+              <span className="font-inter font-medium text-[14px] leading-none m-0">Case Study</span>
+            </div>
 
-          <h2 className="case-study-title shrink-0 text-[clamp(2.2rem,4.5vw,3.2rem)] text-text-primary leading-[1.1] mb-6 lg:mb-8 tracking-tight">
-            <span className="font-normal block mb-2 lg:mb-4">2 Acres.</span> 
-            <span className="font-normal block">24,000 Plants.</span>
-          </h2>
+            {/* Heading - Fixed line heights to prevent vertical overlap */}
+            <h2 className="case-study-title font-inter text-[32px] md:text-[32px] font-medium md:font-semibold text-black leading-[1.2] md:leading-[48px] mb-6 tracking-tight m-0 w-full">
+              2 Acres.<br />
+              24,000 Plants.
+            </h2>
 
-          <p className="case-study-desc shrink-0 text-[clamp(0.95rem,1.1vw,1.1rem)] text-text-primary leading-[2] mb-5 opacity-90 font-normal">
-            What was once idle land is now a working hydroponic farm. Results from Farmcult's first operational hydroponic farm in Garhmukteshwar.
-          </p>
+            {/* Paragraph */}
+            <p className="case-study-desc font-inter text-[16px] md:text-[16px] font-normal text-black leading-[1.6] md:leading-[29px] mb-8 md:mb-10 opacity-90 m-0 w-full">
+              What was once idle land is now a working hydroponic farm. Results from Farmcult's first operational hydroponic farm in Garhmukteshwar.
+            </p>
 
-          <div className="case-study-footer shrink-0 w-full flex justify-between items-center">
-            <span className="case-study-date text-[#8DC83A] font-bold text-lg">
-              Jan 2025
-            </span>
+            {/* Footer */}
+            <div className="case-study-footer w-full flex justify-between items-center mt-auto">
+              <span className="case-study-date font-inter text-[#81B622] font-bold text-[16px] m-0">
+                Jan 2025
+              </span>
+            </div>
+
           </div>
         </div>
 
