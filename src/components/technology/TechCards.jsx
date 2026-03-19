@@ -62,7 +62,7 @@ const TechCards = () => {
           </div>
           <div className="w-full rounded-2xl overflow-hidden mt-auto">
             <img 
-              src="/technology/card02.jpg" 
+              src="/technology/card2.jpg" 
               alt="Automated Fertigation" 
               className="w-full h-[200px] md:h-[250px] lg:h-[280px] object-cover rounded-2xl"
             />

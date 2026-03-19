@@ -99,12 +99,12 @@ const IotMonitoring = () => {
         {/* Center image - Now relative with a black overlay */}
         <div className="iot-center-image relative w-full lg:w-[340px] xl:w-[380px] rounded-2xl overflow-hidden self-stretch">
           <img
-            src="/whyFarmCult/growSmarterBannerimg.jpg"
+            src="/technology/IOT_monitoring.jpg"
             alt="IoT Farm Monitoring"
             className="w-full h-full object-cover"
           />
           {/* Black mask overlay */}
-          <div className="absolute inset-0 bg-black/40" /> 
+          <div className="absolute inset-0 bg-black/20" /> 
         </div>
 
         {/* Right cards — Added h-full */}

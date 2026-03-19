@@ -24,7 +24,7 @@ const CaseStudies = () => {
           <div className="flex justify-center">
             <Link to={`/case-study/${firstCaseStudy.id}`}>
               <div
-                className="w-[1152px] h-[567px] flex items-center px-16 py-9 rounded-[16px] bg-cover bg-center cursor-pointer hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+                className="w-[1152px] h-[567px] flex items-center justify-end px-16 py-9 rounded-[16px] bg-cover bg-center cursor-pointer hover:scale-[1.02] transition-transform duration-300 ease-in-out"
                 style={{ backgroundImage: `url(${firstCaseStudy.image})` }}
               >
                 <div className="w-[413px] h-[495px] bg-[#F7F7F7] rounded-[16px] px-[37px] py-[52px] flex flex-col gap-[37px]">

@@ -5,7 +5,7 @@ const ContactSection = () => {
     <section id="contact" className="contact-section relative min-h-[85vh] flex items-center py-20 lg:py-32 px-[5%] overflow-hidden bg-black">
       {/* Background Image with Overlay */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-60"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: 'url("/contactFromimg.jpg")' }}
       />
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent lg:to-black/10" />
