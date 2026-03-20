@@ -26,7 +26,7 @@ const WfcHeader = ({
         <h1 className="wfc-main-title text-[32px] md:text-[48px] font-medium leading-[40px] md:leading-[66px] mb-5 md:mb-6 text-text-primary max-w-[90vw] md:max-w-[700px] mx-auto">
           {title}
         </h1>
-        <p className="wfc-main-subtitle text-[16px] md:text-[18px] text-text-primary font-normal max-w-[90vw] md:max-w-[600px] mx-auto leading-[1.6]">
+        <p className="wfc-main-subtitle text-[16px] md:text-[18px] text-text-primary font-normal max-w-[90vw] md:max-w-[800px] mx-auto leading-[1.6]">
           {subtitle}
         </p>
       </div>

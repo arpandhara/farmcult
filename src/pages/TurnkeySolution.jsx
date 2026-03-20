@@ -9,6 +9,7 @@ import TsHero from '../components/TurnkeySolution/TsHero';
 import TsWhatsIncluded from '../components/TurnkeySolution/TsWhatsIncluded';
 import TsHowItWorks from '../components/TurnkeySolution/TsHowItWorks';
 import TsCaseStudy from '../components/TurnkeySolution/TsCaseStudy';
+import CaseStudies from '../components/CaseStudy';
 import TsIncentives from '../components/TurnkeySolution/TsIncentives';
 import TsCaseStudy2 from '../components/TurnkeySolution/TsCaseStudy2';
 import TsExploreMore from '../components/TurnkeySolution/TsExploreMore';
@@ -130,7 +131,8 @@ const TurnkeySolution = () => {
       <TsHero />
       <TsWhatsIncluded />
       <TsHowItWorks />
-      <TsCaseStudy />
+      {/* <TsCaseStudy /> */}
+      <CaseStudies />
       <TsIncentives />
       <TsCaseStudy2 />
       <TsExploreMore />

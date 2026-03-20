@@ -2,15 +2,15 @@ import React from 'react';
 
 const PiExploreMore = () => {
   return (
-    <section className="py-20 lg:py-28 bg-[#FAFAFA] px-[5%]">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-[80px] md:py-[100px] lg:py-[140px] bg-[#FAFAFA] px-5 md:px-[68px]">
+      <div className="mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-stretch">
           {/* Left Content */}
           <div className="w-full lg:w-1/3 flex flex-col justify-center">
-            <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-text-primary mb-6 leading-[1.2]">
+            <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-text-primary mb-4 md:mb-6">
               Explore More<br />Solutions
             </h2>
-            <p className="text-[1.05rem] text-[#555] leading-[1.8] mb-8 lg:pr-4">
+            <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-8 lg:pr-4">
               From hands-free investing to hands-on farming, we offer flexible ways to work with Farmcult based on your goals.
             </p>
           </div>
@@ -31,7 +31,7 @@ const PiExploreMore = () => {
               <div className="relative h-full flex flex-col justify-between p-8 z-10 text-white">
                 <h3 className="text-[1.6rem] font-bold max-w-[150px] leading-tight">Turnkey<br />Solution</h3>
                 <div className="mt-auto">
-                  <p className="text-[1rem] text-white/95 leading-relaxed mb-8">
+                  <p className="font-inter text-[15px] text-white/95 leading-[26px] mb-8">
                     Farmcult will build a fully operational hydroponic farm on your land.
                   </p>
                   <button className="bg-white text-text-primary px-6 py-3 rounded-full text-[0.95rem] font-semibold flex items-center justify-between w-[200px] hover:bg-gray-100 transition-colors">
@@ -59,7 +59,7 @@ const PiExploreMore = () => {
               <div className="relative h-full flex flex-col justify-between p-8 z-10 text-white">
                 <h3 className="text-[1.6rem] font-bold max-w-[200px] leading-tight">Education &<br />Training</h3>
                 <div className="mt-auto">
-                  <p className="text-[1rem] text-white/95 leading-relaxed mb-8 pr-2">
+                  <p className="font-inter text-[15px] text-white/95 leading-[26px] mb-8 pr-2">
                     Learn hydroponic farming through practical training, workshops, and guidance.
                   </p>
                   <button className="bg-white text-text-primary px-6 py-3 rounded-full text-[0.95rem] font-semibold flex items-center justify-between w-[200px] hover:bg-gray-100 transition-colors">

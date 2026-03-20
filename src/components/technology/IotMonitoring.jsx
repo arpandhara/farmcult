@@ -71,17 +71,17 @@ const IotMonitoring = () => {
     <section ref={sectionRef} className="iot-monitoring-section bg-[#F4F4F2] min-h-[auto] lg:min-h-[140vh] px-5 py-16 sm:px-10 lg:p-28 flex flex-col justify-center">
       {/* Heading */}
       <div className="text-center mb-10 lg:mb-16 w-full max-w-[95vw] md:max-w-[70vw] mx-auto">
-        <h2 className="iot-heading text-[28px] leading-[38px] md:text-[32px] md:leading-[48px] font-normal text-[#000000] mb-5 md:mb-7">
+        <h2 className="iot-heading text-[28px] leading-[38px] md:text-[32px] md:leading-[48px] font-medium text-[#000000] mb-5 md:mb-7">
           All Farms Equipped With IOT Monitoring
         </h2>
-        <p className="iot-subtitle text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000]">
+        <p className="iot-subtitle text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000] md:max-w-[80%] mx-auto">
           Each farm operates with IoT-based systems that track environmental and nutrient parameters inside the greenhouse.
           This enables data-backed decisions, tighter control over crop cycles, and improved consistency across production.
         </p>
       </div>
 
       {/* 3-column grid — Added lg:min-h-[80vh] to set the layout height on desktop */}
-      <div className="iot-grid grid grid-cols-1 lg:grid-cols-[2fr_auto_2fr] gap-6 max-w-[1300px] mx-auto items-stretch w-full lg:min-h-[100vh]">
+      <div className="iot-grid grid grid-cols-1 lg:grid-cols-[2fr_auto_2fr] gap-8 max-w-[1300px] mx-auto items-stretch w-full lg:min-h-[100vh]">
 
         {/* Left cards — Added h-full so the flex column fills the stretched grid */}
         <div className="flex flex-col gap-6 h-full order-2 lg:order-1">
@@ -90,8 +90,8 @@ const IotMonitoring = () => {
               <div className="mb-8 sm:mb-16">
                 <img src={f.icon} alt={f.title} className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-[18px] leading-[28px] md:text-[20px] md:leading-[30px] font-semibold text-[#000000] mb-4 sm:mb-9">{f.title}</h3>
-              <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000] w-full max-w-[95%] md:max-w-[75%]">{f.description}</p>
+              <h3 className="text-[18px] leading-[28px] md:text-[20px] md:leading-[32px] font-semibold text-[#000000] mb-4 sm:mb-9">{f.title}</h3>
+              <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000] w-full max-w-[95%] md:max-w-[80%]">{f.description}</p>
             </div>
           ))}
         </div>
@@ -114,8 +114,8 @@ const IotMonitoring = () => {
               <div className="mb-8 sm:mb-16">
                 <img src={f.icon} alt={f.title} className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-[18px] leading-[28px] md:text-[20px] md:leading-[30px] font-semibold text-[#000000] mb-4 sm:mb-9">{f.title}</h3>
-              <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000] w-full max-w-[95%] md:max-w-[75%]">{f.description}</p>
+              <h3 className="text-[18px] leading-[28px] md:text-[20px] md:leading-[32px] font-semibold text-[#000000] mb-4 sm:mb-9">{f.title}</h3>
+              <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000] w-full max-w-[95%] md:max-w-[85%]">{f.description}</p>
             </div>
           ))}
         </div>
