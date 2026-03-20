@@ -5,7 +5,7 @@ const caseStudies = [
     description:
       "Transforming traditional farmland into a high-tech commercial hydroponic farm in Garh Mukhteshwar.",
     date: "Jan 2025",
-    image: "/case-studies/case-study1.jpg",
+    image: "/case-studies/CS1.jpg",
     location: "Garh Mukhteshwar, Uttar Pradesh",
     projectSize: "2 Acres",
     clientProfile: "Young Entrepreneur in Hospitality & Restaurant Business",

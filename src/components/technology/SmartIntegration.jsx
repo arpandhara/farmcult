@@ -69,7 +69,7 @@ const SmartIntegration = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-black"> {/* Added bg-black so it's not white before loading */}
         <img
-          src="/whyFarmCult/growSmarterBannerimg.jpg"
+          src="/technology/TechnologyBGimage.jpg"
           alt="Smart Integration Background"
           className="si-bg-image w-full h-full object-cover" // Added 'si-bg-image' class here
         />

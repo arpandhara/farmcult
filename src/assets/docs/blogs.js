@@ -5,7 +5,7 @@ const blogs = [
     description:
       "How the right hydroponic crop selection improves demand predictability, pricing stability, and commercial success",
     date: "Jan 2025",
-    image: "/blogs/blog1.jpg",
+    image: "/blogs/IdeaDrivingModernFarming.jpg",
     content: "/docs/blogs-md/blog1.md",
     selectedIds: [2, 3],
   },
@@ -25,7 +25,7 @@ const blogs = [
     description:
       "The real reason most commercial hydroponics projects struggle. Most hydroponic farms do not fail because...",
     date: "Jan 2025",
-    image: "/blogs/blog3.jpg",
+    image: "/blogs/WhyHydroponicsFarmsFail.jpg",
     content: "/docs/blogs-md/blog3.md",
     selectedIds: [2, 4],
   },

@@ -3,7 +3,7 @@ import React from 'react';
 const WfcBanner = ({ 
   title = "Grow smarter. Use less. Build for tomorrow.", 
   subtitle = "Technology-backed. Resource-efficient. Long-term focused.", 
-  image = "/whyFarmCult/growSmarterBannerimg.jpg",
+  image = "/whyFarmCult/GrowSmaterUselessBuildForTomorrow.jpg",
   tag = "",
   variant = "dark"
 }) => {
@@ -21,9 +21,9 @@ const WfcBanner = ({
           <img 
             src={image} 
             alt={title} 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_80%]"
           />
-          <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
+          <div className="absolute inset-0 bg-black/50 md:bg-black/50" />
         </div>
       ) : (
         <div className="absolute inset-0 bg-white z-0" />
