@@ -12,7 +12,7 @@ const WfcBanner = ({
   return (
     <section 
       className={`wfc-about-banner relative flex items-center justify-center lg:justify-start overflow-hidden ${
-        isDark ? 'min-h-[300px] md:min-h-[350px] py-16 lg:py-0' : 'pt-16 md:pt-24 pb-10 md:pb-14'
+        isDark ? 'min-h-[300px]  py-16 lg:py-0' : 'pt-16 md:pt-24 pb-10 md:pb-14'
       }`}
     >
       {/* Background — image+overlay for dark, plain white for light */}
@@ -41,7 +41,7 @@ const WfcBanner = ({
           </span>
         )}
         <h2 
-          className={`wfc-about-banner-title text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-normal mb-4 md:mb-5 leading-[1.2] lg:leading-[1.15] tracking-[-0.02em] ${
+          className={`wfc-about-banner-title text-[24px] sm:text-[2.5rem] md:text-[29px] font-bold mb-4 md:mb-2 leading-[32px] lg:leading-[48px] ${
             isDark 
               ? 'text-white max-w-[90vw] md:max-w-[800px] mx-auto lg:mx-0' 
               : 'text-[#2A2A2A] max-w-[90vw] md:max-w-[700px] mx-auto'
@@ -50,9 +50,9 @@ const WfcBanner = ({
           {title}
         </h2>
         <p 
-          className={`wfc-about-banner-sub text-[1rem] md:text-[1.05rem] leading-[1.6] md:leading-[1.7] w-full max-w-[90vw] md:max-w-[600px] opacity-90 ${
+          className={`wfc-about-banner-sub text-[16px] md:text-[15px] leading-[26px] md:leading-[29px] w-full max-w-[90vw] md:max-w-[600px] ${
             isDark 
-              ? 'text-white/90 mx-auto lg:mx-0' 
+              ? 'text-white mx-auto lg:mx-0' 
               : 'text-[#666] mx-auto'
           }`}
         >

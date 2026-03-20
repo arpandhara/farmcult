@@ -68,13 +68,13 @@ const IotMonitoring = () => {
   const rightCards = features.filter(f => f.side === 'right');
 
   return (
-    <section ref={sectionRef} className="iot-monitoring-section bg-[#F4F4F2] min-h-[140vh] p-28 flex flex-col justify-center">
+    <section ref={sectionRef} className="iot-monitoring-section bg-[#F4F4F2] min-h-[auto] lg:min-h-[140vh] px-5 py-16 sm:px-10 lg:p-28 flex flex-col justify-center">
       {/* Heading */}
-      <div className="text-center mb-16 max-w-[70vw] mx-auto">
-        <h2 className="iot-heading text-[2.4rem] md:text-[2.75rem] font-normal text-[#000000] leading-[1.2] tracking-tight mb-7">
+      <div className="text-center mb-10 lg:mb-16 w-full max-w-[95vw] md:max-w-[70vw] mx-auto">
+        <h2 className="iot-heading text-[28px] leading-[38px] md:text-[32px] md:leading-[48px] font-normal text-[#000000] mb-5 md:mb-7">
           All Farms Equipped With IOT Monitoring
         </h2>
-        <p className="iot-subtitle text-[1rem] text-[#000000] leading-[2]">
+        <p className="iot-subtitle text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000]">
           Each farm operates with IoT-based systems that track environmental and nutrient parameters inside the greenhouse.
           This enables data-backed decisions, tighter control over crop cycles, and improved consistency across production.
         </p>
@@ -84,20 +84,20 @@ const IotMonitoring = () => {
       <div className="iot-grid grid grid-cols-1 lg:grid-cols-[2fr_auto_2fr] gap-6 max-w-[1300px] mx-auto items-stretch w-full lg:min-h-[100vh]">
 
         {/* Left cards — Added h-full so the flex column fills the stretched grid */}
-        <div className="flex flex-col gap-6 h-full">
+        <div className="flex flex-col gap-6 h-full order-2 lg:order-1">
           {leftCards.map((f, i) => (
-            <div key={i} className="iot-feature-card flex-1 bg-[#EFEEEE] rounded-2xl p-8 flex flex-col justify-center">
-              <div className="mb-16">
+            <div key={i} className="iot-feature-card flex-1 bg-[#EFEEEE] rounded-2xl p-6 sm:p-8 flex flex-col justify-center">
+              <div className="mb-8 sm:mb-16">
                 <img src={f.icon} alt={f.title} className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-[1.15rem] font-semibold text-[#000000] mb-9">{f.title}</h3>
-              <p className="text-[0.95rem] text-[#000000] leading-[1.65] max-w-[75%]">{f.description}</p>
+              <h3 className="text-[18px] leading-[28px] md:text-[20px] md:leading-[30px] font-semibold text-[#000000] mb-4 sm:mb-9">{f.title}</h3>
+              <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000] w-full max-w-[95%] md:max-w-[75%]">{f.description}</p>
             </div>
           ))}
         </div>
 
         {/* Center image - Now relative with a black overlay */}
-        <div className="iot-center-image relative w-full lg:w-[340px] xl:w-[380px] rounded-2xl overflow-hidden self-stretch">
+        <div className="iot-center-image relative w-full lg:w-[340px] xl:w-[380px] rounded-2xl overflow-hidden self-stretch order-1 lg:order-2 h-[300px] sm:h-[400px] lg:h-auto">
           <img
             src="/whyFarmCult/growSmarterBannerimg.jpg"
             alt="IoT Farm Monitoring"
@@ -108,14 +108,14 @@ const IotMonitoring = () => {
         </div>
 
         {/* Right cards — Added h-full */}
-        <div className="flex flex-col gap-6 h-full">
+        <div className="flex flex-col gap-6 h-full order-3">
           {rightCards.map((f, i) => (
-            <div key={i} className="iot-feature-card flex-1 bg-[#EFEEEE] rounded-2xl p-8 flex flex-col justify-center">
-              <div className="mb-16">
+            <div key={i} className="iot-feature-card flex-1 bg-[#EFEEEE] rounded-2xl p-6 sm:p-8 flex flex-col justify-center">
+              <div className="mb-8 sm:mb-16">
                 <img src={f.icon} alt={f.title} className="w-10 h-10 object-contain" />
               </div>
-              <h3 className="text-[1.15rem] font-semibold text-[#000000] mb-9">{f.title}</h3>
-              <p className="text-[0.95rem] text-[#000000] leading-[1.65] max-w-[75%]">{f.description}</p>
+              <h3 className="text-[18px] leading-[28px] md:text-[20px] md:leading-[30px] font-semibold text-[#000000] mb-4 sm:mb-9">{f.title}</h3>
+              <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#000000] w-full max-w-[95%] md:max-w-[75%]">{f.description}</p>
             </div>
           ))}
         </div>

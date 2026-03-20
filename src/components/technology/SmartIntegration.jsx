@@ -65,7 +65,7 @@ const SmartIntegration = () => {
   });
 
   return (
-    <section className="smart-integration-section relative flex flex-col justify-center pt-24 pb-16 overflow-hidden">
+    <section className="smart-integration-section relative flex flex-col justify-center pt-16 pb-16 md:pt-24 md:pb-16 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-black"> {/* Added bg-black so it's not white before loading */}
         <img
@@ -78,31 +78,30 @@ const SmartIntegration = () => {
 
       <div className="relative z-10 mx-auto px-[5%] w-full">
         {/* Header */}
-        <div className="text-center mb-20">
-          <h2 className="si-heading text-[2.5rem] md:text-[2.75rem] font-normal text-white mb-5 tracking-tight leading-[1.2]">
+        <div className="text-center mb-12 md:mb-20 px-4 md:px-0">
+          <h2 className="si-heading text-[28px] leading-[38px] md:text-[32px] md:leading-[48px] font-normal text-white mb-4 md:mb-5">
             Deliver Impact With Smart Integration
           </h2>
-          <p className="si-desc text-white text-[1rem] leading-relaxed mx-auto">
+          <p className="si-desc text-white text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] mx-auto max-w-[90%] md:max-w-2xl">
             Integrated systems translate into measurable gains in water efficiency, crop stability, and operational performance.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="si-cards-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-left max-w-[1600px] mx-auto">
+        <div className="si-cards-grid grid grid-cols-1 sm:grid-cols-2 gap-y-12 sm:gap-y-16 lg:gap-y-0 lg:grid-cols-4 text-left max-w-[1600px] mx-auto w-full">
           {benefitsData.map((benefit, index) => (
             <div
               key={index}
-              className="benefit-card flex gap-6 px-8 py-2"
+              className="benefit-card flex flex-col lg:flex-row gap-4 lg:gap-6 px-6 lg:px-8 py-2"
             >
               {/* Vertical divider — only spans the text height */}
-              {index >= 0 && (
-                <div className="hidden lg:block w-[1px] bg-white/50 self-stretch shrink-0" />
-              )}
-              <div>
-                <h3 className="text-[1.6rem] font-normal text-white pb-[56px] leading-tight whitespace-pre-line">
+              <div className={`hidden lg:block w-[1px] bg-white/50 self-stretch shrink-0 ${index === 0 ? 'lg:opacity-0' : ''}`} />
+              
+              <div className="w-full">
+                <h3 className="text-[20px] leading-[30px] md:text-[24px] md:leading-[34px] font-normal text-white pb-4 lg:pb-[56px] whitespace-pre-line">
                   {benefit.title}
                 </h3>
-                <p className="text-white leading-relaxed font-light">
+                <p className="text-white text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] font-light">
                   {benefit.description}
                 </p>
               </div>

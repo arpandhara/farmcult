@@ -3,38 +3,56 @@ import React from 'react';
 const WfcFeatures = () => {
   return (
     <section className="wfc-features-section px-4 md:px-[5%] pb-16 md:pb-[6rem] max-w-[1600px] mx-auto">
-      <div className="wfc-features-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-0">
+      <div className="wfc-features-wrapper relative flex flex-col w-full max-w-[372px] md:max-w-none h-auto mx-auto">
         
-        <div className="wfc-feature-card py-10 px-6 sm:px-8 md:py-12 xl:py-16 xl:px-12 flex flex-col transition-colors duration-300 ease-in-out">
-          <div className="wfc-feature-icon w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-4 md:mb-6">
-            <img src="/icons/icon 1.svg" alt="Technology-led icon" className="w-full h-full" />
-          </div>
-          <h3 className="wfc-feature-title text-[1.5rem] md:text-[2rem] font-normal mb-6 md:mb-[60px] text-black">Technology-led</h3>
-          <p className="wfc-feature-desc text-[1rem] md:text-[1.1rem] text-text-primary leading-[1.8] md:leading-[2]">
-            Automation, IoT monitoring, and data-based decision-making systems.
-          </p>
-        </div>
+        {/* Mobile Timeline Vertical Line */}
+        <div className="absolute left-[3px] top-[16px] w-[2px] h-[calc(100%-32px)] bg-[#8DC83A] block md:hidden z-0"></div>
 
-        <div className="wfc-feature-card py-10 px-6 sm:px-8 md:py-12 xl:py-16 xl:px-12 flex flex-col transition-colors duration-300 ease-in-out border-[#DEDEDE] border-t sm:border-t-0 sm:border-l sm:border-r xl:border-r-0 xl:border-l">
-          <div className="wfc-feature-icon w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-4 md:mb-6">
-            <img src="/icons/icon 2.svg" alt="Sustainable icon" className="w-full h-full" />
+        <div className="wfc-features-grid flex flex-col gap-[40px] md:gap-0 md:grid md:grid-cols-2 xl:grid-cols-3">
+          
+          {/* Card 1 */}
+          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-l-2 z-10">
+            {/* Mobile Dot */}
+            <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+            
+            <div className="wfc-feature-icon w-6 h-6 md:w-[16px] md:h-[28px] flex items-center justify-center mb-4 md:mb-6">
+              <img src="/icons/icon 1.svg" alt="Technology-led icon" className="w-full h-full" />
+            </div>
+            <h3 className="wfc-feature-title text-[24px] md:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black">Technology-led</h3>
+            <p className="wfc-feature-desc text-[16px] md:text-[16px] text-black leading-[26px] md:leading-[29px]">
+              Automation, IoT monitoring, and data-based decision-making systems.
+            </p>
           </div>
-          <h3 className="wfc-feature-title text-[1.5rem] md:text-[2rem] font-normal mb-6 md:mb-[60px] text-black">Sustainable</h3>
-          <p className="wfc-feature-desc text-[1rem] md:text-[1.1rem] text-text-primary leading-[1.8] md:leading-[2]">
-            Less water usage and no soil dependency, build for long-term environmental balance.
-          </p>
-        </div>
 
-        <div className="wfc-feature-card py-10 px-6 sm:px-8 md:py-12 xl:py-16 xl:px-12 flex flex-col transition-colors duration-300 ease-in-out border-[#DEDEDE] border-t xl:border-t-0 xl:border-l sm:col-span-2 xl:col-span-1">
-          <div className="wfc-feature-icon w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-4 md:mb-6">
-            <img src="/icons/icon 3.svg" alt="Scaleable icon" className="w-full h-full" />
+          {/* Card 2 */}
+          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-t-0 md:border-l md:border-r xl:border-r-1 xl:border-l-2 z-10">
+             {/* Mobile Dot */}
+             <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+             
+            <div className="wfc-feature-icon w-6 h-6 md:w-[25px] md:h-[28px] flex items-center justify-center mb-4 md:mb-6">
+              <img src="/icons/icon 2.svg" alt="Sustainable icon" className="w-full h-full" />
+            </div>
+            <h3 className="wfc-feature-title text-[24px] md:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black">Sustainable</h3>
+            <p className="wfc-feature-desc text-[16px] md:text-[16px] text-black leading-[26px] md:leading-[29px]">
+              Less water usage and no soil dependency, build for long-term environmental balance.
+            </p>
           </div>
-          <h3 className="wfc-feature-title text-[1.5rem] md:text-[2rem] font-normal mb-6 md:mb-[60px] text-black">Scaleable</h3>
-          <p className="wfc-feature-desc text-[1rem] md:text-[1.1rem] text-text-primary leading-[1.8] md:leading-[2]">
-            Structured systems designed to expand smoothly from small to large farms.
-          </p>
-        </div>
 
+          {/* Card 3 */}
+          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-t-0 md:border-l md:col-span-2 xl:col-span-1 md:border-r-2 z-10">
+             {/* Mobile Dot */}
+             <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+             
+            <div className="wfc-feature-icon w-6 h-6 md:w-[25px] md:h-[28px] flex items-center justify-center mb-4 md:mb-6">
+              <img src="/icons/icon 3.svg" alt="Scaleable icon" className="w-full h-full" />
+            </div>
+            <h3 className="wfc-feature-title text-[24px] md:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black">Scaleable</h3>
+            <p className="wfc-feature-desc text-[16px] md:text-[16px] text-black leading-[26px] md:leading-[29px]">
+              Structured systems designed to expand smoothly from small to large farms.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
   );

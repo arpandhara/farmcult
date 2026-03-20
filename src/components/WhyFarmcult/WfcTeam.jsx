@@ -6,7 +6,7 @@ const WfcTeam = () => {
       <section className="wfc-team-section py-10 px-4 md:py-16 md:px-[5%] pb-16 md:pb-[8rem] max-w-[1600px] mx-auto">
         {/* Notice the reversed grid cols for the team header layout: lg:grid-cols-[1fr_1.2fr] */}
         <div className="wfc-team-inner grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 md:gap-12 lg:gap-[100px] items-stretch">
-          <div className="wfc-team-image-col w-full h-[300px] sm:h-[400px] lg:h-full">
+          <div className="wfc-team-image-col w-full h-[300px] sm:h-[400px] lg:h-[359px">
             <img 
               src="/whyFarmCult/farmCultTeamGroupimg.jpg" 
               alt="Farmcult Team"
@@ -14,19 +14,19 @@ const WfcTeam = () => {
             />
           </div>
           <div className="wfc-team-text-col mt-4 lg:mt-0">
-            <h2 className="wfc-section-heading text-[clamp(2rem,3.5vw,3rem)] font-medium mb-6 md:mb-8 tracking-[-0.02em] text-black">The People Behind the Farms</h2>
+            <h2 className="wfc-section-heading text-[24px] md:text-[32px] font-medium mb-6 md:mb-8 md:leading-[48px] leading-[32px] text-black">The People Behind the Farms</h2>
             <div className="wfc-founder-tag inline-flex py-2 px-[1.2rem] bg-accent/25 text-black rounded-full font-primary text-[0.85rem] md:text-[0.9rem] mb-8 md:mb-10">
-              <span>Our Team</span>
+              <span className='font-normal text-[15px]'>Our Team</span>
             </div>
-            <p className="wfc-foundation-desc text-[1rem] md:text-[1.1rem] text-text-primary leading-[1.8] md:leading-[2] mb-6 md:mb-8">
+            <p className="wfc-foundation-desc text-[16px] md:text-[15px] text-text-primary leading-[1.8] md:leading-[29px] mb-6 md:mb-8">
               Behind every greenhouse is a team of planners, engineers, agronomists, and operators
               working together.
             </p>
-            <p className="wfc-foundation-desc text-[1rem] md:text-[1.1rem] text-text-primary leading-[1.8] md:leading-[2] mb-6 md:mb-8">
+            <p className="wfc-foundation-desc text-[16px] md:text-[15px] text-text-primary leading-[1.8] md:leading-[29px] mb-6 md:mb-8">
               From feasibility assessments to system installation and farm monitoring, our team
               ensures that every project runs with clarity and discipline.
             </p>
-            <p className="wfc-foundation-desc text-[1rem] md:text-[1.1rem] text-text-primary leading-[1.8] md:leading-[2] mb-0">
+            <p className="wfc-foundation-desc text-[16px] md:text-[15px] text-text-primary leading-[1.8] md:leading-[29px] mb-0">
               We combine on-ground agricultural knowledge with modern technology systems to deliver
               consistent performance.
             </p>
@@ -46,7 +46,7 @@ const WfcTeam = () => {
           ].map((member, i) => (
             <div className="wfc-team-card flex flex-col items-center group transition-transform duration-300 hover:-translate-y-2" key={i}>
               {/* Circular Professional Photo */}
-              <div className="wfc-team-avatar-container w-[70%] sm:w-full aspect-square rounded-full overflow-hidden mb-6 md:mb-8 max-w-[250px] md:max-w-[300px] border-0 mx-auto">
+              <div className="wfc-team-avatar-container w-[70%] sm:w-full aspect-square rounded-full overflow-hidden mb-6 md:mb-8 max-w-[250px] md:max-w-[336px] border-0 mx-auto">
                 {member.image ? (
                   <img src={member.image} alt={member.name} className="w-full h-full object-fill" />
                 ) : (
@@ -57,14 +57,14 @@ const WfcTeam = () => {
               {/* Info Box */}
               <div className="wfc-team-info-box bg-white rounded-[24px] p-5 md:p-6 w-full max-w-[280px] md:max-w-[320px] flex flex-col items-center shadow-sm border-0 mx-auto">
                 <div className="flex items-center gap-2 md:gap-3 mb-4 w-full justify-between">
-                  <span className="wfc-team-name text-[1rem] md:text-[1.1rem] font-bold text-black">{member.name}</span>
+                  <span className="wfc-team-name text-[15px] md:text-[16px] font-bold text-black">{member.name}</span>
                   <a href="#" className="wfc-linkedin-link shrink-0">
                     <img src="/icons/linkedin.png" alt="LinkedIn" className="w-5 h-5 object-contain" />
                   </a>
                 </div>
                 
                 {/* Role Capsule - 8DC83A with 25% transparency */}
-                <div className="wfc-team-role-tag w-full py-[0.5rem] md:py-[0.6rem] px-3 md:px-4 bg-[#8DC83A]/25 rounded-[12px] text-[0.8rem] md:text-[0.85rem] font-normal text-black flex items-center justify-center text-center">
+                <div className="wfc-team-role-tag w-full py-[0.5rem] md:py-[0.6rem] px-3 md:px-4 bg-[#8DC83A]/25 rounded-[12px] text-[0.8rem] md:text-[15px] font-normal text-black flex items-center justify-center text-center">
                   <span>{member.role}</span>
                 </div>
               </div>
