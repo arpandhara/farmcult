@@ -100,10 +100,10 @@ const Navbar = () => {
               <Link to="/why-farmcult" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent">
                 Why Farmcult
               </Link>
-              <Link to="/technology" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent">
+              <Link to="/technology" className="nav-link font-normal text-[16px] text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent">
                 Technology
               </Link>
-              <Link to="/resources" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent">
+              <Link to="/resources" className="nav-link font-normal text-[16px] text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent">
                 Resources
               </Link>
             </div>
@@ -163,7 +163,7 @@ const Navbar = () => {
                 setMobileMenuOpen(false); 
                 setTimeout(() => window.lenis?.scrollTo('#contact'), 300); // Wait for menu to close
               }} 
-              className="mt-6 inline-block bg-text-primary text-bg-color rounded-[40px] py-[1rem] px-8 text-lg w-[80%] max-w-[300px] transition-transform active:scale-95"
+              className="mt-6 inline-block bg-text-primary text-bg-color rounded-[40px] py-[1rem] px-8 text-lg w-[137px] h-[43px] transition-transform active:scale-95"
             >
               Get Started
             </a>

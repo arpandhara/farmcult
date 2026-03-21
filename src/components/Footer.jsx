@@ -39,7 +39,7 @@ const Footer = () => {
 
   return (
     <footer className="footer-section bg-[#F7F7F7] pt-20 flex flex-col min-h-[50vh]">
-      <div className="container mx-auto px-[5%] flex-1 mb-16">
+      <div className="container mx-auto px-[2%] flex-1 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Logo and Tagline Section */}
@@ -56,7 +56,7 @@ const Footer = () => {
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-16 lg:gap-15">
             {footerLinks.map((column, idx) => (
               <div key={idx} className="footer-col">
-                <span className="block text-[8px] font-normal text-[#343434] mb-8 uppercase tracking-wider font-inter">
+                <span className="block text-[14px] font-normal text-[#343434] mb-8 uppercase tracking-wider font-inter">
                   {column.title}
                 </span>
                 <ul className="flex flex-col gap-6">
@@ -67,14 +67,14 @@ const Footer = () => {
                           href={link.path} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-[12px] font-normal text-[#343434] hover:text-accent transition-colors font-inter "
+                          className="text-[18px] md:text-[18px] font-normal text-[#343434] hover:text-accent transition-colors font-inter "
                         >
                           {link.label}
                         </a>
                       ) : (
                         <Link 
                           to={link.path}
-                          className="text-[12px] font-normal text-[#343434] hover:text-accent transition-colors font-inter"
+                          className="text-[18px] md:text-[18px] font-normal text-[#343434] hover:text-accent transition-colors font-inter"
                         >
                           {link.label}
                         </Link>

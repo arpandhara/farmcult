@@ -46,7 +46,7 @@ const FarmcultMedia = () => {
       className="media-section w-full px-[5%] py-16 lg:py-24 bg-white min-h-[70vh] flex flex-col" 
       ref={sectionRef}
     >
-      <h2 className="media-heading text-[32px] font-[500] text-text-primary leading-[1.1] mb-12 lg:mb-16">
+      <h2 className="media-heading text-[32px] font-[500] text-text-primary leading-[48px] mb-12 lg:mb-16">
         Farmcult in the Media
       </h2>
 
@@ -71,7 +71,7 @@ const FarmcultMedia = () => {
             <div className="media-link-wrapper mt-auto">
               <a 
                 href={item.link} 
-                className="btn-text-link group font-[16px] text-base text-text-primary relative inline-block pb-[4px] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-text-primary after:origin-bottom-right after:transition-transform after:duration-[350ms] after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="btn-text-link group font-normal text-[16px] text-text-primary relative inline-block pb-[4px] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-text-primary after:origin-bottom-right after:transition-transform after:duration-[350ms] after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 Read more &rarr;
               </a>

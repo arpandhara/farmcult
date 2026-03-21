@@ -27,15 +27,15 @@ const TechCards = () => {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="bg-[#EFEEEE] p-24">
-      <div className="max-w-[100vw] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section ref={sectionRef} className="bg-[#EFEEEE] px-5 py-12 lg:px-24 lg:py-24">
+      <div className="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
         {/* Card 1 */}
-        <div className="tech-feature-card bg-white rounded-2xl p-8 md:p-12 flex flex-col justify-between">
+        <div className="tech-feature-card bg-white rounded-2xl p-6 md:p-12 flex flex-col justify-between">
           <div>
-            <h3 className="text-2xl md:text-[1.5rem] font-semibold text-[#000000] mb-5">
+            <h3 className="text-[28px] leading-[38px] md:text-[20px] md:leading-[32px] font-medium text-[#000000] mb-4 md:mb-5">
               24/7 Cloud-Based Monitoring
             </h3>
-            <p className="text-[1rem] md:text-[1rem] text-[#333333] leading-[1.6] mb-10 pr-8">
+            <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#333333] mb-8 md:mb-10 lg:pr-8">
               Continuous cloud syncing provides real-time visibility and remote access to
               farm performance data.
             </p>
@@ -44,18 +44,18 @@ const TechCards = () => {
             <img 
               src="/technology/card01.jpg" 
               alt="Cloud Monitoring" 
-              className="w-full h-[200px] md:h-[250px] lg:h-[280px] object-cover rounded-2xl"
+              className="w-full h-[250px] sm:h-[300px] md:h-[250px] lg:h-[250px] object-cover rounded-2xl"
             />
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="tech-feature-card bg-white rounded-2xl p-8 md:p-12 flex flex-col justify-between">
+        <div className="tech-feature-card bg-white rounded-2xl p-6 md:p-12 flex flex-col justify-between">
           <div>
-            <h3 className="text-2xl md:text-[1.5rem] font-semibold text-[#000000] mb-5">
+            <h3 className="text-[28px] leading-[38px] md:text-[20px] md:leading-[32px] font-medium text-[#000000] mb-4 md:mb-5">
               Automated Fertigation
             </h3>
-            <p className="text-[1rem] md:text-[1rem] text-[#333333] leading-[1.6] mb-10 pr-8">
+            <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#333333] mb-8 md:mb-10 lg:pr-8">
               Precision-controlled nutrient dosing ensures balanced growth, efficient
               resource use, and consistent crop outcomes.
             </p>
@@ -64,7 +64,7 @@ const TechCards = () => {
             <img 
               src="/technology/card2.jpg" 
               alt="Automated Fertigation" 
-              className="w-full h-[200px] md:h-[250px] lg:h-[280px] object-cover rounded-2xl"
+              className="w-full h-[250px] sm:h-[300px] md:h-[250px] lg:h-[250px] object-cover rounded-2xl"
             />
           </div>
         </div>

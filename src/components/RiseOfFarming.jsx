@@ -13,7 +13,7 @@ const RiseOfFarming = () => {
             <h2 className="rise-title font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-text-primary w-full md:h-auto m-0">
               The Rise of Modern<br />Farming in India
             </h2>
-            <p className="rise-desc font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[2] text-text-secondary w-full md:h-auto m-0 md:w-[382px]">
+            <p className="rise-desc font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary w-full md:h-auto m-0 md:w-[382px]">
               Rapid urban demand, water stress, and government support are accelerating hydroponic adoption across key Indian states.
             </p>
             
@@ -43,30 +43,30 @@ const RiseOfFarming = () => {
           
           <div className="rise-stats-grid flex flex-col md:grid md:grid-cols-4 gap-[20px] md:gap-y-0 pt-0 md:pt-12 md: border-[#DEDEDE]">
             
-            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-2 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 md:border-r-2">
               <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
-              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">Over 30%</h3>
-              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">ROI on projects with hydroponics / modern farming</p>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-black w-full md:w-auto md:h-auto m-0">Over 30%</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-black w-full md:w-auto md:h-auto m-0">ROI on projects with hydroponics / modern farming</p>
             </div>
             
             {/* Note: This card specifically drops its border at the Tablet breakpoint just like your media query */}
-            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 lg:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 lg:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 md:border-r-2">
               <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
-              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">80–90%</h3>
-              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">Less water usage compared to soil farming</p>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-black w-full md:w-auto md:h-auto m-0">80–90%</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-black w-full md:w-auto md:h-auto m-0">Less water usage compared to soil farming</p>
             </div>
             
-            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 md:border-r-2">
               <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
-              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">Up to 5x</h3>
-              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">Higher yield per acre in controlled systems</p>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-black w-full md:w-auto md:h-auto m-0">Up to 5x</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-black w-full md:w-auto md:h-auto m-0">Higher yield per acre in controlled systems</p>
             </div>
             
             {/* Completely borderless on the right */}
-            <div className="stat-card borderless-right relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 border-l-0 border-r-0 border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 border-transparent md:border-r-[#DEDEDE]">
+            <div className="stat-card  relative flex flex-col gap-[12px] md:gap-[53px] pl-[20px] sm:px-6 lg:px-8 w-full md:h-auto bg-transparent z-10 md:border-r-2 border-[#DEDEDE]">
               <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
-              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary w-full md:w-auto md:h-auto m-0">Up to 50%</h3>
-              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-text-secondary w-full md:w-auto md:h-auto m-0">Capital subsidy for eligible projects</p>
+              <h3 className="stat-value font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-black w-full md:w-auto md:h-auto m-0">Up to 50%</h3>
+              <p className="stat-label font-inter text-[16px] md:text-[16px] font-normal leading-[24px] md:leading-[29px] text-black w-full md:w-auto md:h-auto m-0">Capital subsidy for eligible projects</p>
             </div>
 
           </div>

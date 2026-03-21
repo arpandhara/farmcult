@@ -68,13 +68,13 @@ const CaseStudy = () => {
             </div>
 
             {/* Heading - Fixed line heights to prevent vertical overlap */}
-            <h2 className="case-study-title font-inter text-[32px] md:text-[32px] font-medium md:font-semibold text-black leading-[1.2] md:leading-[48px] mb-6 tracking-tight m-0 w-full">
+            <h2 className="case-study-title font-inter text-[32px] md:text-[32px] font-medium md:font-medium text-black leading-[1.2] md:leading-[48px] mb-8 tracking-tight m-0 w-full">
               2 Acres.<br />
               24,000 Plants.
             </h2>
 
             {/* Paragraph */}
-            <p className="case-study-desc font-inter text-[16px] md:text-[16px] font-normal text-black leading-[1.6] md:leading-[29px] mb-8 md:mb-10 opacity-90 m-0 w-full">
+            <p className="case-study-desc font-inter text-[16px] md:text-[16px] font-normal text-black leading-[1.6] md:leading-[29px] mb-8 md:mb-2 opacity-90 m-0 w-full md:max-w-[90%]">
               What was once idle land is now a working hydroponic farm. Results from Farmcult's first operational hydroponic farm in Garhmukteshwar.
             </p>
 

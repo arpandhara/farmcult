@@ -61,12 +61,12 @@ const SmartTechnology = () => {
         <h2 className="smart-tech-title font-inter text-[32px] md:text-[32px] font-medium md:font-[500] leading-[48px] md:leading-[48px] text-text-primary mb-[24px] md:mb-8 m-0 w-full tracking-normal">
           Built on Smart <br className="hidden sm:block" /> Technology
         </h2>
-        <p className="smart-tech-desc font-inter text-[15px] md:text-[16px] font-normal leading-[29px] md:leading-[1.8] text-text-secondary mb-[24px] md:mb-10 w-full m-0">
+        <p className="smart-tech-desc font-inter text-[15px] md:text-[15px] font-normal leading-[29px] md:leading-[29px] text-text-secondary mb-[24px] md:mb-10 w-full m-0">
           Smart systems run quietly in the background to keep farms operating smoothly. Technology helps reduce effort, improve consistency, and support better outcomes.
         </p>
 
         <div className="smart-tech-link-container md:mt-[74px]">
-          <a href="#technology" className="smart-tech-link font-inter font-normal md:font-medium text-[16px] md:text-[16px] leading-[1.5] md:leading-normal text-text-primary underline md:no-underline md:relative inline-block md:pb-[4px] md:after:content-[''] md:after:absolute md:after:w-full md:after:scale-x-0 md:after:h-[1px] md:after:bottom-0 md:after:left-0 md:after:bg-text-primary md:after:origin-bottom-right md:after:transition-transform md:after:duration-[350ms] md:after:ease-out md:hover:after:scale-x-100 md:hover:after:origin-bottom-left m-0">
+          <a href="#technology" className="smart-tech-link font-inter font-normal md:font-normal text-[16px] md:text-[16px] leading-[1.5] md:leading-normal text-text-primary underline md:no-underline md:relative inline-block md:pb-[4px] md:after:content-[''] md:after:absolute md:after:w-full md:after:scale-x-0 md:after:h-[1px] md:after:bottom-0 md:after:left-0 md:after:bg-text-primary md:after:origin-bottom-right md:after:transition-transform md:after:duration-[350ms] md:after:ease-out md:hover:after:scale-x-100 md:hover:after:origin-bottom-left m-0">
             Learn more about how we use technology <span className="inline-block ml-1">&rarr;</span>
           </a>
         </div>
@@ -82,8 +82,8 @@ const SmartTechnology = () => {
             className="w-full h-full object-cover"
           />
 
-          {/* Intense Black Overlay for better icon/text contrast */}
-          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-500"></div>
+          {/* Intense Black Overlay for better icon/text contrast (Hover effect removed) */}
+          <div className="absolute inset-0 bg-black/60"></div>
 
           {/* Features Overlay */}
           <div className="absolute inset-0 flex flex-row justify-between md:justify-center items-center gap-[10px] md:gap-8 lg:gap-16 px-[16px] md:px-8 py-0 md:py-10">
@@ -92,7 +92,7 @@ const SmartTechnology = () => {
                 <div className="feature-icon-wrapper w-[25px] h-[25px] md:w-16 md:h-16 flex items-center justify-center transition-all duration-300">
                   <img src={feature.icon} alt={feature.text} className="w-full h-full object-contain drop-shadow-lg" />
                 </div>
-                <p className="feature-text font-inter text-white text-[14px] md:text-[0.95rem] font-semibold leading-[20px] md:leading-snug drop-shadow-md m-0 w-full">
+                <p className="feature-text font-inter text-white text-[14px] md:text-[18px] font-bold leading-[20px] md:leading-[29px] drop-shadow-md m-0 w-full">
                   {feature.text}
                 </p>
               </div>

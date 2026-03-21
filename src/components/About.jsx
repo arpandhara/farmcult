@@ -7,24 +7,24 @@ const About = () => {
       {/* Header Section */}
       <div className="about-header flex flex-col md:flex-row md:justify-between items-start md:items-end mb-8 md:mb-12 gap-6 md:gap-8">
         <div className="about-header-text w-full md:max-w-[700px]">
-          <h2 className="section-title font-inter font-medium text-[24px] leading-[32px] tracking-normal text-[#343434] md:text-[32px] md:leading-[1.2] md:tracking-[-0.02em] md:text-text-primary mb-3 md:mb-4">
+          <h2 className="section-title font-inter font-medium text-[24px] leading-[32px] tracking-normal text-[#343434] md:text-[32px] md:leading-[48px] md:tracking-[-0.02em] md:text-text-primary mb-3 md:mb-4">
             Cultivating For Tomorrow
           </h2>
-          <p className="section-subtitle text-[15px] text-text-secondary leading-[1.8] md:leading-[2]">
+          <p className="section-subtitle text-[15px] text-text-secondary leading-[29px] md:leading-[29px]">
             Farmcult uses technology to build farming systems that are easy to manage, sustainable, and designed to grow over time.
           </p>
         </div>
 
         {/* Animated Underline Link */}
         <div className="about-header-link mt-2 md:mt-0">
-          <a href="#about-us" className="btn-text-link group font-medium text-base text-text-primary relative inline-block pb-[2px] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-text-primary after:origin-bottom-right after:transition-transform after:duration-[250ms] after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left">
+          <a href="#about-us" className="btn-text-link group font-medium text-[16px] text-text-primary relative inline-block pb-[2px] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-text-primary after:origin-bottom-right after:transition-transform after:duration-[250ms] after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left">
             Learn more about Farmcult &rarr;
           </a>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="about-content-wrapper relative w-full h-[388px] md:h-[85vh] md:min-h-[600px] rounded-[16px] md:rounded-2xl mb-8 md:mb-0 overflow-hidden shadow-lg md:shadow-none">
+      <div className="about-content-wrapper relative w-full h-[388px] md:h-[75vh] md:min-h-[500px] rounded-[16px] md:rounded-2xl mb-8 md:mb-0 overflow-hidden shadow-lg md:shadow-none">
 
         {/* Image Background */}
         <div className="absolute inset-0 w-full h-full z-0">
@@ -45,7 +45,7 @@ const About = () => {
             <h3 className="feature-title text-[18px] md:text-[18px] font-semibold md:font-bold font-inter text-text-primary h-[36px] leading-[36px] m-0">
               Technology-led
             </h3>
-            <p className="feature-desc text-[13px] md:text-[12px] text-text-secondary h-[20px] leading-[20px] m-0 whitespace-nowrap md:whitespace-normal overflow-hidden overflow-ellipsis w-full">
+            <p className="feature-desc md:font-normal text-[13px] md:text-[12px] text-text-secondary h-[20px] leading-[20px] m-0 whitespace-nowrap md:whitespace-normal overflow-hidden overflow-ellipsis w-full">
               Automation, monitoring, and data-based decisions
             </p>
           </div>
@@ -57,7 +57,7 @@ const About = () => {
             <h3 className="feature-title text-[18px] md:text-[18px] font-semibold md:font-bold font-inter text-text-primary h-[36px] leading-[36px] m-0">
               Sustainable
             </h3>
-            <p className="feature-desc text-[13px] md:text-[12px] text-text-secondary h-[20px] leading-[20px] m-0 whitespace-nowrap md:whitespace-normal overflow-hidden overflow-ellipsis w-full">
+            <p className="feature-desc md:font-normal text-[13px] md:text-[12px] text-text-secondary h-[20px] leading-[20px] m-0 whitespace-nowrap md:whitespace-normal overflow-hidden overflow-ellipsis w-full">
               Less water. No pesticides. Cleaner farming.
             </p>
           </div>
@@ -69,7 +69,7 @@ const About = () => {
             <h3 className="feature-title text-[18px] md:text-[18px] font-semibold md:font-bold font-inter text-text-primary h-[36px] leading-[36px] m-0">
               Scaleable
             </h3>
-            <p className="feature-desc text-[13px] md:text-[12px] text-text-secondary h-[20px] leading-[20px] m-0 whitespace-nowrap md:whitespace-normal overflow-hidden overflow-ellipsis w-full">
+            <p className="feature-desc md:font-normal text-[13px] md:text-[12px] text-text-secondary h-[20px] leading-[20px] m-0 whitespace-nowrap md:whitespace-normal overflow-hidden overflow-ellipsis w-full">
               Systems that can grow from small to large farms
             </p>
           </div>
