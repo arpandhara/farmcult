@@ -8,7 +8,6 @@ import ContactSection from '../components/ContactSection';
 import TsHero from '../components/TurnkeySolution/TsHero';
 import TsWhatsIncluded from '../components/TurnkeySolution/TsWhatsIncluded';
 import TsHowItWorks from '../components/TurnkeySolution/TsHowItWorks';
-import TsCaseStudy from '../components/TurnkeySolution/TsCaseStudy';
 import CaseStudies from '../components/CaseStudy';
 import TsIncentives from '../components/TurnkeySolution/TsIncentives';
 import TsCaseStudy2 from '../components/TurnkeySolution/TsCaseStudy2';

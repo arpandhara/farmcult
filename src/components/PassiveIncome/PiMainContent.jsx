@@ -5,7 +5,7 @@ const PiMainContent = () => {
     <section className="pi-content-container py-[80px] md:py-[100px] lg:py-[140px] px-4 md:px-[68px]">
       <div className="mx-auto">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 lg:mb-28">
+        <div className="text-center mx-auto mb-16 md:mb-32 lg:mb-32">
           <h2 className="pi-section-title font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-text-primary mb-3 md:mb-4">
             Earn Tax-Free Without Moving a Finger
           </h2>
@@ -15,58 +15,63 @@ const PiMainContent = () => {
         </div>
 
         {/* Stats / Features Layout */}
-        <div className="pi-stats-grid grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 lg:gap-12 relative">
-          {/* Divider lines conceptually visible on desktop */}
-          <div className="hidden md:block absolute top-[10%] bottom-[10%] left-[33%] w-[1px] bg-gray-200"></div>
-          <div className="hidden md:block absolute top-[10%] bottom-[10%] left-[66%] w-[1px] bg-gray-200"></div>
+        <div className="pi-stats-grid grid grid-cols-1 md:grid-cols-3 md:divide-x md:border-x border-gray-200">
 
           {/* Feature 1 */}
-          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left md:px-4 group flex-1">
-            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary mb-2 md:mb-3">
+          {/* Notice we added md:px-8 lg:px-12 for spacing instead of using grid gaps */}
+          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
+            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-2 md:mb-3">
               Up to 50%
             </h3>
-            <p className="font-inter text-[16px] md:text-[16px] font-medium leading-[24px] md:leading-[29px] text-[#444] mb-2 md:mb-3 w-full">Capital Subsidy</p>
-            <p className="font-inter text-[15px] font-normal leading-[24px] md:leading-[26px] text-text-secondary">
+            <p className="font-inter text-[16px] md:text-[32px] font-light leading-[24px] md:leading-[48px] text-black mb-2 md:mb-14 w-full">
+              Capital Subsidy
+            </p>
+            <p className="font-inter text-[16px] font-light leading-[24px] md:leading-[29px] text-black md:max-w-[85%]">
               Available under National Horticulture Board schemes for eligible projects.
             </p>
           </div>
 
           {/* Feature 2 */}
-          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left md:px-4 group flex-1">
-            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary mb-2 md:mb-3">
-              3% <span className="text-[20px] md:text-[24px] font-medium text-[#444] tracking-normal inline-block ml-1">Interest Subsidy</span>
+          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
+            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-2 md:mb-3">
+              3% <span className="text-[20px] md:text-[32px] font-light text-black tracking-normal inline-block ml-1">Interest Subsidy</span>
             </h3>
-            <p className="font-inter text-[16px] md:text-[16px] font-medium leading-[24px] md:leading-[29px] text-[#444] mb-2 md:mb-3 w-full">Available</p>
-            <p className="font-inter text-[15px] font-normal leading-[24px] md:leading-[26px] text-text-secondary">
+            <p className="font-inter text-[16px] md:text-[32px] font-light leading-[24px] md:leading-[48px] text-black mb-2 md:mb-14 w-full">
+              Available
+            </p>
+            <p className="font-inter text-[16px] font-normal leading-[24px] md:leading-[29px] text-black md:max-w-[85%]">
               Loan interest support available under the Agriculture Infrastructure Fund scheme.
             </p>
           </div>
 
           {/* Feature 3 */}
-          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left md:px-4 group flex-1">
-            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-normal text-text-primary mb-2 md:mb-3">
+          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
+            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-2 md:mb-3">
               Tax-Free
             </h3>
-            <p className="font-inter text-[16px] md:text-[16px] font-medium leading-[24px] md:leading-[29px] text-[#444] mb-2 md:mb-3 w-full">Returns</p>
-            <p className="font-inter text-[15px] font-normal leading-[24px] md:leading-[26px] text-text-secondary">
+            <p className="font-inter text-[16px] md:text-[32px] font-light leading-[24px] md:leading-[48px] text-black mb-2 md:mb-14 w-full">
+              Returns
+            </p>
+            <p className="font-inter text-[16px] font-normal leading-[24px] md:leading-[29px] text-black md:max-w-[85%]">
               Agricultural income qualifies for tax exemptions under Indian law.
             </p>
           </div>
+
         </div>
 
         {/* What's Included Section */}
-        <div className="pi-whats-included mt-24 md:mt-32 pt-16 md:pt-24 border-t border-gray-200">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-            <div className="w-full lg:w-1/2">
-              <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-text-primary mb-4 md:mb-6">
+        <div className="pi-whats-included mt-24 md:mt-16 pt-16 md:pt-24">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-28 items-center">
+            <div className="w-full lg:w-[58%]">
+              <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-4 md:mb-6">
                 What's Included in our<br className="hidden md:block" /> Passive Income Solution?
               </h2>
 
-              <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-6">
+              <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-6">
                 Farmcult's passive income model is designed for investors and landowners who want exposure to modern agriculture without managing daily farm operations.
               </p>
 
-              <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-8 md:mb-10">
+              <p className="font-inter text-[16px] md:text-[15px] md:max-w-[79%] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-8 md:mb-10">
                 We handle the setup, cultivation, monitoring, and farm management while you benefit from a structured agricultural asset.
               </p>
 
@@ -121,12 +126,12 @@ const PiMainContent = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-1/2 mt-10 lg:mt-0">
-              <div className="pb-[60%] lg:pb-[70%] relative w-full h-full overflow-hidden rounded-3xl group">
+            <div className="w-full lg:w-[455px] lg:h-[426px] mt-10 lg:mt-0">
+              <div className="pb-[60%] lg:pb-[70%] relative w-full h-full overflow-hidden rounded-[16px] group">
                 <img
-                  src="/ourSolutionCard2.jpg"
+                  src="/passiveIncome/whatIsIncluded.jpg"
                   alt="Passive Income Farming"
-                  className="absolute inset-0 w-full h-full object-cover rounded-3xl transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  className="absolute inset-0 w-full h-full object-cover rounded-3xl"
                 />
                 <div className="absolute inset-0 bg-black/5 rounded-3xl"></div>
               </div>
