@@ -48,7 +48,7 @@ const EtCaseStudy = ({ bgColor = "bg-[#F7F7F7]" }) => {
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
-            src="/caseStudyHomeimg.jpg"
+            src="/case-studies/case-study3.jpg"
             alt="Kids Explore the Magic of Growing Without Soil"
             className="et-casestudy-bg w-full h-full object-cover"
           />

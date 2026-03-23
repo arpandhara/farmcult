@@ -22,7 +22,7 @@ const EtTrainingDifferent = () => {
         {/* Large Image with Overlaid Card */}
         <div className="relative w-full rounded-[16px] overflow-hidden bg-gray-100 min-h-[500px] lg:min-h-[640px] flex items-center justify-end group et-different-image">
           <img
-            src="/caseStudyHomeimg.jpg"
+            src="/Training.jpg"
             alt="Training Different"
             className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
             onError={(e) => { e.target.src = '/ourSolutionCard2.jpg'; }}
