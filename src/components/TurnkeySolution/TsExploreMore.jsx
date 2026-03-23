@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TsExploreMore = () => {
   return (
@@ -35,12 +36,14 @@ const TsExploreMore = () => {
                   <p className="text-[1rem] text-white/95 leading-relaxed mb-8">
                     Invest in a hydroponic farm while Farmcult manages operations end-to-end.
                   </p>
+                  <Link to="/passive-income">
                   <button className="bg-white text-text-primary px-6 py-3 rounded-full text-[0.95rem] font-semibold flex items-center justify-between w-[200px] hover:bg-gray-100 transition-colors">
                     Learn More
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -61,12 +64,14 @@ const TsExploreMore = () => {
                   <p className="text-[1rem] text-white/95 leading-relaxed mb-8 pr-2">
                     Learn hydroponic farming through practical training, workshops, and guidance.
                   </p>
+                  <Link to="/education-and-training">
                   <button className="bg-white text-text-primary px-6 py-3 rounded-full text-[0.95rem] font-semibold flex items-center justify-between w-[200px] hover:bg-gray-100 transition-colors">
                     Learn More
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
