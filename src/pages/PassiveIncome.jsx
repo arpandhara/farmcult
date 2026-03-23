@@ -75,7 +75,7 @@ const PassiveIncome = () => {
       exit="exit"
       ref={containerRef}
       onAnimationComplete={() => ScrollTrigger.refresh()}
-      className="bg-[#FAFAFA]"
+      className="bg-[#F7F7F7]"
     >
       <PiHero />
       <PiMainContent />

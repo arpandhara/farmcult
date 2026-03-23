@@ -2,15 +2,15 @@ import React from 'react';
 
 const EtReviews = () => {
   return (
-    <section className="et-reviews-container py-20 lg:py-24 bg-[#F9FAFB] px-[5%]">
-      <div className="max-w-[1280px] mx-auto">
+    <section className="et-reviews-container py-[80px] md:py-[100px] lg:py-[140px] px-4 md:px-[68px] bg-[#FAFAFA]">
+      <div className="mx-auto">
         {/* Header Row */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 et-reviews-header">
           <div>
-            <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#1F2937] mb-3 leading-[1.2]">
+            <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-3">
               What Participants Say
             </h2>
-            <p className="text-[1.05rem] text-[#6B7280] leading-[1.6] max-w-2xl">
+            <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary max-w-2xl">
               Real feedback from students, growers, and professionals who've trained with Farmcult.
             </p>
           </div>
@@ -23,7 +23,7 @@ const EtReviews = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 et-reviews-grid">
 
           {/* Left Card: Overall Rating */}
-          <div className="lg:row-span-2 bg-white rounded-[24px] p-8 lg:p-12 flex flex-col items-center justify-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full min-h-[450px]">
+          <div className="lg:row-span-2 bg-white rounded-[16px] p-8 lg:p-12 flex flex-col items-center justify-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full min-h-[450px]">
             <h3 className="text-[2.5rem] lg:text-[2.8rem] font-semibold text-[#5F6368] leading-none mb-2">Google</h3>
             <p className="text-[#5F6368] text-[1.1rem] mb-6">average rating</p>
 
@@ -60,7 +60,7 @@ const EtReviews = () => {
           </div>
 
           {/* Middle Card */}
-          <div className="bg-white rounded-[24px] p-8 lg:p-10 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full">
+          <div className="bg-white rounded-[16px] p-8 lg:p-10 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full">
             <svg width="32" height="32" viewBox="0 0 48 48" className="mb-4">
               <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
               <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
@@ -95,7 +95,7 @@ const EtReviews = () => {
           </div>
 
           {/* Right Card */}
-          <div className="bg-white rounded-[24px] p-8 lg:p-10 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full">
+          <div className="bg-white rounded-[16px] p-8 lg:p-10 flex flex-col items-center text-center shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full">
             <svg width="32" height="32" viewBox="0 0 48 48" className="mb-4">
               <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
               <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
@@ -130,7 +130,7 @@ const EtReviews = () => {
           </div>
 
           {/* Bottom Card (spanning 2 cols) */}
-          <div className="lg:col-span-2 bg-white rounded-[24px] p-8 lg:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full justify-center lg:justify-start">
+          <div className="lg:col-span-2 bg-white rounded-[16px] p-8 lg:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-shadow duration-300 h-full justify-center lg:justify-start">
             <img src="/ourSolutionCard2.jpg" alt="Avatar" className="w-[60px] h-[60px] rounded-full object-cover flex-shrink-0 sm:mt-1 shadow-sm bg-gray-200" />
             <div className="flex flex-col text-center sm:text-left">
               <p className="text-[#4B5563] text-[1.05rem] leading-[1.7] mb-4">

@@ -1,40 +1,92 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const EtCaseStudy = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const EtCaseStudy = ({ bgColor = "bg-[#F7F7F7]" }) => {
+  const sectionRef = useRef(null);
+
+  useGSAP(() => {
+    // Initial reveal of the card container
+    gsap.fromTo('.et-casestudy-container-inner',
+      { scale: 0.95, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
+        scale: 1, autoAlpha: 1, duration: 1.2, ease: 'power2.out'
+      }
+    );
+
+    // Slide in the white content card
+    gsap.fromTo('.et-casestudy-inner-card',
+      { x: 40, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.et-casestudy-container-inner', start: 'top 60%' },
+        x: 0, autoAlpha: 1, duration: 1, delay: 0.3, ease: 'power3.out'
+      }
+    );
+
+    // Stagger elements inside the card
+    gsap.fromTo('.et-casestudy-tag, .et-casestudy-title, .et-casestudy-desc, .et-casestudy-footer',
+      { y: 20, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.et-casestudy-inner-card', start: 'top 80%' },
+        y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.15, delay: 0.5, ease: 'power3.out'
+      }
+    );
+  }, { scope: sectionRef });
+
   return (
-    <section className="et-case-study-container py-20 lg:py-24 bg-white px-[5%]">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="relative w-full rounded-[24px] lg:rounded-[32px] overflow-hidden min-h-[500px] lg:min-h-[640px] flex items-center justify-center lg:justify-end shadow-[0_4px_24px_rgba(0,0,0,0.06)] group">
-          {/* Background Image */}
+    <section
+      className={`et-case-study-section w-full py-[80px] md:py-[100px] lg:py-[140px] px-4 md:px-[68px] ${bgColor} flex justify-center`}
+      ref={sectionRef}
+    >
+      {/* Edge-to-edge on mobile, rounded max-width on tablet/desktop */}
+      <div className="et-casestudy-container-inner relative w-full h-[550px] md:h-[500px] lg:h-[600px] rounded-[16px] overflow-hidden shadow-none md:shadow-xl group">
+
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
             src="/caseStudyHomeimg.jpg"
             alt="Kids Explore the Magic of Growing Without Soil"
-            className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
-            onError={(e) => { e.target.src = '/ourSolutionCard2.jpg'; }}
+            className="et-casestudy-bg w-full h-full object-cover"
           />
+          {/* Subtle dark overlay for better depth */}
+          <div className="absolute inset-0 bg-black/10"></div>
+        </div>
 
-          {/* Overlay Gradient (adds deeper contrast if needed, but the original was plain) */}
-          <div className="absolute inset-0 bg-black/5"></div>
+        {/* Safe GSAP Flex Wrapper - Centers on mobile, right-aligns on desktop */}
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center md:justify-end p-5 lg:pr-16 z-10 pointer-events-none">
+          
+          {/* The Card - Fluid width on mobile, bounded max-width */}
+          <div className="et-casestudy-inner-card pointer-events-auto bg-[#F7F7F7] md:bg-white/95 backdrop-blur-sm rounded-[16px] p-7 md:p-24 lg:p-12 w-[92%] max-w-[380px] md:max-w-[420px] lg:max-w-[480px] min-h-[440px] md:min-h-[480px] lg:min-h-[520px] shadow-2xl flex flex-col justify-start items-start">
 
-          {/* Content Card */}
-          <div className="relative z-10 bg-white rounded-[24px] p-10 lg:p-14 w-[90%] sm:w-[80%] lg:w-[480px] my-12 lg:my-0 lg:mr-16 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-            <span className="inline-block bg-[#E8F5E9] text-[#2E7D32] px-4 py-1.5 rounded-full text-[0.85rem] font-semibold mb-6">
-              Case Study
-            </span>
+            {/* Capsule */}
+            <div className="et-casestudy-tag px-[16px] py-[6px] bg-[#E3F0D3] text-[#343434] rounded-full mb-6 md:mb-8">
+              <span className="font-inter font-medium text-[14px] leading-none m-0">Case Study</span>
+            </div>
 
-            <h2 className="text-[2rem] lg:text-[2.4rem] font-bold text-[#111827] leading-[1.2] mb-5 tracking-tight">
-              Kids Explore the<br className="hidden sm:block" /> Magic of Growing<br className="hidden sm:block" /> Without Soil
+            {/* Heading - Fixed line heights to prevent vertical overlap */}
+            <h2 className="et-casestudy-title font-inter text-[32px] md:text-[32px] font-medium md:font-medium text-black leading-[1.2] md:leading-[48px] mb-8 tracking-tight m-0 w-full">
+              Kids Explore the<br /> Magic of Growing<br /> Without Soil
             </h2>
 
-            <p className="text-[1.05rem] text-[#4B5563] leading-[1.65] mb-12">
+            {/* Paragraph */}
+            <p className="et-casestudy-desc font-inter text-[16px] md:text-[16px] font-normal text-black leading-[1.6] md:leading-[29px] mb-8 md:mb-2 opacity-90 m-0 w-full md:max-w-[90%]">
               A fun and educational workshop at Elante Mall introducing children to hydroponics, urban farming, and healthy eating
             </p>
 
-            <div className="text-[#2E7D32] font-semibold text-[1.05rem]">
-              Jan 2025
+            {/* Footer */}
+            <div className="et-casestudy-footer w-full flex justify-between items-center mt-auto">
+              <span className="et-casestudy-date font-inter text-[#81B622] font-bold text-[16px] m-0">
+                Jan 2025
+              </span>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

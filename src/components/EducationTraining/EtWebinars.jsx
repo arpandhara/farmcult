@@ -2,38 +2,40 @@ import React from 'react';
 
 const EtWebinars = () => {
   return (
-    <section className="et-webinars-container py-20 lg:py-28 bg-[#FAFAFA] px-[5%]">
-      <div className="max-w-6xl mx-auto et-webinars-content">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+    /* Added px-[68px] here to ensure the 68px padding is consistent */
+    <section className="et-webinars-container py-[80px] md:py-[100px] lg:py-[80px] px-[68px] bg-[#F7F7F7]">
+      {/* Changed max-w-full to max-w-7xl and added mx-auto to keep it centered on large screens */}
+      <div className="mx-auto et-webinars-content">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-28 items-center">
 
           {/* Left Column (Image) */}
-          <div className="w-full lg:w-1/2">
-            <div className="pb-[70%] lg:pb-[75%] relative w-full overflow-hidden rounded-[2rem] group">
+          <div className="w-full lg:w-[455px] lg:h-[455px]">
+            <div className="relative w-full h-full overflow-hidden rounded-[16px] group shadow-[0_10px_40px_rgba(0,0,0,0.06)]">
               <img
-                src="/turnkeyIncentivesImg.jpg"
+                src="/Heroimg.jpg"
                 alt="Webinars"
-                className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                onError={(e) => { e.target.src = '/contactFromimg.jpg'; }}
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                onError={(e) => { e.target.src = '/turnkeyIncentivesImg.jpg'; }}
               />
-              <div className="absolute inset-0 bg-black/5 rounded-[2rem]"></div>
+              <div className="absolute inset-0 bg-black/5 rounded-[16px]"></div>
             </div>
           </div>
 
           {/* Right Column (Text) */}
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-text-primary mb-2 leading-[1.2]">
+          <div className="w-full lg:w-[58%] mt-10 lg:mt-0">
+            <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-6 md:mb-8">
               Webinars
             </h2>
 
-            <h4 className="text-[1.1rem] font-semibold text-[#333] mb-6">
+            <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-8 md:mb-10">
               Clearing the Air on Hydroponics.
-            </h4>
+            </p>
 
-            <p className="text-[1.05rem] text-[#555] leading-[1.8] mb-10 lg:pr-4">
+            <p className="font-inter text-[16px] md:text-[15px] md:max-w-full font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-10 md:mb-12">
               Farmcult hosts live and virtual webinar sessions designed to simplify hydroponics and modern farming concepts. These sessions help participants understand the fundamentals before moving into hands on training.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
               {/* List Items */}
               {[
                 "Hydroponics fundamentals",
@@ -43,10 +45,10 @@ const EtWebinars = () => {
                 "Live Q and A with experts"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-[#444] text-[1.05rem] leading-snug">{item}</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-secondary font-normal">{item}</span>
                 </div>
               ))}
             </div>
