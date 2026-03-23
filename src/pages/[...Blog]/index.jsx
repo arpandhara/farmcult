@@ -2,11 +2,25 @@ import WfcHeader from "../../components/WhyFarmcult/WfcHeader";
 import ContactSection from "../../components/ContactSection";
 import Footer from "../../components/Footer";
 import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import { Link } from "react-router-dom";
 import blogs from "../../assets/docs/blogs.js";
-import { useEffect, useState } from "react";
+import Content1 from "../../components/blogscontent/blog1.jsx";
+import Content2 from "../../components/blogscontent/blog2.jsx";
+import Content3 from "../../components/blogscontent/blog3.jsx";
+import Content4 from "../../components/blogscontent/blog4.jsx";
+
+const componentMap = {
+  1: Content1,
+  2: Content2,
+  3: Content3,
+  4: Content4,
+};
+
+function DynamicRenderer({ type }) {
+  const Component = componentMap[type];
+
+  return Component ? <Component /> : <div>Not Found</div>;
+}
 
 const Blog = () => {
   const { id } = useParams();
@@ -18,14 +32,7 @@ const Blog = () => {
   }
 
   const selectedBlogs = blogs.filter(b => blog.selectedIds.includes(b.id));
-  const [content, setContent] = useState("");
   
-    useEffect(() => {
-      fetch(`${blog.content}`)
-        .then((res) => res.text())
-        .then((text) => setContent(text));
-    }, [blog.content]);
-
   return (
     <div className="blog-page">
       <WfcHeader tag="BLOG" title={blog.title} subtitle={blog.description} />
@@ -38,8 +45,8 @@ const Blog = () => {
       <section className="flex justify-center px-16 py-16">
         <div className="max-w-[1152px] flex gap-16">
           {/* Article */}
-          <div className="max-w-[788px] text-[15px] leading-[29px] text-[#343434] prose lg:prose-lg">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          <div className="flex-1 max-w-[724px] text-[15px] leading-[29px] text-[#343434] space-y-6">
+            <DynamicRenderer type={blog.id} />
           </div>
 
           {/* Sidebar */}

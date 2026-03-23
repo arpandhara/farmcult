@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CaseStudy = () => {
+const CaseStudy = ({ bgColor = "bg-white" }) => {
   const sectionRef = useRef(null);
 
   useGSAP(() => {
@@ -39,7 +39,7 @@ const CaseStudy = () => {
 
   return (
     <section
-      className="case-study-section w-full py-10 md:py-16 lg:py-20 bg-white md:px-[5%] flex justify-center"
+      className={`case-study-section w-full py-10 md:py-16 lg:py-20 ${bgColor} md:px-[5%] flex justify-center`}
       ref={sectionRef}
     >
       {/* Edge-to-edge on mobile, rounded max-width on tablet/desktop */}

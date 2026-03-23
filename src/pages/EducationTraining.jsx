@@ -13,6 +13,7 @@ import EtTrainingDifferent from '../components/EducationTraining/EtTrainingDiffe
 import EtReviews from '../components/EducationTraining/EtReviews';
 import EtCaseStudy from '../components/EducationTraining/EtCaseStudy';
 import EtExploreMore from '../components/EducationTraining/EtExploreMore';
+import ParticipantReview from '../components/ParticipantsReviews';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,14 +109,7 @@ const EducationTraining = () => {
       }
     );
 
-    // Case Study Animations
-    gsap.fromTo('.et-case-study-container',
-      { y: 30, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.et-case-study-container', start: 'top 80%' },
-        y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out'
-      }
-    );
+
 
   }, { scope: containerRef });
 
@@ -133,7 +127,8 @@ const EducationTraining = () => {
       <EtWorkshops />
       <EtWebinars />
       <EtTrainingDifferent />
-      <EtReviews />
+      {/* <EtReviews /> */}
+      <ParticipantReview/>
       <EtCaseStudy />
       <EtExploreMore />
       <ContactSection />

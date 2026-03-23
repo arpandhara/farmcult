@@ -10,7 +10,6 @@ const caseStudies = [
     projectSize: "2 Acres",
     clientProfile: "Young Entrepreneur in Hospitality & Restaurant Business",
     projectType: "Turnkey Hydroponic Farm Development",
-    content: "/docs/case-study-md/case-study1.md",
     selectedIds: [2, 3],
   },
 
@@ -26,7 +25,6 @@ const caseStudies = [
     projectSize: "2 Acres",
     clientProfile: "Former Professional Footballer (I-League & ISL), Age 32",
     projectType: "Turnkey Hydroponic Farm Setup",
-    content: "/docs/case-study-md/case-study2.md",
     selectedIds: [1, 3],
   },
 
@@ -42,7 +40,6 @@ const caseStudies = [
     projectSize: "-",
     clientProfile: "Young participants from Curious Play Labs",
     projectType: "Offline hydroponics training workshop",
-    content: "/docs/case-study-md/case-study3.md",
     selectedIds: [1, 2],
   },
 ];

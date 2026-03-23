@@ -2,11 +2,23 @@ import WfcHeader from "../../components/WhyFarmcult/WfcHeader.jsx";
 import ContactSection from "../../components/ContactSection.jsx";
 import Footer from "../../components/Footer.jsx";
 import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import { Link } from "react-router-dom";
 import caseStudies from "../../assets/docs/case_studies.js";
-import { useEffect, useState } from "react";
+import Content1 from "../../components/casestudiescontent/caseStudy1.jsx";
+import Content2 from "../../components/casestudiescontent/caseStudy2.jsx";
+import Content3 from "../../components/casestudiescontent/caseStudy3.jsx";
+
+const componentMap = {
+  1: Content1,
+  2: Content2,
+  3: Content3,
+};
+
+function DynamicRenderer({ type }) {
+  const Component = componentMap[type];
+
+  return Component ? <Component /> : <div>Not Found</div>;
+}
 
 const CaseStudy = () => {
   const { id } = useParams();
@@ -17,15 +29,9 @@ const CaseStudy = () => {
     return <div>Case Study not found</div>;
   }
 
-  const selectedCaseStudies = caseStudies.filter(c => caseStudy.selectedIds.includes(c.id));
-  const [content, setContent] = useState("");
-
-  useEffect(() => {
-    fetch(`${caseStudy.content}`)
-      .then((res) => res.text())
-      .then((text) => setContent(text));
-  }, [caseStudy.content]);
-
+  const selectedCaseStudies = caseStudies.filter((c) =>
+    caseStudy.selectedIds.includes(c.id),
+  );
   return (
     <div className="case-study-page">
       <WfcHeader
@@ -76,8 +82,9 @@ const CaseStudy = () => {
             </div>
           </div>
           {/* Article */}
-          <div className="flex-1 max-w-[424px] text-[15px] leading-[29px] text-[#343434] space-y-6 prose lg:prose-lg">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+
+          <div className="flex-1 max-w-[724px] text-[15px] leading-[29px] text-[#343434] space-y-6">
+            <DynamicRenderer type={caseStudy.id} />
           </div>
 
           {/* Sidebar */}
@@ -137,11 +144,11 @@ const CaseStudy = () => {
 
                   <h3 className="font-bold text-lg">{caseStudy.title}</h3>
 
-                  <p className="text-sm leading-7">
-                    {caseStudy.description}
-                  </p>
+                  <p className="text-sm leading-7">{caseStudy.description}</p>
 
-                  <span className="text-[#8DC83A] font-bold">{caseStudy.date}</span>
+                  <span className="text-[#8DC83A] font-bold">
+                    {caseStudy.date}
+                  </span>
                 </div>
               </Link>
             ))}
