@@ -8,9 +8,9 @@ const Footer = () => {
     {
       title: 'Solutions',
       links: [
-        { label: 'Passive Income Model', path: '/solutions' },
-        { label: 'Turnkey End-to-End', path: '/solutions' },
-        { label: 'Education & Training', path: '/solutions' },
+        { label: 'Passive Income', path: '/passive-income' },
+        { label: 'Turnkey Solution', path: '/turnkey-solution' },
+        { label: 'Education & Training', path: '/education-and-training' },
       ]
     },
     {
