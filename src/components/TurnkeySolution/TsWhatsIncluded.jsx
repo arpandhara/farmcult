@@ -37,7 +37,7 @@ const TsWhatsIncluded = () => {
           <div className="w-full lg:w-[455px] lg:h-[426px] mt-10 lg:mt-0">
             <div className="pb-[60%] lg:pb-[70%] relative w-full h-full overflow-hidden rounded-[16px] group">
               <img 
-                src="/caseStudyHomeimg.jpg" 
+                src="/blogs/WhyHydroponicsFarmsFail.jpg" 
                 alt="Turnkey Hydroponic Farm" 
                 className="absolute inset-0 w-full h-full object-cover rounded-3xl"
                 onError={(e) => { e.target.src = '/ourSolutionCard3.jpg'; }}

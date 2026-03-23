@@ -1,97 +1,80 @@
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight } from 'lucide-react';
-
-gsap.registerPlugin(ScrollTrigger);
+import React from 'react';
 
 const EtExploreMore = () => {
-  const sectionRef = useRef(null);
-
-  useGSAP(() => {
-    // Left text animations
-    gsap.fromTo('.explore-title',
-      { y: 30, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-        y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out'
-      }
-    );
-
-    gsap.fromTo('.explore-desc',
-      { y: 20, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-        y: 0, autoAlpha: 1, duration: 1, delay: 0.2, ease: 'power3.out'
-      }
-    );
-
-    // Cards staggered animation
-    gsap.fromTo('.explore-card',
-      { y: 50, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.explore-cards-wrapper', start: 'top 85%' },
-        y: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power2.out'
-      }
-    );
-  }, { scope: sectionRef });
-
   return (
-    <section className="explore-section flex flex-col lg:flex-row bg-[#FAFAFA] px-[16px] md:px-[5%] pt-[10px] pb-[16px] md:py-[80px] lg:py-[100px] min-h-[80vh] gap-[48px] md:gap-[10%] lg:gap-[10%] items-start w-full" ref={sectionRef}>
-
-      <div className="explore-left flex-1 lg:flex-none lg:w-[25%] lg:max-w-[350px] mb-0 text-left w-full flex flex-col gap-[24px]">
-        <h2 className="explore-title font-inter text-[32px] md:text-[32px] font-medium leading-[48px] md:leading-[48px] text-black m-0">
-          Explore More<br />Solutions
-        </h2>
-        <p className="explore-desc font-inter text-[15px] md:text-[15px] font-normal leading-[29px] md:leading-[29px] text-text-primary m-0">
-          From hands-free investing to hands-on farming, we offer flexible ways to work with Farmcult based on your goals.
-        </p>
-      </div>
-
-      <div className="explore-right flex-1 w-full mt-0 lg:mt-0">
-        <div className="explore-cards-wrapper flex flex-col md:flex-row gap-[28px] md:gap-14 justify-between">
-          
-          {/* Card 1 */}
-          <div 
-            className="explore-card flex-1 gap-24 relative bg-[#ECECEC] bg-cover bg-center rounded-[16px] md:rounded-[20px] h-[337px] md:h-auto md:min-h-[540px] w-full max-w-[370px] md:max-w-none mx-auto md:mx-0 flex flex-col justify-between p-[25px] md:py-10 md:px-8 text-white overflow-hidden transition-transform duration-400 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.1)] cursor-pointer" 
-            style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%), url('/ourSolutionCard1.jpg')" }}
-            onClick={() => window.location.href='/passive-income'}
-          >
-            <div className="explore-card-overlay hidden"></div>
-            <div className="explore-card-top relative z-10 w-full">
-              <h3 className="explore-card-title font-inter text-[24px] md:text-[24px] font-bold leading-[29px] md:leading-[29px] m-0 w-[70%] h-auto">Passive Income<br />Model</h3>
-            </div>
-            <div className="explore-card-bottom relative z-10 w-full flex flex-col gap-[50px] md:gap-6 justify-end">
-              <p className="explore-card-desc font-inter text-[15px] md:text-[15px] font-normal leading-[29px] text-[#F7F7F7] m-0 w-full h-auto">
-                Invest in a hydroponic farm while Farmcult manages operations end-to-end.
-              </p>
-              <button className="explore-btn w-full h-[40px] md:h-auto flex justify-between items-center bg-white text-text-primary border-none px-[24px] py-0 md:py-[12px] md:px-[18px] rounded-[40px] md:rounded-[30px] font-inter text-[15px] md:text-[0.9rem] font-medium md:font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group m-0">
-                <span className='text-[12px]'>Learn More</span> <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
+    <section className="et-explore-container py-20 lg:py-28 bg-[#FAFAFA] px-[5%]">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-stretch">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/3 flex flex-col justify-center">
+            <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-text-primary mb-6 leading-[1.2]">
+              Explore More<br />Solutions
+            </h2>
+            <p className="text-[1.05rem] text-[#555] leading-[1.8] mb-8 lg:pr-4">
+              From hands-free investing to hands-on farming, we offer flexible ways to work with Farmcult based on your goals.
+            </p>
           </div>
 
-          {/* Card 2 */}
-          <div 
-            className="explore-card flex-1 gap-24 relative bg-[#ECECEC] bg-cover bg-center rounded-[16px] md:rounded-[20px] h-[337px] md:h-auto md:min-h-[540px] w-full max-w-[370px] md:max-w-none mx-auto md:mx-0 flex flex-col justify-between p-[25px] md:py-10 md:px-8 text-white overflow-hidden transition-transform duration-400 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.1)] cursor-pointer" 
-            style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%), url('/turnkeyIncentivesImg.jpg')" }}
-            onClick={() => window.location.href='/turnkey-solution'}
-          >
-            <div className="explore-card-overlay hidden"></div>
-            <div className="explore-card-top relative z-10 w-full">
-              <h3 className="explore-card-title font-inter text-[24px] md:text-[24px] font-bold leading-[29px] md:leading-[29px] m-0 w-full h-auto">Turnkey<br />Solution</h3>
-            </div>
-            <div className="explore-card-bottom relative z-10 w-full flex flex-col gap-[50px] md:gap-6 justify-end">
-              <p className="explore-card-desc font-inter text-[15px] md:text-[15px] font-normal leading-[29px] text-[#F7F7F7] m-0 w-full h-auto">
-                Farmcult will build and handover a fully operational hydroponic farm on your land.
-              </p>
-              <button className="explore-btn w-full h-[40px] md:h-auto flex justify-between items-center bg-white text-text-primary border-none px-[24px] py-0 md:py-[12px] md:px-[18px] rounded-[40px] md:rounded-[30px] font-inter text-[15px] md:text-[0.9rem] font-medium md:font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group m-0">
-                <span className='text-[12px]'>Learn More</span> <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
-          </div>
+          {/* Right Cards */}
+          <div className="w-full lg:w-2/3 flex flex-col sm:flex-row gap-6">
+            {/* Card 1: Passive Income Model */}
+            <div
+              className="flex-1 relative rounded-3xl overflow-hidden group aspect-[4/5] sm:aspect-auto sm:min-h-[400px] cursor-pointer"
+              onClick={() => window.location.href = '/passive-income'}
+            >
+              <img
+                src="/ourSolutionCard1.jpg"
+                alt="Passive Income Model"
+                className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/90"></div>
 
+              <div className="relative h-full flex flex-col justify-between p-8 z-10 text-white">
+                <h3 className="text-[1.6rem] font-bold max-w-[200px] leading-tight">Passive Income<br />Model</h3>
+                <div className="mt-auto">
+                  <p className="text-[1rem] text-white/95 leading-relaxed mb-8">
+                    Invest in a hydroponic farm while Farmcult manages operations end-to-end.
+                  </p>
+                  <button className="bg-white text-text-primary px-6 py-3 rounded-full text-[0.95rem] font-semibold flex items-center justify-between w-[200px] hover:bg-gray-100 transition-colors">
+                    Learn More
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Turnkey Solution */}
+            <div
+              className="flex-1 relative rounded-3xl overflow-hidden group aspect-[4/5] sm:aspect-auto sm:min-h-[400px] cursor-pointer"
+              onClick={() => window.location.href = '/turnkey-solution'}
+            >
+              <img
+                src="/GovernmentIncentives.jpg"
+                alt="Turnkey Solution"
+                className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                onError={(e) => { e.target.src = '/ourSolutionCard3.jpg'; }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/90"></div>
+
+              <div className="relative h-full flex flex-col justify-between p-8 z-10 text-white">
+                <h3 className="text-[1.6rem] font-bold max-w-[200px] leading-tight">Turnkey<br />Solution</h3>
+                <div className="mt-auto">
+                  <p className="text-[1rem] text-white/95 leading-relaxed mb-8 pr-2">
+                    Farmcult will build and handover a fully operational hydroponic farm on your land.
+                  </p>
+                  <button className="bg-white text-text-primary px-6 py-3 rounded-full text-[0.95rem] font-semibold flex items-center justify-between w-[200px] hover:bg-gray-100 transition-colors">
+                    Learn More
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

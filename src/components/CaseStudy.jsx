@@ -48,7 +48,7 @@ const CaseStudy = ({ bgColor = "bg-white" }) => {
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
-            src="/caseStudyHomeimg.jpg"
+            src="/home2acre.jpg"
             alt="Hydroponic Farm Facility"
             className="case-study-bg w-full h-full object-cover"
           />

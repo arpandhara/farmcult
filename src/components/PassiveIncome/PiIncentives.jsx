@@ -29,7 +29,7 @@ const PiIncentives = () => {
             {/* 3. Removed 'group' from parent and hover/transform classes from the image */}
             <div className="pb-[60%] lg:pb-[65%] relative w-full overflow-hidden rounded-3xl">
               <img
-                src="/ourSolutionCard3.jpg"
+                src="/GovernmentIncentives.jpg"
                 alt="Government Incentives"
                 className="absolute inset-0 w-full h-full object-cover"
               />
