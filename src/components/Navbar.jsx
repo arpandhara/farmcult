@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const lastScrollY = useRef(0);
   const scrollThreshold = 10; // Buffer to prevent jitter
 
@@ -88,9 +89,9 @@ const Navbar = () => {
           <div className="nav-col nav-links-col hidden lg:flex flex-1 justify-center">
             <div className="nav-links flex gap-10 items-center">
               <div className="nav-item group relative py-4">
-                <Link to="/solutions" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent block">
+                <button type="button" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent block cursor-pointer">
                   Solutions
-                </Link>
+                </button>
                 <div className="absolute top-full left-0 w-[220px] bg-white border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] z-50 transform origin-top translate-y-2 group-hover:translate-y-0">
                   <Link to="/passive-income" className="block px-5 py-2.5 text-[0.95rem] text-text-primary hover:bg-gray-50 hover:text-accent transition-colors">Passive Income</Link>
                   <Link to="/turnkey-solution" className="block px-5 py-2.5 text-[0.95rem] text-text-primary hover:bg-gray-50 hover:text-accent transition-colors">Turnkey Solution</Link>
@@ -151,7 +152,22 @@ const Navbar = () => {
         className={`fixed inset-0 bg-white z-[105] flex flex-col items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] lg:hidden ${mobileMenuOpen ? 'translate-y-0' : '-translate-y-[100vh]'}`}
       >
         <div className="flex flex-col items-center gap-8 text-2xl font-medium w-full px-6 text-center">
-            <Link to="/solutions" onClick={() => setMobileMenuOpen(false)} className="nav-link-mobile transition-colors hover:text-accent w-full py-2">Solutions</Link>
+            <div className="w-full flex flex-col items-center">
+              <button 
+                onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                className="nav-link-mobile outline-none transition-colors hover:text-accent w-full py-2 flex items-center justify-center gap-2"
+              >
+                Solutions
+                <svg className={`w-6 h-6 transition-transform duration-300 ${mobileSolutionsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className={`flex flex-col items-center w-full overflow-hidden transition-all duration-300 ${mobileSolutionsOpen ? 'max-h-[200px] opacity-100 mt-4 gap-4' : 'max-h-0 opacity-0'}`}>
+                <Link to="/passive-income" onClick={() => setMobileMenuOpen(false)} className="text-xl text-text-primary hover:text-accent transition-colors w-full py-1">Passive Income</Link>
+                <Link to="/turnkey-solution" onClick={() => setMobileMenuOpen(false)} className="text-xl text-text-primary hover:text-accent transition-colors w-full py-1">Turnkey Solution</Link>
+                <Link to="/education-and-training" onClick={() => setMobileMenuOpen(false)} className="text-xl text-text-primary hover:text-accent transition-colors w-full py-1">Education & Training</Link>
+              </div>
+            </div>
             <Link to="/why-farmcult" onClick={() => setMobileMenuOpen(false)} className="nav-link-mobile transition-colors hover:text-accent w-full py-2">Why Farmcult</Link>
             <Link to="/technology" onClick={() => setMobileMenuOpen(false)} className="nav-link-mobile transition-colors hover:text-accent w-full py-2">Technology</Link>
             <Link to="/resources" onClick={() => setMobileMenuOpen(false)} className="nav-link-mobile transition-colors hover:text-accent w-full py-2">Resources</Link>

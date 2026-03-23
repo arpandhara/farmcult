@@ -29,7 +29,7 @@ const ContactSection = () => {
               <div className="info-group">
                 <span className="block text-[24px] font-medium mb-8">Location</span>
                 <p className="text-[16px] leading-[28px] opacity-100">
-                  Ground Floor, T1, E-328, Sector 75, <br />Sahibzada Ajit Singh Nagar, Punjab
+                  Farmcult Agritech Pvt Ltd Plot no 181, <br /> 32 Industrial Area Phase 1 Chandigarh, pincode 160002
                 </p>
               </div>
               <div className="info-group">
@@ -53,7 +53,6 @@ const ContactSection = () => {
                     <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">First Name</label>
                     <input
                       type="text"
-                      placeholder="John"
                       className="bg-transparent border-b border-[#DEDEDE] py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-inter text-[#1A1A1A]/60 focus:text-black"
                     />
                   </div>
@@ -61,7 +60,6 @@ const ContactSection = () => {
                     <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">Last Name</label>
                     <input
                       type="text"
-                      placeholder="Doe"
                       className="bg-transparent border-b border-[#DEDEDE] py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-inter text-[#1A1A1A]/60 focus:text-black placeholder:text-[#1A1A1A]/30"
                     />
                   </div>
@@ -78,7 +76,6 @@ const ContactSection = () => {
                     <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">Phone Number</label>
                     <input
                       type="tel"
-                      placeholder="+1 012 3456 789"
                       className="bg-transparent border-b border-[#1A1A1A]/60 py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-bold font-inter text-[#1A1A1A]/60 focus:text-black"
                     />
                   </div>
