@@ -14,7 +14,7 @@ const PiHero = () => {
           Passive Income Model
         </h1>
         <p className="pi-hero-desc text-white/90 text-[clamp(1.1rem,1.5vw,1.25rem)] font-medium leading-[1.6] max-w-2xl">
-          Invest in a hydroponic farm while Farmcult manages operations end-to-end.
+          End-to-end farm management, from seed to sale. We design , build, and operate - you simply invest.
         </p>
       </div>
       </div>

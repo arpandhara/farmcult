@@ -12,7 +12,7 @@ const PiIncentives = () => {
             {/* Grouped the top text together */}
             <div>
               <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-4 md:mb-6">
-                Government Incentives<br />Reduce Your Initial Investment
+                Government Subsidies Reduce<br />Your Initial Investment
               </h2>
               <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary md:max-w-[70%]">
                 Eligible hydroponic projects can receive capital subsidies of up to 50%, helping reduce initial investment and improve long-term viability.

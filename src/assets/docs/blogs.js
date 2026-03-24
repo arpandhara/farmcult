@@ -19,9 +19,9 @@ const blogs = [
   },
   {
     id: 3,
-    title: "Why Hydroponic Farms Fail",
+    title: "Hydroponic Break Even Explained",
     description:
-      "The real reason most commercial hydroponics projects struggle. Most hydroponic farms do not fail because...",
+      "The real reason most commercial hydroponics projects struggle",
     date: "Jan 2025",
     image: "/blogs/WhyHydroponicsFarmsFail.jpg",
     selectedIds: [2, 4],
@@ -30,7 +30,7 @@ const blogs = [
     id: 4,
     title: "Hydroponic Break Even Explained",
     description:
-      "How crop choice, pricing and planning decide your ROI timeline. Break-even is not a buzzword. It is the moment...",
+      "How crop choice, pricing and planning decide your ROI timeline.",
     date: "Jan 2025",
     image: "/blogs/blog4.jpg",
     selectedIds: [2, 3],
