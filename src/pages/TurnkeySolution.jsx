@@ -7,14 +7,14 @@ import Footer from '../components/Footer';
 import ContactSection from '../components/ContactSection';
 import TsHero from '../components/TurnkeySolution/TsHero';
 import TsWhatsIncluded from '../components/TurnkeySolution/TsWhatsIncluded';
-// import TsHowItWorks from '../components/TurnkeySolution/TsHowItWorks';
-import PiHowItWorks from '../components/PassiveIncome/PiHowItWorks'
+import TsHowItWorks from '../components/TurnkeySolution/TsHowItWorks';
+// import PiHowItWorks from '../components/PassiveIncome/PiHowItWorks'
 import CaseStudies from '../components/CaseStudy';
 import TsIncentives from '../components/TurnkeySolution/TsIncentives';
 import TsCaseStudy2 from '../components/TurnkeySolution/TsCaseStudy2';
 import TsExploreMore from '../components/TurnkeySolution/TsExploreMore';
 import PiIncentives from '../components/PassiveIncome/PiIncentives';
-import PiStatsGrid from '../components/PassiveIncome/PiStatsGrid';
+import TsStatsGrid from '../components/TurnkeySolution/TsStatsGrid';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -125,15 +125,14 @@ const TurnkeySolution = () => {
     >
       <TsHero />
       <TsWhatsIncluded />
-      {/* <TsHowItWorks /> */}
-      <PiHowItWorks />
+      <TsHowItWorks />
       {/* <TsCaseStudy /> */}
       <CaseStudies bgColor="bg-[#F7F7F7]" />
       {/* <TsIncentives /> */}
       <PiIncentives />
       
       <section className="px-4 md:px-[68px] mx-auto py-10 lg:py-16">
-        <PiStatsGrid />
+        <TsStatsGrid />
       </section>
 
       <TsCaseStudy2 />

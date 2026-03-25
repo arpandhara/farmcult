@@ -15,7 +15,7 @@ const PiMainContent = () => {
         </div>
 
         {/* Stats / Features Layout */}
-        <div className="pi-stats-grid grid grid-cols-1 md:grid-cols-3 md:divide-x md:border-x border-gray-200">
+        <div className="pi-stats-grid grid grid-cols-1 md:grid-cols-3 md:divide-x md:border-x border-[#DEDEDE]">
 
           {/* Feature 1 */}
           <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
@@ -66,11 +66,11 @@ const PiMainContent = () => {
                 What's Included in our<br className="hidden md:block" /> Passive Income Solution?
               </h2>
 
-              <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-6">
+              <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-primary mb-6">
                 Farmcult's passive income model is designed for investors and landowners who want exposure to modern agriculture without managing daily farm operations.
               </p>
 
-              <p className="font-inter text-[16px] md:text-[15px] md:max-w-[79%] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-8 md:mb-10">
+              <p className="font-inter text-[16px] md:text-[15px] md:max-w-[79%] font-normal leading-[26px] md:leading-[29px] text-text-primary mb-8 md:mb-10">
                 We handle the setup, cultivation, monitoring, and farm management while you benefit from a structured agricultural asset.
               </p>
 
@@ -81,28 +81,28 @@ const PiMainContent = () => {
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">End-to-end farm setup</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">End-to-end farm setup</span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Farm operations management</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Farm operations management</span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">IoT monitoring &amp; reporting</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">IoT monitoring &amp; reporting</span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Crop planning &amp; yeild optimisation</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Crop planning &amp; yeild optimisation</span>
                 </div>
 
                 {/* RIGHT COLUMN ORDER */}
@@ -110,28 +110,28 @@ const PiMainContent = () => {
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Market linkage &amp; sales coordination</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Market linkage &amp; sales coordination</span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Ongoing performance oversight</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Ongoing performance oversight</span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Minimum 5 acres &amp; above</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Minimum 5 acres &amp; above</span>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Investment in operational expenses</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Investment in operational expenses</span>
                 </div>
 
               </div>

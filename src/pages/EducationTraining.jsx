@@ -10,10 +10,10 @@ import EtHero from '../components/EducationTraining/EtHero';
 import EtWorkshops from '../components/EducationTraining/EtWorkshops';
 import EtWebinars from '../components/EducationTraining/EtWebinars';
 import EtTrainingDifferent from '../components/EducationTraining/EtTrainingDifferent';
-import EtReviews from '../components/EducationTraining/EtReviews';
+// import EtReviews from '../components/EducationTraining/EtReviews';
 import EtCaseStudy from '../components/EducationTraining/EtCaseStudy';
 import EtExploreMore from '../components/EducationTraining/EtExploreMore';
-import ParticipantReview from '../components/ParticipantsReviews';
+import EtTestimonialVideo from '../components/EducationTraining/EtTestimonialVideo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,8 +127,7 @@ const EducationTraining = () => {
       <EtWorkshops />
       <EtWebinars />
       <EtTrainingDifferent />
-      {/* <EtReviews /> */}
-      <ParticipantReview/>
+      <EtTestimonialVideo />
       <EtCaseStudy />
       <EtExploreMore />
       <ContactSection />

@@ -14,13 +14,13 @@ const PiIncentives = () => {
               <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-4 md:mb-6">
                 Government Subsidies Reduce<br />Your Initial Investment
               </h2>
-              <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary md:max-w-[70%]">
+              <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-primary md:max-w-[70%]">
                 Eligible hydroponic projects can receive capital subsidies of up to 50%, helping reduce initial investment and improve long-term viability.
               </p>
             </div>
             
             {/* This will now sit at the very bottom, aligned with the bottom of the image */}
-            <p className="font-inter text-[13px] md:text-[14px] text-[#888] mt-8 lg:mt-0">
+            <p className="font-inter text-[13px] md:text-[14px] text-text-primary mt-8 lg:mt-0">
               *Availability depends on project eligibility and applicable state or central government schemes.
             </p>
           </div>

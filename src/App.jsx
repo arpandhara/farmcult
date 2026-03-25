@@ -16,6 +16,7 @@ import Blogs from './pages/Blogs';
 import CaseStudies from './pages/CaseStudies';
 import Blog from './pages/[...Blog]';
 import CaseStudy from './pages/[...CaseStudy]';
+import TopBanner from './components/TopBanner';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,9 +34,16 @@ const ScrollToTop = () => {
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  const showBanner = location.pathname !== '/';
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <>
+      {showBanner && (
+        <div className="w-full pt-[75px] md:pt-[80px] z-50 relative bg-white">
+          <TopBanner />
+        </div>
+      )}
+      <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/passive-income" element={<PassiveIncome />} />
@@ -49,6 +57,7 @@ const AnimatedRoutes = () => {
         <Route path="/case-study/:id" element={<CaseStudy />} />
       </Routes>
     </AnimatePresence>
+    </>
   );
 };
 

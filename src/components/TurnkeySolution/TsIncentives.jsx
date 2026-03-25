@@ -2,7 +2,7 @@ import React from 'react';
 
 const TsIncentives = () => {
   return (
-    <section className="ts-incentives-container py-20 lg:py-32 bg-white px-[5%]">
+    <section className="ts-incentives-container py-20 lg:py-32 bg-[#F7F7F7] px-[5%]">
       <div className="max-w-6xl mx-auto">
         {/* Top part: Text and Image */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-16 lg:mb-24">

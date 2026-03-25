@@ -2,23 +2,23 @@ import React from 'react';
 
 const PiHero = () => {
   return (
-    <section className="pi-hero-container relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-20">
-      <div
-        className="pi-hero-bg absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 origin-bottom"
-        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/passiveIncome/piHeader.jpg')" }}
-      ></div>
+    <div className="w-full flex justify-center">
+      <section className="pi-hero-container relative w-full min-h-[240px] md:min-h-[280px] p-[24px] md:pt-[24px] md:pr-[64px] md:pb-[24px] md:pl-[64px] flex flex-col justify-center overflow-hidden">
+        <div
+          className="pi-hero-bg absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 origin-bottom"
+          style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/passiveIncome/piHeader.jpg')" }}
+        ></div>
 
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-[5%] mt-10 text-left]">
-        <div className="max-w-4xl">
-        <h1 className="pi-hero-title  text-white text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-[1.1] mb-6 tracking-tight">
-          Passive Income Model
-        </h1>
-        <p className="pi-hero-desc text-white/90 text-[clamp(1.1rem,1.5vw,1.25rem)] font-medium leading-[1.6] max-w-2xl">
-          End-to-end farm management, from seed to sale. We design , build, and operate - you simply invest.
-        </p>
-      </div>
-      </div>
-    </section>
+        <div className="relative z-10 w-full flex flex-col gap-[12px] md:gap-[6px] text-left">
+          <h1 className="pi-hero-title text-white font-['Inter'] font-medium text-[32px] md:text-[48px] leading-[40px] md:leading-[66px] tracking-normal m-0 max-w-full">
+            Passive Income Model
+          </h1>
+          <p className="pi-hero-desc text-white/90 font-['Inter'] font-normal text-[15px] md:text-[18px] leading-[24px] md:leading-[28px] tracking-normal m-0 w-full">
+            End-to-end farm management, from seed to sale. We design , build, and operate - you simply invest.
+          </p>
+        </div>
+      </section>
+    </div>
   );
 };
 

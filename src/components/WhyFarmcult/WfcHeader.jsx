@@ -30,7 +30,7 @@ const WfcHeader = ({
   return (
     <section
       ref={headerRef}
-      className="wfc-header-section pt-[120px] md:pt-[150px] pb-[40px] md:pb-[60px] px-4 md:px-[5%] text-center max-w-[1200px] mx-auto overflow-hidden"
+      className="wfc-header-section pt-[40px] md:pt-[60px] pb-[40px] md:pb-[60px] px-4 md:px-[5%] text-center max-w-[1200px] mx-auto overflow-hidden"
     >
       <div className="wfc-header-inner w-full">
         <span className="wfc-label block text-[0.8rem] md:text-[18px] font-bold text-accent mb-4 md:mb-6 uppercase">

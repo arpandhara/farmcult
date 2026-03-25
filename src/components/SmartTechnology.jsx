@@ -54,7 +54,7 @@ const SmartTechnology = () => {
   ];
 
   return (
-    <section className="smart-tech-section flex flex-col lg:flex-row bg-[#F7F7F7] px-[16px] md:px-[5%] pt-[40px] md:py-[80px] lg:py-[100px] min-h-[70vh] gap-[32px] md:gap-12 lg:gap-[5%] items-center" ref={sectionRef}>
+    <section className="smart-tech-section flex flex-col lg:flex-row bg-white px-[16px] md:px-[5%] pt-[40px] md:py-[80px] lg:py-[100px] min-h-[70vh] gap-[32px] md:gap-12 lg:gap-[5%] items-center" ref={sectionRef}>
 
       {/* Left Content */}
       <div className="smart-tech-left w-full lg:w-[40%] lg:max-w-[450px] text-left lg:mr-4">

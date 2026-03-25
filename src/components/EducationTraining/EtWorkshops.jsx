@@ -11,15 +11,15 @@ const EtWorkshops = () => {
             </h2>
 
             <div className="flex flex-wrap gap-4 mb-6">
-              <span className="bg-[#E8F5E9] text-[#2E7D32] px-4 py-1.5 rounded-full text-[0.85rem] font-semibold">
+              <span className="bg-[#8DC83A]/25 text-[#343434] px-4 py-1.5 rounded-full text-[0.85rem] font-normal">
                 Chandigarh, India
               </span>
-              <span className="bg-[#E8F5E9] text-[#2E7D32] px-4 py-1.5 rounded-full text-[0.85rem] font-semibold">
+              <span className="bg-[#8DC83A]/25 text-[#343434] px-4 py-1.5 rounded-full text-[0.85rem] font-normal">
                 Online
               </span>
             </div>
 
-            <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-6">
+            <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-primary mb-6">
               Farmcult's onsite training is designed to build real, practical hydroponics skills. Learn directly at our Chandigarh facility through hands on sessions and guided practice.
             </p>
 
@@ -37,11 +37,11 @@ const EtWorkshops = () => {
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">{item}</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">{item}</span>
                 </div>
               ))}
             </div>
-            <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-secondary md:mt-[25px]">
+            <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-primary md:mt-[25px]">
               Workshops are available both online and offline, with a strong focus on clarity and real-world application.
             </p>
           </div>

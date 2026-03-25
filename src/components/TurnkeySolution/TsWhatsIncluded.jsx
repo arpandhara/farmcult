@@ -10,7 +10,7 @@ const TsWhatsIncluded = () => {
               What's Included in our<br className="hidden md:block" /> Turnkey Solution?
             </h2>
 
-            <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-secondary mb-6">
+            <p className="font-inter text-[16px] md:text-[15px] md:max-w-[80%] font-normal leading-[26px] md:leading-[29px] text-text-primary mb-6">
               Farmcult's turnkey model covers every stage of setting up a high-tech hydroponic farm. From design and infrastructure to crop planning and operational readiness.
             </p>
 
@@ -22,14 +22,14 @@ const TsWhatsIncluded = () => {
                 "Polyhouse construction",
                 "Crop planning & agronomy",
                 "Hydroponic system installation",
+                "Market linkages post-harvest",
                 "Minimum project size of 2.5 acres",
-                "Market linkages post-harvest"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">{item}</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">{item}</span>
                 </div>
               ))}
             </div>
