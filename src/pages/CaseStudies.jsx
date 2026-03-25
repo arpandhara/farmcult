@@ -6,7 +6,6 @@ import { Link, Navigate } from "react-router-dom";
 // import casestudies from "../assets/docs/blogs.js";
 import caseStudies from "../assets/docs/case_studies.js";
 
-
 const firstCaseStudy = caseStudies.find((caseStudy) => caseStudy.id === 1);
 const otherCaseStudies = caseStudies.filter((caseStudy) => caseStudy.id !== 1);
 
@@ -36,8 +35,13 @@ const CaseStudies = () => {
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-[32px] leading-[48px] font-medium text-black">
-                    {firstCaseStudy.title}
+                  <h2 className="case-study-title font-inter text-[32px] md:text-[32px] font-medium md:font-medium text-black leading-[1.2] md:leading-[48px] mb-8 tracking-tight m-0 w-full">
+                    {firstCaseStudy.title.split("\n").map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
                   </h2>
 
                   {/* Description */}
@@ -78,7 +82,12 @@ const CaseStudies = () => {
 
                 {/* Title */}
                 <h3 className="text-[18px] font-bold leading-[36px] text-[#343434]">
-                  {caseStudy.title}
+                  {caseStudy.title.split("\n").map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
                 </h3>
 
                 {/* Description */}

@@ -5,13 +5,9 @@ import { useGSAP } from '@gsap/react';
 
 const Navbar = () => {
   const navRef = useRef();
-  const location = useLocation();
   const [isVisible, setIsVisible] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
-  const lastScrollY = useRef(0);
-  const scrollThreshold = 10; // Buffer to prevent jitter
 
   useEffect(() => {
     // Prevent scrolling when mobile menu is open
@@ -20,34 +16,6 @@ const Navbar = () => {
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [mobileMenuOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (mobileMenuOpen) return; // Don't hide navbar when menu is open
-
-      const currentScrollY = window.scrollY;
-
-      // Background and blur effect after 50px
-      if (currentScrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-
-      // Hide on scroll down, show on scroll up with a threshold buffer
-      if (Math.abs(currentScrollY - lastScrollY.current) > scrollThreshold) {
-        if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-          setIsVisible(false);
-        } else {
-          setIsVisible(true);
-        }
-        lastScrollY.current = currentScrollY;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
   }, [mobileMenuOpen]);
 
   useGSAP(() => {
@@ -71,9 +39,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`nav-container fixed top-0 w-full z-[110] transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] left-0 ${
-          isScrolled || mobileMenuOpen || location.pathname === '/passive-income' || location.pathname === '/turnkey-solution' || location.pathname === '/education-and-training' ? 'bg-white/95 backdrop-blur-md shadow-sm py-4 px-4 md:px-[5%]' : 'bg-transparent py-6 md:py-8 px-4 md:px-[5%]'
-        }`}
+        className={`nav-container fixed top-0 w-full z-[110] transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] left-0 bg-white/95 backdrop-blur-md shadow-sm py-4 px-4 md:px-[5%]`}
         ref={navRef}
       >
         {/* Wrapper to maintain max-width behavior on fixed element */}

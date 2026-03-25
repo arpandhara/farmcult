@@ -1,7 +1,7 @@
 const caseStudies = [
   {
     id: 1,
-    title: "2 Acres. 24,000 Plants.",
+    title: "2 Acres.\n24,000 Plants.",
     description:
       "Transforming traditional farmland into a high-tech commercial hydroponic farm in Garh Mukhteshwar.",
     date: "Jan 2025",

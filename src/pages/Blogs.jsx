@@ -35,7 +35,12 @@ const Blogs = () => {
 
                   {/* Title */}
                   <h2 className="text-[32px] leading-[48px] font-medium text-black">
-                    {firstBlog.title}
+                    {firstBlog.title.split("\n").map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
                   </h2>
 
                   {/* Description */}
@@ -76,7 +81,12 @@ const Blogs = () => {
 
                 {/* Title */}
                 <h3 className="text-[18px] font-bold leading-[36px] text-[#343434]">
-                  {blog.title}
+                  {blog.title.split("\n").map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
                 </h3>
 
                 {/* Description */}
