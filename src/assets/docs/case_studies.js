@@ -17,9 +17,9 @@ const caseStudies = [
     id: 2,
     title: "From Professional Football to Professional Farming",
     description:
-      "A former professional footballer's journey from the field to building a hydroponic farm with Farmcult.",
+      "Not every entrepreneur starts their journey in a boardroom. Some start on a football field. A Former ISL Player's Journey into Hydroponics ",
     date: "Jan 2025",
-    image: "/case-studies/case-study2.jpg",
+    image: "/case-studies/pp.jpg",
 
     location: "30 km from Amritsar, Punjab",
     projectSize: "2 Acres",

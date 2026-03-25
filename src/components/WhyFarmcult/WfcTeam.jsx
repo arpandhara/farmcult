@@ -37,12 +37,13 @@ const WfcTeam = () => {
       <section className="wfc-team-cards-section px-4 md:px-[5%] pb-16 md:pb-[4rem] max-w-[1600px] mx-auto">
         <div className="wfc-team-cards-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-16 gap-x-6 md:gap-x-8">
           {[
-            { name: 'Pritpal Singh', role: 'Founder & CEO', image: null },
+            { name: 'Pritpal Singh', role: 'Founder & CEO', image: '/whyFarmCult/PritpalSingh.jpg' },
             { name: 'Sanampreet', role: 'Manager: Projects & Business Development', image: '/whyFarmCult/teamSanampreet.jpg' },
-            { name: 'Aman', role: 'Sr Agronomist', image: null },
+            { name: 'Aman', role: 'Sr Agronomist', image: '/whyFarmCult/Aman.jpg' },
             { name: 'Subhajit', role: 'Procurement Manager', image: '/whyFarmCult/Subhajit.jpg' },
             { name: 'Harleen', role: 'Business Development Manager', image: '/whyFarmCult/Harleen.jpg' },
             { name: 'Dr Akshiptika', role: 'Head- Research and Training', image: '/whyFarmCult/DrAkshiptika.jpg' },
+            { name: 'Aditya Rathi', role: 'Jr Agronomist', image: '/whyFarmCult/AdityaRathi.jpg' }
           ].map((member, i) => (
             <div className="wfc-team-card flex flex-col items-center group transition-transform duration-300 hover:-translate-y-2" key={i}>
               {/* Circular Professional Photo */}

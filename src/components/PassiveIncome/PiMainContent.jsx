@@ -18,7 +18,6 @@ const PiMainContent = () => {
         <div className="pi-stats-grid grid grid-cols-1 md:grid-cols-3 md:divide-x md:border-x border-gray-200">
 
           {/* Feature 1 */}
-          {/* Notice we added md:px-8 lg:px-12 for spacing instead of using grid gaps */}
           <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
             <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-2 md:mb-3">
               Up to 50%
@@ -76,7 +75,8 @@ const PiMainContent = () => {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-6">
-                {/* List Item 1 */}
+
+                {/* LEFT COLUMN ORDER */}
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -84,7 +84,6 @@ const PiMainContent = () => {
                   <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">End-to-end farm setup</span>
                 </div>
 
-                {/* List Item 4 */}
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -92,7 +91,6 @@ const PiMainContent = () => {
                   <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Farm operations management</span>
                 </div>
 
-                {/* List Item 2 */}
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -100,15 +98,14 @@ const PiMainContent = () => {
                   <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">IoT monitoring &amp; reporting</span>
                 </div>
 
-                {/* List Item 5 */}
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Crop planning &amp; yield optimisation</span>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Crop planning &amp; yeild optimisation</span>
                 </div>
 
-                {/* List Item 3 */}
+                {/* RIGHT COLUMN ORDER */}
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -116,20 +113,34 @@ const PiMainContent = () => {
                   <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Market linkage &amp; sales coordination</span>
                 </div>
 
-                {/* List Item 6 */}
                 <div className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Ongoing performance oversight</span>
                 </div>
+
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Minimum 5 acres &amp; above</span>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-medium">Investment in operational expenses</span>
+                </div>
+
               </div>
             </div>
 
-            <div className="w-full lg:w-[455px] lg:h-[426px] mt-10 lg:mt-0">
+            <div className="w-full lg:w-[555px] lg:h-[468px] mt-10 lg:mt-0">
               <div className="pb-[60%] lg:pb-[70%] relative w-full h-full overflow-hidden rounded-[16px] group">
                 <img
-                  src="/passiveIncome/whatIsIncluded.jpg"
+                  src="/passiveIncome/piSolutions.jpg"
                   alt="Passive Income Farming"
                   className="absolute inset-0 w-full h-full object-cover rounded-3xl"
                 />

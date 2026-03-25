@@ -22,6 +22,7 @@ const TsWhatsIncluded = () => {
                 "Polyhouse construction",
                 "Crop planning & agronomy",
                 "Hydroponic system installation",
+                "Minimum project size of 2.5 acres",
                 "Market linkages post-harvest"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
