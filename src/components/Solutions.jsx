@@ -139,18 +139,18 @@ const Solutions = () => {
             </div>
             <div className="solution-card-bottom relative z-10 w-full flex flex-col gap-[50px] md:gap-6 justify-end">
               <p className="solution-card-desc font-inter text-[15px] md:text-[15px] font-normal leading-[29px] text-[#F7F7F7] m-0 w-full h-auto">
-                Farmcult will build and handover a fully operational hydroponic
+                Farmcult will build a fully operational hydroponic
                 farm on your land.
               </p>
               <Link to="/turnkey-solution">
-              <button className="solution-btn w-full h-[40px] md:h-auto flex justify-between items-center bg-white text-text-primary border-none px-[24px] py-0 md:py-[12px] md:px-[18px] rounded-[40px] md:rounded-[30px] font-inter text-[15px] md:text-[0.9rem] font-medium md:font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group m-0">
-                <span className="text-[12px]">Learn More</span>{" "}
-                <ArrowRight
-                  size={12}
-                  className="transition-transform group-hover:translate-x-1"
+                <button className="solution-btn w-full h-[40px] md:h-auto flex justify-between items-center bg-white text-text-primary border-none px-[24px] py-0 md:py-[12px] md:px-[18px] rounded-[40px] md:rounded-[30px] font-inter text-[15px] md:text-[0.9rem] font-medium md:font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group m-0">
+                  <span className="text-[12px]">Learn More</span>{" "}
+                  <ArrowRight
+                    size={12}
+                    className="transition-transform group-hover:translate-x-1"
                   />
-              </button>
-                  </Link>
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -174,14 +174,14 @@ const Solutions = () => {
                 and guidance.
               </p>
               <Link to="/education-and-training">
-              <button className="solution-btn w-full h-[40px] md:h-auto flex justify-between items-center bg-white text-text-primary border-none px-[24px] py-0 md:py-[12px] md:px-[18px] rounded-[40px] md:rounded-[30px] font-inter text-[15px] md:text-[0.9rem] font-medium md:font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group m-0">
-                <span className="text-[12px]">Learn More</span>{" "}
-                <ArrowRight
-                  size={12}
-                  className="transition-transform group-hover:translate-x-1"
+                <button className="solution-btn w-full h-[40px] md:h-auto flex justify-between items-center bg-white text-text-primary border-none px-[24px] py-0 md:py-[12px] md:px-[18px] rounded-[40px] md:rounded-[30px] font-inter text-[15px] md:text-[0.9rem] font-medium md:font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group m-0">
+                  <span className="text-[12px]">Learn More</span>{" "}
+                  <ArrowRight
+                    size={12}
+                    className="transition-transform group-hover:translate-x-1"
                   />
-              </button>
-                  </Link>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
