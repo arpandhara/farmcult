@@ -5,13 +5,15 @@ const Hero = () => {
     <section className="hero-container relative w-full h-[100svh] min-h-[600px] flex flex-col items-center justify-center overflow-hidden">
       {/* Background Image Wrapper */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/Heroimg.jpg"
-          alt="Farmcult Modern Farming"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover object-center will-change-transform"
-          decoding="async"
-          loading="lazy"
-        />
+        >
+          <source src="/farmcult hero video.mp4" type="video/mp4" />
+        </video>
         {/* Dark Overlay for text readability */}
         <div className="absolute inset-0 bg-black/40 z-10"></div>
       </div>
@@ -53,4 +55,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero;
