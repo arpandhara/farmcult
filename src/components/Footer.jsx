@@ -41,15 +41,12 @@ const Footer = () => {
     <footer className="footer-section bg-[#F7F7F7] pt-20 flex flex-col min-h-[50vh]">
       <div className="container mx-auto px-[2%] flex-1 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
+
           {/* Logo and Tagline Section */}
           <div className="lg:col-span-4 flex flex-col">
             <Link to="/" className="inline-block mb-10">
               <img src="/logo.svg" alt="Farmcult Logo" className="h-10 lg:h-12" />
             </Link>
-            <h2 className="text-xl lg:text-2xl font-normal text-[#343434] max-w-[300px] leading-snug font-outfit">
-              Turn Your Idle Land Into A Money Generating Asset
-            </h2>
           </div>
 
           {/* Links Grid */}
@@ -63,16 +60,16 @@ const Footer = () => {
                   {column.links.map((link, lIdx) => (
                     <li key={lIdx}>
                       {link.path.startsWith('http') ? (
-                        <a 
-                          href={link.path} 
-                          target="_blank" 
+                        <a
+                          href={link.path}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-[18px] md:text-[18px] font-normal text-[#343434] hover:text-accent transition-colors font-inter "
                         >
                           {link.label}
                         </a>
                       ) : (
-                        <Link 
+                        <Link
                           to={link.path}
                           className="text-[18px] md:text-[18px] font-normal text-[#343434] hover:text-accent transition-colors font-inter"
                         >

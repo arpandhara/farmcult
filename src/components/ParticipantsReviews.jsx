@@ -12,10 +12,8 @@ const ParticipantsReviews = () => {
 
   const handleScroll = () => {
     if (carouselRef.current) {
-      // Calculate which slide is closest to center
       const scrollLeft = carouselRef.current.scrollLeft;
       const width = carouselRef.current.clientWidth;
-      // Add half a viewport to ensure snapping triggers accurately at centers
       const newActive = Math.round(scrollLeft / width);
       setActiveSlide(newActive);
     }
@@ -69,7 +67,7 @@ const ParticipantsReviews = () => {
 
   return (
     <section className="reviews-section w-full px-[5%] py-16 lg:py-24 bg-[#F9F9F9]" ref={sectionRef}>
-      {/* Header Area */}
+
       <div className="reviews-heading-area flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6 md:gap-0">
         <div className="max-w-[700px]">
           <h2 className="text-[32px] font-medium text-text-primary leading-[48px] mb-4">
@@ -84,10 +82,8 @@ const ParticipantsReviews = () => {
         </button>
       </div>
 
-      {/* Content Grid */}
       <div className="reviews-content-grid grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-        
-        {/* Left Col: Aggregate Rating */}
+
         <div className="review-card-item lg:col-span-4 bg-white rounded-[24px] p-10 shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-50 flex flex-col items-center justify-center text-center">
           <img src="/icons/Google__G__Logo 1.png" alt="Google" className="w-12 h-12 mb-6" />
           <h3 className="text-[2.8rem] font-bold text-text-primary leading-tight mb-2">Google</h3>
@@ -97,24 +93,28 @@ const ParticipantsReviews = () => {
           <img src="/icons/Google__G__Logo 1.png" alt="Google" className="w-12" />
         </div>
 
-        {/* Right Col: Individual Reviews */}
         <div className="lg:col-span-8 w-full overflow-hidden lg:overflow-visible">
-          <div 
+          <div
             ref={carouselRef}
             onScroll={handleScroll}
             className="flex lg:grid overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none lg:grid-cols-2 gap-4 lg:gap-8 -mx-[5%] px-[5%] lg:mx-0 lg:px-0 pb-2 lg:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
             {reviews.filter(r => !r.isHorizontal).map((review) => (
               <div key={review.id} className="review-card-item bg-white rounded-[24px] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-50 flex flex-col shrink-0 w-[85vw] sm:w-[50vw] snap-center lg:w-auto">
+
                 <div className="flex justify-center mb-6">
                   <img src="/icons/Google__G__Logo 1.png" alt="Google" className="w-8 h-8" />
                 </div>
+
                 <div className="flex justify-center mb-6">
                   <img src={review.stars} alt="Rating" className="h-5" />
                 </div>
-                <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 text-center mb-8 flex-1">
+
+                {/* ✅ ONLY CHANGE HERE */}
+                <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 text-center mb-8 flex-1 font-bold">
                   "{review.content}"
                 </p>
+
                 <div className="flex flex-col items-center mt-auto">
                   <span className="font-bold text-text-primary text-base mb-1">{review.reviewer}</span>
                   <span className="text-sm text-text-secondary opacity-60 mb-4">{review.time}</span>
@@ -123,21 +123,24 @@ const ParticipantsReviews = () => {
               </div>
             ))}
 
-            {/* Bottom Horizontal Card */}
             {reviews.filter(r => r.isHorizontal).map((review) => (
               <div key={review.id} className="review-card-item lg:col-span-2 bg-white rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-50 flex flex-col lg:flex-row items-center lg:gap-6 shrink-0 w-[85vw] sm:w-[50vw] snap-center lg:w-auto p-8 lg:p-6 lg:px-8">
-                
-                {/* Mobile specific layout (Same visual hierarchy as regular cards) */}
+
                 <div className="flex flex-col lg:hidden w-full h-full align-center justify-between">
+
                   <div className="flex justify-center mb-6">
                     <img src="/icons/Google__G__Logo 1.png" alt="Google" className="w-8 h-8" />
                   </div>
+
                   <div className="flex justify-center mb-6">
                     <img src={review.stars} alt="Rating" className="h-5" />
                   </div>
-                  <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 text-center mb-8 flex-1">
+
+                  {/* ✅ ONLY CHANGE */}
+                  <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 text-center mb-8 flex-1 font-bold">
                     "{review.content}"
                   </p>
+
                   <div className="flex flex-col items-center mt-auto">
                     <span className="font-bold text-text-primary text-base mb-1">{review.reviewer}</span>
                     <span className="text-sm text-text-secondary opacity-60 mb-4">{review.time}</span>
@@ -145,13 +148,15 @@ const ParticipantsReviews = () => {
                   </div>
                 </div>
 
-                {/* Desktop specific layout (Horizontal) */}
                 <div className="hidden lg:flex flex-row w-full items-center gap-6">
                   <img src={review.image} alt="Reviewer" className="w-14 h-14 rounded-full flex-shrink-0 object-cover" />
                   <div className="flex-1">
-                    <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 mb-2">
+
+                    {/* ✅ ONLY CHANGE */}
+                    <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 mb-2 font-bold">
                       "{review.content}"
                     </p>
+
                     <img src={review.stars} alt="Rating" className="h-4" />
                   </div>
                 </div>
@@ -160,18 +165,16 @@ const ParticipantsReviews = () => {
             ))}
           </div>
 
-          {/* Dots Pagination */}
           <div className="flex lg:hidden justify-center items-center gap-2 mt-6">
             {reviews.map((_, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`w-[6px] h-[6px] rounded-full transition-colors duration-300 ${activeSlide === idx ? 'bg-[#8DC83A]' : 'bg-[#D9D9D9]'}`}
               />
             ))}
           </div>
 
         </div>
-
       </div>
     </section>
   );
