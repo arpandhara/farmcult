@@ -5,22 +5,23 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Updated data to use JSX for strict <br /> placement: 2-line titles and 3-line descriptions
 const benefitsData = [
   {
-    title: 'Water\nEfficient',
-    description: 'Uses significantly less water through controlled growing systems.',
+    title: <>Water<br />Efficient</>,
+    description: <>Uses significantly<br />less water through<br />controlled growing systems.</>,
   },
   {
-    title: 'Reduced\nPesticide Use',
-    description: 'Cleaner cultivation methods with lower chemical dependency.',
+    title: <>Reduced<br />Pesticide Use</>,
+    description: <>Cleaner cultivation<br />methods with lower<br />chemical dependency.</>,
   },
   {
-    title: 'Consistent\nProduction',
-    description: 'Structured systems designed for stable, repeatable crop cycles.',
+    title: <>Consistent<br />Production</>,
+    description: <>Structured systems<br />designed for stable,<br />repeatable crop cycles.</>,
   },
   {
-    title: 'Automated\nEfficiency',
-    description: 'Reduce manual dependency, and improve operational efficiency and reliability.',
+    title: <>Automated<br />Efficiency</>,
+    description: <>Reduce manual dependency,<br />and improve operational<br />efficiency and reliability.</>,
   },
 ];
 
@@ -95,16 +96,18 @@ const SmartIntegration = () => {
             return (
               <div
                 key={index}
-                // Apply left border to all, right border only to the last one
-                className={`benefit-card flex gap-4 lg:gap-6 px-6 lg:px-8 py-2 relative lg:border-l lg:border-white/50 ${
+                // Added overflow-hidden to prevent bleeding
+                className={`benefit-card flex gap-4 lg:gap-6 px-6 lg:px-8 py-2 relative lg:border-l lg:border-white/50 overflow-hidden ${
                   isLast ? 'lg:border-r' : ''
                 }`}
               >
                 <div className="w-full">
-                  <h3 className="text-[20px] leading-[30px] md:text-[24px] md:leading-[32px] font-medium pb-4 lg:pb-12 whitespace-pre-line">
+                  {/* Kept whitespace-nowrap and clamp() for fluid sizing */}
+                  <h3 className="text-[20px] leading-[30px] md:text-[24px] lg:text-[clamp(16px,1.5vw,24px)] xl:text-[24px] md:leading-[32px] font-medium pb-4 lg:pb-12 whitespace-nowrap">
                     {benefit.title}
                   </h3>
-                  <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] font-light md:max-w-[80%]">
+                  {/* Kept whitespace-nowrap and clamp() for fluid sizing */}
+                  <p className="text-[14px] leading-[24px] md:text-[15px] lg:text-[clamp(11px,1.1vw,15px)] xl:text-[15px] md:leading-[29px] font-light md:max-w-[80%] whitespace-nowrap">
                     {benefit.description}
                   </p>
                 </div>

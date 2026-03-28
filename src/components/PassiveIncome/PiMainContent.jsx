@@ -14,48 +14,60 @@ const PiMainContent = () => {
           </p>
         </div>
 
-        {/* Stats / Features Layout */}
-        <div className="pi-stats-grid grid grid-cols-1 md:grid-cols-3 md:divide-x md:border-x border-[#DEDEDE]">
+        {/* Stats / Features Layout - Updated to match RiseOfFarming responsive style */}
+        <div className="pi-stats-wrapper relative flex flex-col w-full max-w-[372px] md:max-w-none h-auto md:h-auto mx-auto">
+          
+          {/* Mobile vertical timeline line */}
+          <div className="absolute left-[3px] top-[16px] w-[2px] h-[calc(100%-32px)] bg-[#8DC83A] block md:hidden z-0"></div>
 
-          {/* Feature 1 */}
-          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
-            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-2 md:mb-3">
-              Up to 50%
-            </h3>
-            <p className="font-inter text-[16px] md:text-[32px] font-light leading-[24px] md:leading-[48px] text-black mb-2 md:mb-14 w-full">
-              Capital Subsidy
-            </p>
-            <p className="font-inter text-[16px] font-light leading-[24px] md:leading-[29px] text-black md:max-w-[85%]">
-              Available under National Horticulture Board schemes for eligible projects.
-            </p>
+          <div className="pi-stats-grid flex flex-col md:grid md:grid-cols-3 gap-[20px] md:gap-y-0 pt-0 md:pt-12 md: border-[#DEDEDE]">
+
+            {/* Feature 1 */}
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[16px] pl-[20px] sm:px-6 lg:px-8 border-l-2 md:border-l-0 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 md:border-r-2 overflow-hidden">
+              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+              
+              <h3 className="font-inter text-[22px] min-[400px]:text-[24px] sm:text-[28px] md:text-[clamp(18px,2vw,28px)] xl:text-[32px] font-medium leading-[1.2] md:leading-normal text-black w-full md:w-auto md:h-auto m-0 whitespace-nowrap">
+                Up to 50%
+              </h3>
+              <p className="font-inter text-[16px] md:text-[clamp(16px,1.5vw,24px)] xl:text-[32px] font-light leading-[24px] md:leading-[32px] text-black w-full whitespace-nowrap mb-0 md:mb-4">
+                Capital Subsidy
+              </p>
+              <p className="font-inter text-[12px] min-[400px]:text-[13px] sm:text-[14px] md:text-[clamp(11px,1.2vw,15px)] xl:text-[16px] whitespace-nowrap font-normal leading-[1.4] md:leading-[1.6] text-black w-full md:w-auto md:h-auto m-0">
+                Available under National Horticulture<br />Board schemes for eligible projects.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[16px] pl-[20px] sm:px-6 lg:px-8 border-l-0 sm:border-r border-[#DEDEDE] w-full md:h-auto bg-transparent z-10 md:border-r-2 overflow-hidden">
+              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+              
+              <h3 className="font-inter text-[22px] min-[400px]:text-[24px] sm:text-[28px] md:text-[clamp(18px,2vw,28px)] xl:text-[32px] font-medium leading-[1.2] md:leading-normal text-black w-full md:w-auto md:h-auto m-0 whitespace-nowrap">
+                3% <span className="text-[16px] md:text-[clamp(14px,1.5vw,20px)] xl:text-[20px] font-light text-black tracking-normal inline-block ml-1">Interest Subsidy</span>
+              </h3>
+              <p className="font-inter text-[16px] md:text-[clamp(16px,1.5vw,24px)] xl:text-[32px] font-light leading-[24px] md:leading-[32px] text-black w-full whitespace-nowrap mb-0 md:mb-4">
+                Available
+              </p>
+              <p className="font-inter text-[12px] min-[400px]:text-[13px] sm:text-[14px] md:text-[clamp(11px,1.2vw,15px)] xl:text-[16px] whitespace-nowrap font-normal leading-[1.4] md:leading-[1.6] text-black w-full md:w-auto md:h-auto m-0">
+                Loan interest support available under the<br />Agriculture Infrastructure Fund scheme.
+              </p>
+            </div>
+
+            {/* Feature 3 - No right border */}
+            <div className="stat-card relative flex flex-col gap-[12px] md:gap-[16px] pl-[20px] sm:px-6 lg:px-8 w-full md:h-auto bg-transparent z-10 border-[#DEDEDE] overflow-hidden">
+              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
+              
+              <h3 className="font-inter text-[22px] min-[400px]:text-[24px] sm:text-[28px] md:text-[clamp(18px,2vw,28px)] xl:text-[32px] font-medium leading-[1.2] md:leading-normal text-black w-full md:w-auto md:h-auto m-0 whitespace-nowrap">
+                Tax-Free
+              </h3>
+              <p className="font-inter text-[16px] md:text-[clamp(16px,1.5vw,24px)] xl:text-[32px] font-light leading-[24px] md:leading-[32px] text-black w-full whitespace-nowrap mb-0 md:mb-4">
+                Returns
+              </p>
+              <p className="font-inter text-[12px] min-[400px]:text-[13px] sm:text-[14px] md:text-[clamp(11px,1.2vw,15px)] xl:text-[16px] whitespace-nowrap font-normal leading-[1.4] md:leading-[1.6] text-black w-full md:w-auto md:h-auto m-0">
+                Agricultural income qualifies for tax<br />exemptions under Indian law.
+              </p>
+            </div>
+
           </div>
-
-          {/* Feature 2 */}
-          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
-            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-2 md:mb-3">
-              3% <span className="text-[20px] md:text-[32px] font-light text-black tracking-normal inline-block ml-1">Interest Subsidy</span>
-            </h3>
-            <p className="font-inter text-[16px] md:text-[32px] font-light leading-[24px] md:leading-[48px] text-black mb-2 md:mb-14 w-full">
-              Available
-            </p>
-            <p className="font-inter text-[16px] font-normal leading-[24px] md:leading-[29px] text-black md:max-w-[85%]">
-              Loan interest support available under the Agriculture Infrastructure Fund scheme.
-            </p>
-          </div>
-
-          {/* Feature 3 */}
-          <div className="pi-stat-item flex flex-col items-center md:items-start text-center md:text-left px-4 md:px-8 lg:px-12 py-6 md:py-4 group flex-1">
-            <h3 className="font-inter text-[28px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-2 md:mb-3">
-              Tax-Free
-            </h3>
-            <p className="font-inter text-[16px] md:text-[32px] font-light leading-[24px] md:leading-[48px] text-black mb-2 md:mb-14 w-full">
-              Returns
-            </p>
-            <p className="font-inter text-[16px] font-normal leading-[24px] md:leading-[29px] text-black md:max-w-[85%]">
-              Agricultural income qualifies for tax exemptions under Indian law.
-            </p>
-          </div>
-
         </div>
 
         {/* What's Included Section */}
@@ -77,61 +89,63 @@ const PiMainContent = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-6">
 
                 {/* LEFT COLUMN ORDER */}
-                <div className="flex items-start gap-3">
+                {/* Added overflow-hidden to all bullet point wrappers */}
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">End-to-end farm setup</span>
+                  {/* Added whitespace-nowrap and clamp() */}
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">End-to-end farm setup</span>
                 </div>
 
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Farm operations management</span>
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">Farm operations management</span>
                 </div>
 
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">IoT monitoring &amp; reporting</span>
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">IoT monitoring &amp; reporting</span>
                 </div>
 
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Crop planning &amp; yeild optimisation</span>
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">Crop planning &amp; yeild optimisation</span>
                 </div>
 
                 {/* RIGHT COLUMN ORDER */}
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Market linkage &amp; sales coordination</span>
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">Market linkage &amp; sales coordination</span>
                 </div>
 
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Ongoing performance oversight</span>
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">Ongoing performance oversight</span>
                 </div>
 
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Minimum 5 acres &amp; above</span>
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">Minimum 5 acres &amp; above</span>
                 </div>
 
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">Investment in operational expenses</span>
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">Investment in operational expenses</span>
                 </div>
 
               </div>

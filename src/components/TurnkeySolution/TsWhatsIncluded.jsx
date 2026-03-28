@@ -25,11 +25,15 @@ const TsWhatsIncluded = () => {
                 "Market linkages post-harvest",
                 "Minimum project size of 2.5 acres",
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
+                // Added overflow-hidden to prevent grid bleed
+                <div key={i} className="flex items-start gap-3 overflow-hidden">
                   <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">{item}</span>
+                  {/* Added whitespace-nowrap and clamp() fluid sizing */}
+                  <span className="font-inter text-[15px] lg:text-[clamp(12px,1.1vw,15px)] xl:text-[15px] leading-[26px] text-text-primary font-normal whitespace-nowrap">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>

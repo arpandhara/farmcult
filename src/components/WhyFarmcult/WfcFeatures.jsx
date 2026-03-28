@@ -11,44 +11,50 @@ const WfcFeatures = () => {
         <div className="wfc-features-grid flex flex-col gap-[40px] md:gap-0 md:grid md:grid-cols-2 xl:grid-cols-3">
           
           {/* Card 1 */}
-          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-l-2 z-10">
+          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-l-2 z-10 overflow-hidden">
             {/* Mobile Dot */}
             <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
             
             <div className="wfc-feature-icon w-6 h-6 md:w-[16px] md:h-[28px] flex items-center justify-center mb-4 md:mb-6">
               <img src="/icons/icon 1.svg" alt="Technology-led icon" className="w-full h-full" />
             </div>
-            <h3 className="wfc-feature-title text-[24px] md:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black">Technology-led</h3>
-            <p className="wfc-feature-desc text-[16px] md:text-[16px] text-black leading-[26px] md:leading-[29px]">
-              Automation, IoT monitoring, and data-based decision-making systems.
+            <h3 className="wfc-feature-title text-[24px] md:text-[clamp(20px,2.5vw,32px)] xl:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black whitespace-nowrap">
+              Technology-led
+            </h3>
+            <p className="wfc-feature-desc text-[14px] md:text-[clamp(12px,1.2vw,16px)] xl:text-[16px] text-black leading-[26px] md:leading-[29px] whitespace-nowrap">
+              Automation, IoT monitoring, and<br />data-based decision-making systems.
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-t-0 md:border-l md:border-r xl:border-r-1 xl:border-l-2 z-10">
+          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-t-0 md:border-l md:border-r xl:border-r-1 xl:border-l-2 z-10 overflow-hidden">
              {/* Mobile Dot */}
              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
              
             <div className="wfc-feature-icon w-6 h-6 md:w-[25px] md:h-[28px] flex items-center justify-center mb-4 md:mb-6">
               <img src="/icons/icon 2.svg" alt="Sustainable icon" className="w-full h-full" />
             </div>
-            <h3 className="wfc-feature-title text-[24px] md:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black">Sustainable</h3>
-            <p className="wfc-feature-desc text-[16px] md:text-[16px] text-black leading-[26px] md:leading-[29px]">
-              Less water usage and no soil dependency, build for long-term environmental balance.
+            <h3 className="wfc-feature-title text-[24px] md:text-[clamp(20px,2.5vw,32px)] xl:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black whitespace-nowrap">
+              Sustainable
+            </h3>
+            <p className="wfc-feature-desc text-[14px] md:text-[clamp(12px,1.2vw,16px)] xl:text-[16px] text-black leading-[26px] md:leading-[29px] whitespace-nowrap">
+              Less water usage and no soil dependency,<br />build for long-term environmental balance.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-t-0 md:border-l md:col-span-2 xl:col-span-1 md:border-r-2 z-10">
+          <div className="wfc-feature-card relative flex flex-col pl-[20px] md:pl-0 md:py-2 xl:py-2 md:px-6 sm:px-8 xl:px-12 transition-colors duration-300 ease-in-out border-[#DEDEDE] md:border-t-0 md:border-l md:col-span-2 xl:col-span-1 md:border-r-2 z-10 overflow-hidden">
              {/* Mobile Dot */}
              <div className="absolute left-0 top-[12px] w-[8px] h-[8px] bg-[#8DC83A] rounded-full block md:hidden"></div>
              
             <div className="wfc-feature-icon w-6 h-6 md:w-[25px] md:h-[28px] flex items-center justify-center mb-4 md:mb-6">
               <img src="/icons/icon 3.svg" alt="Scaleable icon" className="w-full h-full" />
             </div>
-            <h3 className="wfc-feature-title text-[24px] md:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black">Scaleable</h3>
-            <p className="wfc-feature-desc text-[16px] md:text-[16px] text-black leading-[26px] md:leading-[29px]">
-              Structured systems designed to expand smoothly from small to large farms.
+            <h3 className="wfc-feature-title text-[24px] md:text-[clamp(20px,2.5vw,32px)] xl:text-[32px] md:leading-[48px] font-medium mb-2 md:mb-[60px] text-black whitespace-nowrap">
+              Scaleable
+            </h3>
+            <p className="wfc-feature-desc text-[14px] md:text-[clamp(12px,1.2vw,16px)] xl:text-[16px] text-black leading-[26px] md:leading-[29px] whitespace-nowrap">
+              Structured systems designed to expand<br />smoothly from small to large farms.
             </p>
           </div>
 

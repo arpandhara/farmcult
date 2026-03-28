@@ -5,11 +5,11 @@ const WfcTeam = () => {
     <>
       <section className="wfc-team-section py-10 px-4 md:py-16 md:px-[5%] pb-16 md:pb-[8rem] max-w-[1600px] mx-auto">
         <div className="wfc-team-inner grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 md:gap-12 lg:gap-[100px] items-stretch">
-          <div className="wfc-team-image-col w-full h-[300px] sm:h-[400px] lg:h-[359px">
+          <div className="wfc-team-image-col w-full h-[300px] sm:h-[400px] lg:h-[430px]">
             <img 
-              src="/whyFarmCult/farmCultTeamGroupimg.jpg" 
+              src="/icons/farmCultLogoPic.png" 
               alt="Farmcult Team"
-              className="w-full h-full object-cover rounded-2xl md:rounded-[32px] shadow-sm"
+              className="w-full h-full object-cover rounded-2xl md:rounded-[32px]"
             />
           </div>
           <div className="wfc-team-text-col mt-4 lg:mt-0">
@@ -30,12 +30,12 @@ const WfcTeam = () => {
         </div>
       </section>
 
-      <section className="wfc-team-cards-section px-4 md:px-[5%] pb-16 md:pb-[4rem] max-w-[1600px] mx-auto">
+      <section className="wfc-team-cards-section px-4 md:px-[5%] pb-16 md:pb-[4rem] mx-auto">
         
         <div className="flex flex-col gap-y-16">
 
           {/* ROW 1 → 4 MEMBERS */}
-          <div className="flex justify-center gap-8 flex-wrap">
+          <div className="flex justify-center gap-20 flex-wrap">
             
             {[
               { name: 'Pritpal Singh', role: 'Founder & CEO', image: '/whyFarmCult/PritpalSingh.jpg' },
@@ -54,7 +54,7 @@ const WfcTeam = () => {
                     <span className="font-bold text-black">{member.name}</span>
                     <img src="/icons/linkedin.png" className="w-5 h-5" />
                   </div>
-                  <div className="w-full py-2 bg-[#8DC83A]/25 rounded-[12px] text-center text-sm">
+                  <div className="w-full py-2 px-4 bg-[#8DC83A]/25 rounded-[12px] text-left text-sm">
                     {member.role}
                   </div>
                 </div>
@@ -64,7 +64,7 @@ const WfcTeam = () => {
           </div>
 
           {/* ROW 2 → 3 MEMBERS */}
-          <div className="flex justify-center gap-8 flex-wrap">
+          <div className="flex justify-center gap-20 flex-wrap">
             
             {[
               { name: 'Subhajit', role: 'Procurement Manager', image: '/whyFarmCult/SubhajitM.jpg' },
@@ -82,7 +82,7 @@ const WfcTeam = () => {
                     <span className="font-bold text-black">{member.name}</span>
                     <img src="/icons/linkedin.png" className="w-5 h-5" />
                   </div>
-                  <div className="w-full py-2 bg-[#8DC83A]/25 rounded-[12px] text-center text-sm">
+                  <div className="w-full py-2 px-4 bg-[#8DC83A]/25 rounded-[12px] text-left text-sm">
                     {member.role}
                   </div>
                 </div>

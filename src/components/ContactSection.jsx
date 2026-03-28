@@ -8,17 +8,17 @@ const ContactSection = () => {
 
     console.log(data);
     try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbzRhD1hCyyCc5CoY_PVuRpOdfcaQ0amIh1FAUpzMiGMmYc3c5WPxCpw2PjpCpoMMt2y/exec", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
+      const res = await fetch("https://script.google.com/macros/s/AKfycbzRhD1hCyyCc5CoY_PVuRpOdfcaQ0amIh1FAUpzMiGMmYc3c5WPxCpw2PjpCpoMMt2y/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
 
-    const result = await res.json();
-    console.log(result);
+      const result = await res.json();
+      console.log(result);
 
-  } catch (err) {
-    console.error(err);
-  }
+    } catch (err) {
+      console.error(err);
+    }
     // e.preventDefault();
   };
 
@@ -55,9 +55,9 @@ const ContactSection = () => {
                 <span className="block text-[24px] font-medium mb-8">
                   Location
                 </span>
-                <p className="text-[16px] leading-[28px] opacity-100">
-                  Farmcult Agritech Pvt Ltd Plot no 181, <br /> 32 Industrial
-                  Area Phase 1 Chandigarh, pincode 160002
+                <p className="text-[16px] leading-[28px] opacity-100 max-w-[80%]">
+                  Farmcult Agritech Pvt Ltd <br /> Plot no 181, 32 Industrial
+                  Area Phase 1 Chandigarh,(160002)
                 </p>
               </div>
               <div className="info-group">

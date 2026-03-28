@@ -6,8 +6,13 @@ const WfcFoundation = () => {
       <div className="wfc-foundation-inner grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 md:gap-12 lg:gap-[100px] items-stretch">
         <div className="wfc-foundation-text-col md:max-w-[600px]">
           <h2 className="wfc-section-heading text-[24px] md:text-[32px] leading-[32px] md:leading-[48px] font-medium mb-6 md:mb-8 text-black">Our Foundation</h2>
-          <div className="wfc-founder-tag inline-flex py-[2px] px-[12px] bg-accent/25 text-text-primary rounded-full font-normal text-[15px] md:text-[15px] md:leading-[29px9px] mb-8 md:mb-10">
-            <span>Pritpal Singh, Founder &amp; CEO</span>
+          <div className="flex items-center justify-start gap-4 mb-8 md:mb-10 w-full text-left">
+            <div className="wfc-founder-tag inline-flex justify-start text-left py-[2px] px-[12px] bg-accent/25 text-text-primary rounded-full font-normal text-[15px] md:text-[15px] md:leading-[29px]">
+              <span className="text-left">Pritpal Singh, Founder &amp; CEO</span>
+            </div>
+            <a href="https://www.linkedin.com/in/pritpalsingh2/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110 flex items-center justify-center p-1" aria-label="LinkedIn Profile">
+              <img src="/icons/linkedin.png" alt="LinkedIn" className="w-[20px] h-[20px] object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)]" />
+            </a>
           </div>
           <p className="wfc-foundation-desc text-[16px] md:text-[15px] text-text-primary leading-[1.8] md:leading-[29px] mb-6 md:mb-8">
             Farmcult was founded in 2020 by Pritpal Singh, an MBA graduate from IMT Nagpur who

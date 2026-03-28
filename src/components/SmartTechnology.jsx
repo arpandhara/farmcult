@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -66,9 +67,9 @@ const SmartTechnology = () => {
         </p>
 
         <div className="smart-tech-link-container md:mt-[74px]">
-          <a href="#technology" className="smart-tech-link font-inter font-normal md:font-normal text-[16px] md:text-[16px] leading-[1.5] md:leading-normal text-text-primary underline md:no-underline md:relative inline-block md:pb-[4px] md:after:content-[''] md:after:absolute md:after:w-full md:after:scale-x-0 md:after:h-[1px] md:after:bottom-0 md:after:left-0 md:after:bg-text-primary md:after:origin-bottom-right md:after:transition-transform md:after:duration-[350ms] md:after:ease-out md:hover:after:scale-x-100 md:hover:after:origin-bottom-left m-0">
+          <Link to="/technology" className="smart-tech-link font-inter font-normal md:font-normal text-[16px] md:text-[16px] leading-[1.5] md:leading-normal text-text-primary underline md:no-underline md:relative inline-block md:pb-[4px] md:after:content-[''] md:after:absolute md:after:w-full md:after:scale-x-0 md:after:h-[1px] md:after:bottom-0 md:after:left-0 md:after:bg-text-primary md:after:origin-bottom-right md:after:transition-transform md:after:duration-[350ms] md:after:ease-out md:hover:after:scale-x-100 md:hover:after:origin-bottom-left m-0">
             Learn more about how we use technology <span className="inline-block ml-1">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </div>
 

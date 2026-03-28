@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   useEffect(() => {
     // Prevent scrolling when mobile menu is open
@@ -70,9 +71,15 @@ const Navbar = () => {
               <Link to="/technology" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent block cursor-pointer">
                 Technology
               </Link>
-              <Link to="/resources" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent block cursor-pointer">
-                Resources
-              </Link>
+              <div className="nav-item group relative py-4">
+                <button type="button" className="nav-link font-medium text-base text-text-primary opacity-90 transition-all duration-200 ease-in-out whitespace-nowrap hover:opacity-100 hover:text-accent block cursor-pointer">
+                  Resources
+                </button>
+                <div className="absolute top-full left-0 w-[220px] bg-white border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] z-50 transform origin-top translate-y-2 group-hover:translate-y-0">
+                  <Link to="/blogs" className="block px-5 py-2.5 text-[0.95rem] text-text-primary hover:bg-gray-50 hover:text-accent transition-colors">Blogs</Link>
+                  <Link to="/case-studies" className="block px-5 py-2.5 text-[0.95rem] text-text-primary hover:bg-gray-50 hover:text-accent transition-colors">Case Studies</Link>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -82,7 +89,7 @@ const Navbar = () => {
               href="https://wa.me/919041104230"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-primary hover:text-[#25D366] transition-all duration-300 transform hover:scale-110 flex items-center justify-center nav-link"
+              className="text-[#8DC83A] hover:text-[#8DC83A] transition-all duration-300 transform hover:scale-110 flex items-center justify-center nav-link"
               aria-label="WhatsApp Contact"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
@@ -131,7 +138,10 @@ const Navbar = () => {
         <div className="flex flex-col items-center gap-8 text-2xl font-medium w-full px-6 text-center">
           <div className="w-full flex flex-col items-center">
             <button
-              onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+              onClick={() => {
+                setMobileSolutionsOpen(!mobileSolutionsOpen);
+                if (!mobileSolutionsOpen) setMobileResourcesOpen(false);
+              }}
               className="nav-link-mobile outline-none transition-colors hover:text-accent w-full py-2 flex items-center justify-center gap-2"
             >
               Solutions
@@ -147,19 +157,49 @@ const Navbar = () => {
           </div>
           <Link to="/why-farmcult" onClick={() => setMobileMenuOpen(false)} className="nav-link-mobile transition-colors hover:text-accent w-full py-2">Why Farmcult</Link>
           <Link to="/technology" onClick={() => setMobileMenuOpen(false)} className="nav-link-mobile transition-colors hover:text-accent w-full py-2">Technology</Link>
-          <Link to="/resources" onClick={() => setMobileMenuOpen(false)} className="nav-link-mobile transition-colors hover:text-accent w-full py-2">Resources</Link>
+          <div className="w-full flex flex-col items-center">
+            <button
+              onClick={() => {
+                setMobileResourcesOpen(!mobileResourcesOpen);
+                if (!mobileResourcesOpen) setMobileSolutionsOpen(false);
+              }}
+              className="nav-link-mobile outline-none transition-colors hover:text-accent w-full py-2 flex items-center justify-center gap-2"
+            >
+              Resources
+              <svg className={`w-6 h-6 transition-transform duration-300 ${mobileResourcesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className={`flex flex-col items-center w-full overflow-hidden transition-all duration-300 ${mobileResourcesOpen ? 'max-h-[200px] opacity-100 mt-4 gap-4' : 'max-h-0 opacity-0'}`}>
+              <Link to="/blogs" onClick={() => setMobileMenuOpen(false)} className="text-xl text-text-primary hover:text-accent transition-colors w-full py-1">Blogs</Link>
+              <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)} className="text-xl text-text-primary hover:text-accent transition-colors w-full py-1">Case Studies</Link>
+            </div>
+          </div>
 
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              setMobileMenuOpen(false);
-              setTimeout(() => window.lenis?.scrollTo('#contact'), 300); // Wait for menu to close
-            }}
-            className="mt-6 inline-block bg-text-primary text-bg-color rounded-[40px] py-[1rem] px-8 text-lg w-[137px] h-[43px] transition-transform active:scale-95"
-          >
-            Get Started
-          </a>
+          <div className="flex items-center gap-4 mt-6">
+            <a
+              href="https://wa.me/919041104230"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8DC83A] hover:text-[#8DC83A] transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
+              aria-label="WhatsApp Contact"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.115.55 4.185 1.595 6.007L0 24l6.108-1.602c1.761.968 3.738 1.48 5.923 1.48 6.645 0 12.03-5.385 12.03-12.03S18.676 0 12.031 0zm6.657 17.15c-.282.795-1.636 1.492-2.274 1.543-.59.048-1.353.155-3.92-1.026-3.13-1.442-5.115-4.66-5.267-4.862-.152-.202-1.259-1.68-1.259-3.208 0-1.528.796-2.28 1.08-2.585.284-.305.617-.382.82-.382.203 0 .406 0 .584.009.186.009.435-.07.662.48.236.574.81 1.983.882 2.135.071.152.12.33.02.533-.102.203-.153.33-.306.51-.153.18-.316.38-.45.506-.144.136-.296.284-.131.57.165.286.736 1.218 1.583 1.976 1.096.977 2.012 1.282 2.298 1.417.286.136.452.11.62-.085.168-.195.727-.845.92-1.137.193-.292.385-.245.645-.148.26.097 1.645.776 1.926.917.281.14.468.21.536.326.068.116.068.67-.214 1.465z" />
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                setMobileMenuOpen(false);
+                setTimeout(() => window.lenis?.scrollTo('#contact'), 300); // Wait for menu to close
+              }}
+              className="inline-block border border-border-color rounded-[40px] py-[0.6rem] px-5 text-base font-medium text-text-primary bg-transparent whitespace-nowrap transition-transform active:scale-95"
+            >
+              Free Consultation
+            </a>
+          </div>
         </div>
       </div>
     </>

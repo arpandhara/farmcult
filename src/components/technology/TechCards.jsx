@@ -30,14 +30,17 @@ const TechCards = () => {
     <section ref={sectionRef} className="bg-[#EFEEEE] px-5 py-12 lg:px-24 lg:py-24">
       <div className="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
         {/* Card 1 */}
-        <div className="tech-feature-card bg-white rounded-2xl p-6 md:p-12 flex flex-col justify-between">
-          <div>
-            <h3 className="text-[28px] leading-[38px] md:text-[20px] md:leading-[32px] font-medium text-[#000000] mb-4 md:mb-5">
+        {/* Added overflow-hidden */}
+        <div className="tech-feature-card bg-white rounded-2xl p-6 md:p-12 flex flex-col justify-between overflow-hidden">
+          <div className="w-full">
+            {/* Added whitespace-nowrap and clamp() for fluid sizing */}
+            <h3 className="text-[22px] sm:text-[28px] lg:text-[20px] leading-[38px] md:leading-[32px] font-medium text-[#000000] mb-4 md:mb-5 whitespace-nowrap">
               24/7 Cloud-Based Monitoring
             </h3>
-            <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#333333] mb-8 md:mb-10 lg:pr-8">
-              Continuous cloud syncing provides real-time visibility and remote access to
-              farm performance data.
+            {/* Added whitespace-nowrap, <br />, and clamp() */}
+            <p className="text-[13px] sm:text-[14px] lg:text-[15px] xl:text-[15px] leading-[24px] md:leading-[29px] text-[#333333] mb-8 md:mb-10 lg:pr-8 whitespace-wrap">
+              Continuous cloud syncing provides real-time visibility<br />
+              and remote access to farm performance data.
             </p>
           </div>
           <div className="w-full rounded-2xl overflow-hidden mt-auto">
@@ -50,14 +53,17 @@ const TechCards = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="tech-feature-card bg-white rounded-2xl p-6 md:p-12 flex flex-col justify-between">
-          <div>
-            <h3 className="text-[28px] leading-[38px] md:text-[20px] md:leading-[32px] font-medium text-[#000000] mb-4 md:mb-5">
+        {/* Added overflow-hidden */}
+        <div className="tech-feature-card bg-white rounded-2xl p-6 md:p-12 flex flex-col justify-between overflow-hidden">
+          <div className="w-full">
+            {/* Added whitespace-nowrap and clamp() for fluid sizing */}
+            <h3 className="text-[22px] sm:text-[28px] lg:text-[20px] leading-[38px] md:leading-[32px] font-medium text-[#000000] mb-4 md:mb-5 whitespace-nowrap">
               Automated Fertigation
             </h3>
-            <p className="text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] text-[#333333] mb-8 md:mb-10 lg:pr-8">
-              Precision-controlled nutrient dosing ensures balanced growth, efficient
-              resource use, and consistent crop outcomes.
+            {/* Added whitespace-nowrap, <br />, and clamp() */}
+            <p className="text-[13px] sm:text-[14px] lg:text-[15px] xl:text-[15px] leading-[24px] md:leading-[29px] text-[#333333] mb-8 md:mb-10 lg:pr-8 whitespace-wrap">
+              Precision-controlled nutrient dosing ensures balanced growth,<br />
+              efficient resource use, and consistent crop outcomes.
             </p>
           </div>
           <div className="w-full rounded-2xl overflow-hidden mt-auto">
