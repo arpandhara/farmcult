@@ -5,27 +5,38 @@ const TsIncentives = () => {
     <section className="ts-incentives-container py-20 lg:py-32 bg-[#F7F7F7] px-[5%]">
       <div className="max-w-6xl mx-auto">
         {/* Top part: Text and Image */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-16 lg:mb-24">
-          <div className="w-full lg:w-1/2">
-            <h2 className="ts-incentives-text text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-text-primary mb-6 leading-[1.2]">
-              Government Incentives<br />Reduce Your Initial Investment
-            </h2>
-            <p className="ts-incentives-text text-[1.1rem] text-[#555] leading-[1.8] mb-8">
-              Eligible hydroponic projects can receive capital subsidies of up to 50%, helping reduce initial investment and improve long-term viability.
-            </p>
-            <p className="ts-incentives-text text-[0.85rem] text-[#888] italic">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-32 lg:items-stretch mb-16 lg:mb-24">
+          <div className="w-full lg:w-1/2 flex flex-col justify-between py-2 lg:py-6">
+            <div>
+              <h2 className="ts-incentives-text text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-text-primary mb-6 leading-[1.2]">
+                Government Incentives<br className="hidden md:block" /> Reduce Your Initial Investment
+              </h2>
+              <p className="ts-incentives-text text-[1.1rem] text-[#555] leading-[1.8] mb-8">
+                Eligible hydroponic projects can receive capital subsidies of up to 50%, helping reduce initial investment and improve long-term viability.
+              </p>
+            </div>
+            <p className="ts-incentives-text text-[0.85rem] text-[#888] italic mt-10 lg:mt-0">
               *Availability depends on project eligibility and applicable state or central government schemes.
             </p>
           </div>
-          <div className="w-full lg:w-1/2">
-            <div className="ts-incentives-img pb-[60%] lg:pb-[65%] relative w-full overflow-hidden rounded-[2rem] group">
-              <img
-                src="/GovernmentIncentives.jpg"
-                alt="Government Incentives"
-                className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                onError={(e) => { e.target.src = '/ourSolutionCard3.jpg'; }}
-              />
-              <div className="absolute inset-0 bg-black/5 rounded-[2rem]"></div>
+          
+          <div className="w-full lg:w-[45%] lg:ml-auto">
+            {/* Split Image Card wrapper */}
+            <div className="w-full flex flex-col rounded-[24px] overflow-hidden lg:h-[440px] xl:h-[480px] min-h-[400px] shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white border border-black/5">
+              <div className="w-full h-[60%] lg:h-[62%] relative bg-gray-100 ts-incentives-img">
+                <img
+                  src="/Agri_Infrastructure_Fund.jpg"
+                  alt="Agri Infrastructure Fund"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              <div className="w-full h-[40%] lg:h-[38%] relative bg-white ts-incentives-img">
+                <img
+                  src="/National_Horticulture_Board.jpg"
+                  alt="National Horticulture Board"
+                  className="absolute inset-0 w-full h-full object-cover bg-white"
+                />
+              </div>
             </div>
           </div>
         </div>
