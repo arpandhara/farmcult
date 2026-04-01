@@ -1,5 +1,5 @@
 import React from "react";
-import WfcHeader from "../components/WhyFarmcult/WfcHeader";
+import BlogsHeader from "../components/BlogsHeader";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
@@ -11,30 +11,34 @@ const otherBlogs = blogs.filter((blog) => blog.id !== 1);
 const Blogs = () => {
   return (
     <div className="blog-page">
-      <WfcHeader
+      <BlogsHeader
         tag="BLOGS"
         title="Ideas Driving Modern Farming"
         subtitle="Industry updates, hydroponic knowledge, and practical insights shaping modern agriculture in India."
       />
 
       {firstBlog && (
-        <section className="flex flex-col gap-[60px] px-16 pb-16 bg-[#F7F7F7]">
-          <div className="flex justify-center">
-            <Link to={`/blog/${firstBlog.id}`}>
-              <div
-                className="w-[1152px] h-[567px] flex items-center px-16 py-9 rounded-[16px] bg-cover bg-center cursor-pointer hover:scale-[1.02] transition-transform duration-300 ease-in-out"
-                style={{ backgroundImage: `url(${firstBlog.image})` }}
-              >
-                <div className="w-[413px] h-[495px] bg-[#F7F7F7] rounded-[16px] px-[37px] py-[52px] flex flex-col gap-[37px]">
-                  {/* Blog Tag */}
-                  <div className="flex justify-center items-center px-3 py-[2px] bg-[rgba(141,200,58,0.25)] rounded-[16px] w-fit">
-                    <span className="text-[15px] text-[#343434] font-normal">
+        <section className="w-full py-10 md:py-3 lg:py-3 bg-[#F7F7F7] md:px-[5%] flex justify-center">
+          <div className="relative w-full max-w-9xl h-[550px] md:h-[500px] lg:h-[600px] rounded-none md:rounded-[16px] overflow-hidden shadow-none md:shadow-xl group">
+            <div className="absolute inset-0 w-full h-full overflow-hidden">
+              <img
+                src={firstBlog.image}
+                alt="Blog Cover"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/10"></div>
+            </div>
+
+            <div className="absolute inset-0 w-full h-full flex items-center justify-center md:justify-start p-5 lg:pl-16 z-10 pointer-events-none">
+              <Link to={`/blog/${firstBlog.id}`}>
+                <div className="pointer-events-auto bg-[#F7F7F7] md:bg-white/95 backdrop-blur-sm rounded-2xl p-7 md:p-24 lg:p-12 w-[92%] max-w-[380px] md:max-w-[420px] lg:max-w-[480px] min-h-[440px] md:min-h-[480px] lg:min-h-[520px] shadow-2xl flex flex-col justify-start items-start cursor-pointer hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+                  <div className="px-[16px] py-[6px] bg-[#E3F0D3] text-[#343434] rounded-full mb-6 md:mb-8">
+                    <span className="font-inter font-medium text-[14px] leading-none m-0">
                       Blog
                     </span>
                   </div>
 
-                  {/* Title */}
-                  <h2 className="text-[32px] leading-[48px] font-medium text-black">
+                  <h2 className="font-inter text-[32px] md:text-[32px] font-medium md:font-medium text-black leading-[1.2] md:leading-[48px] mb-8 tracking-tight m-0 w-full">
                     {firstBlog.title.split("\n").map((line, index) => (
                       <span key={index}>
                         {line}
@@ -43,18 +47,18 @@ const Blogs = () => {
                     ))}
                   </h2>
 
-                  {/* Description */}
-                  <p className="text-[16px] leading-[29px] text-black">
+                  <p className="font-inter text-[16px] md:text-[16px] font-normal text-black leading-[1.6] md:leading-[29px] mb-8 md:mb-2 opacity-90 m-0 w-full md:max-w-[90%]">
                     {firstBlog.description}
                   </p>
 
-                  {/* Date */}
-                  <span className="text-[16px] leading-[29px] font-bold text-[#8DC83A]">
-                    {firstBlog.date}
-                  </span>
+                  <div className="w-full flex justify-between items-center mt-auto">
+                    <span className="font-inter text-[#81B622] font-bold text-[16px] m-0">
+                      {firstBlog.date}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
         </section>
       )}

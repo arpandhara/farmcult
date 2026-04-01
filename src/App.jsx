@@ -16,6 +16,7 @@ import Blogs from './pages/Blogs';
 import CaseStudies from './pages/CaseStudies';
 import Blog from './pages/[...Blog]';
 import CaseStudy from './pages/[...CaseStudy]';
+import NotFound from './pages/NotFound';
 import TopBanner from './components/TopBanner';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -65,6 +66,7 @@ const AnimatedRoutes = () => {
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/blog/:id" element={<Blog />} />
         <Route path="/case-study/:id" element={<CaseStudy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
     </>

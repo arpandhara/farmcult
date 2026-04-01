@@ -1,8 +1,8 @@
 function Content1() {
   return (
     <div className="space-y-6">
-      <h3 className="text-lg font-bold">The Story Behind the Farm</h3>
-      <p>
+      <h3 className="text-[22px] font-extrabold">The Story Behind the Farm</h3>
+      <p className="text-[15px]">
         Our client, a successful young hotelier and restaurant owner based in
         Ghaziabad, owned a 2-acre agricultural plot near Garh Mukhteshwar.
         Despite the land's potential, traditional farming methods were yielding
