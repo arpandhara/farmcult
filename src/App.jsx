@@ -40,7 +40,7 @@ const AnimatedRoutes = () => {
     <>
       {showBanner && (
         <div className="w-full pt-[75px] md:pt-[80px] z-50 relative bg-white">
-          <TopBanner />
+          {/* <TopBanner /> */}
         </div>
       )}
       <AnimatePresence mode="wait" initial={false}>

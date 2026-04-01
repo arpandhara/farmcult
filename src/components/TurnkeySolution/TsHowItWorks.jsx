@@ -19,11 +19,11 @@ const TsHowItWorks = () => {
 
           {/* Step 1 */}
           <div className="flex flex-col items-center text-center relative z-10 w-full">
-            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-white flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
+            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-[#F7F7F7] flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 1
               </div>
-              <img src="/icons/17.png" alt="Site Feasibility" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/passiveIncome/piIcon1.jpg" alt="Site Feasibility" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Site<br className="hidden lg:block" /> Feasibility</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Land and resource assessment</p>
@@ -35,7 +35,7 @@ const TsHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 2
               </div>
-              <img src="/icons/18.png" alt="Paperwork & Planning" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/passiveIncome/piIcon2.jpg" alt="Paperwork & Planning" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Paperwork &<br className="hidden lg:block" /> Planning</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Documentation and farm planning</p>
@@ -47,7 +47,7 @@ const TsHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 3
               </div>
-              <img src="/icons/19.png" alt="Construction & Installation" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/passiveIncome/piIcon3.jpg" alt="Construction & Installation" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Construction &<br className="hidden lg:block" /> Installation</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Greenhouse and system setup</p>
@@ -59,7 +59,7 @@ const TsHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 4
               </div>
-              <img src="/icons/20.png" alt="Full Stack Crop Agronomy" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/passiveIncome/piIcon4.jpg" alt="Full Stack Crop Agronomy" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Full Stack Crop<br className="hidden lg:block" /> Agronomy</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Crop plantation begins</p>
@@ -71,7 +71,7 @@ const TsHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 5
               </div>
-              <img src="/icons/27.png" alt="Standard Operating Procedure's" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/passiveIncome/piIcon5.jpg" alt="Standard Operating Procedure's" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Standard Operating<br className="hidden lg:block" /> Procedure's</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">SOPs taught and practiced on the farms</p>
@@ -83,7 +83,7 @@ const TsHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 6
               </div>
-              <img src="/icons/21.png" alt="Market Linkage" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/passiveIncome/piIcon6.jpg" alt="Market Linkage" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Market<br className="hidden lg:block" /> Linkage</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Linking your produce to market</p>

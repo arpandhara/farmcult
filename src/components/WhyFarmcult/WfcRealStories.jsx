@@ -1,59 +1,57 @@
-import React from "react";
+import React from 'react';
 
 const WfcRealStories = () => {
   return (
-    <section className="w-full bg-white py-[64px] px-[64px]">
-      
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[64px] items-center">
+    <section className="ts-content-container py-[80px] md:py-[100px] bg-white lg:py-[100px] px-4 md:px-[68px]">
+      <div className="mx-auto ts-section-content">
+        <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-28 items-center">
 
-        {/* LEFT IMAGE */}
-        <div className="flex justify-start">
-          <img
-            src="/RealStories.jpg"
-            alt="Client Story"
-            className="w-[413px] h-[488px] object-cover rounded-2xl"
-          />
-        </div>
+          {/* CONTENT */}
+          <div className="w-full lg:w-[58%]">
+            <h2 className="font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-black mb-4 md:mb-8">
+              Real Stories With Real Outcomes
+            </h2>
 
-        {/* RIGHT CONTENT */}
-        <div className="w-[639px] h-[488px] flex flex-col justify-center">
-          
-          {/* HEADING */}
-          <h2 className="text-[36px] leading-[44px] font-semibold text-[#1A1A1A] mb-[16px]">
-            Real Stories With Real Outcomes
-          </h2>
+            <p className="font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-primary mb-6">
+              From concept to execution, we ensure consistency and depth across every engagement. Here’s how our clients describe their experience with Farmcult.
+            </p>
 
-          {/* PARAGRAPH */}
-          <p className="text-[#667085] text-[16px] leading-[26px] mb-[28px]">
-           From concept to execution, we ensure consistency and depth across every engagement.
-            Here’s how our clients describe their experience with Farmcult.
-          </p>
+            {/* BULLETS */}
+            <div className="flex flex-col gap-y-5 mt-8 md:mt-10">
+              {[
+                "Precision-led execution at every stage",
+                "Built for scale and long-term viability",
+                "Sustainability at the core of every solution",
+                "Seamless journey from concept to execution",
+                "Trusted partnerships built on transparency",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4">
+                  <svg className="w-5 h-5 text-[#89C74A] mt-[2px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-inter text-[15px] leading-[26px] text-[#475467] font-normal">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-          {/* BULLETS */}
-          <ul className="space-y-[10px]">
-            {[
-              "Precision-led execution at every stage",
-              "Built for scale and long-term viability",
-              "Sustainability at the core of every solution",
-              "Seamless journey from concept to execution",
-              "Trusted partnerships built on transparency",
-            ].map((item, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-[10px] text-[#344054] text-[16px] leading-[24px]"
-              >
-                <span className="text-[#12B76A] mt-[4px] text-[14px]">
-                  ✓
-                </span>
+          </div>
 
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {/* IMAGE */}
+          <div className="w-full lg:w-[455px] lg:h-[450px] mt-10 lg:mt-0">
+            <div className="relative w-full h-full overflow-hidden rounded-[16px]">
+              <img 
+                src="/RealStories.jpg" 
+                alt="Client Story" 
+                className="w-full h-full object-cover rounded-[16px]"
+              />
+              <div className="absolute inset-0 bg-black/5 rounded-[16px]"></div>
+            </div>
+          </div>
 
         </div>
       </div>
-
     </section>
   );
 };

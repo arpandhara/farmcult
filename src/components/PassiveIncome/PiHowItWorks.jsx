@@ -19,7 +19,7 @@ const PiHowItWorks = () => {
 
           {/* Step 1 */}
           <div className="flex flex-col items-center text-center relative z-10 w-full">
-            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-white flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
+            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-[#F7F7F7] flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 1
               </div>
@@ -31,7 +31,7 @@ const PiHowItWorks = () => {
 
           {/* Step 2 */}
           <div className="flex flex-col items-center text-center relative z-10 w-full">
-            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-white flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
+            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-[#F7F7F7] flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 2
               </div>
@@ -43,7 +43,7 @@ const PiHowItWorks = () => {
 
           {/* Step 3 */}
           <div className="flex flex-col items-center text-center relative z-10 w-full">
-            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-white flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
+            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-[#F7F7F7] flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 3
               </div>
@@ -55,7 +55,7 @@ const PiHowItWorks = () => {
 
           {/* Step 4 */}
           <div className="flex flex-col items-center text-center relative z-10 w-full">
-            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-white flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
+            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-[#F7F7F7] flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 4
               </div>
@@ -67,7 +67,7 @@ const PiHowItWorks = () => {
 
           {/* Step 5 */}
           <div className="flex flex-col items-center text-center relative z-10 w-full">
-            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-white flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
+            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-[#F7F7F7] flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 5
               </div>
@@ -79,7 +79,7 @@ const PiHowItWorks = () => {
 
           {/* Step 6 */}
           <div className="flex flex-col items-center text-center relative z-10 w-full">
-            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-white flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
+            <div className="w-20 h-20 rounded-full border-[2px] border-dashed border-black bg-[#F7F7F7] flex items-center justify-center mb-5 relative group transition-colors duration-300 hover:border-green-500">
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 6
               </div>
