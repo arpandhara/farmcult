@@ -11,6 +11,7 @@ import SmartTechnology from '../components/SmartTechnology';
 import CaseStudy from '../components/CaseStudy';
 import FarmcultMedia from '../components/FarmcultMedia';
 import ParticipantsReviews from '../components/ParticipantsReviews';
+import FAQ from '../components/FAQ';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
@@ -141,6 +142,7 @@ const Home = () => {
       <CaseStudy />
       <FarmcultMedia />
       <ParticipantsReviews />
+      <FAQ />
       <ContactSection />
       <Footer />
     </motion.div>
