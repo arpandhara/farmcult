@@ -8,19 +8,28 @@ const ContactSection = () => {
 
     console.log(data);
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbzRhD1hCyyCc5CoY_PVuRpOdfcaQ0amIh1FAUpzMiGMmYc3c5WPxCpw2PjpCpoMMt2y/exec", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbzRhD1hCyyCc5CoY_PVuRpOdfcaQ0amIh1FAUpzMiGMmYc3c5WPxCpw2PjpCpoMMt2y/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+        },
+      );
 
       const result = await res.json();
       console.log(result);
-
     } catch (err) {
       console.error(err);
     }
     // e.preventDefault();
   };
+
+  const options = [
+    { value: "Turnkey Model", label: "Turnkey Model" },
+    { value: "Passive Model", label: "Passive Model" },
+    { value: "Education & Trainings", label: "Education & Trainings" },
+    { value: "Become our Vendor", label: "Become our Vendor" },
+  ];
 
   return (
     <section
@@ -127,6 +136,30 @@ const ContactSection = () => {
                       className="bg-transparent border-b border-[#1A1A1A]/60 py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-bold font-inter text-[#1A1A1A]/60 focus:text-black"
                     />
                   </div>
+                </div>
+
+                <div className="form-group flex flex-col gap-2 group">
+                  <label className="text-sm font-semibold text-[#1A1A1A]/60 font-inter transition-colors group-focus-within:text-black">
+                    Service
+                  </label>
+                  <select
+                    name="service"
+                    defaultValue=""
+                    className="bg-transparent border-b border-[#DEDEDE] py-2 focus:outline-none focus:border-black transition-colors text-[1.1rem] font-inter text-[#1A1A1A]/60 focus:text-black"
+                  >
+                    <option value="" disabled hidden>
+                      Select an option
+                    </option>
+                    {options.map((option) => (
+                      <option
+                        key={option.value}
+                        value={option.value}
+                        className="text-[#1A1A1A]/60"
+                      >
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="form-group flex flex-col gap-2 group">
