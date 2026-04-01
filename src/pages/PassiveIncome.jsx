@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import ContactSection from '../components/ContactSection';
 import PiHero from '../components/PassiveIncome/PiHero';
 import PiMainContent from '../components/PassiveIncome/PiMainContent';
+import PiStatsGrid from '../components/PassiveIncome/PiStatsGrid';
 import PiHowItWorks from '../components/PassiveIncome/PiHowItWorks';
 import PiIncentives from '../components/PassiveIncome/PiIncentives';
 import PiExploreMore from '../components/PassiveIncome/PiExploreMore';

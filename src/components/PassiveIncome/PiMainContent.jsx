@@ -1,4 +1,5 @@
 import React from 'react';
+import PiStatsGrid from './PiStatsGrid';
 
 const PiMainContent = () => {
   return (
@@ -15,17 +16,8 @@ const PiMainContent = () => {
           </p>
         </div>
 
-        {/* Stats Section (unchanged) */}
-        <div className="pi-stats-wrapper relative flex flex-col w-full max-w-[372px] md:max-w-none h-auto md:h-auto mx-auto">
-          <div className="absolute left-[3px] top-[16px] w-[2px] h-[calc(100%-32px)] bg-[#8DC83A] block md:hidden z-0"></div>
-
-          <div className="pi-stats-grid flex flex-col md:grid md:grid-cols-3 gap-[20px] md:gap-y-0 pt-0 md:pt-12 md:border-[#DEDEDE]">
-            
-            {/* (KEEPED EXACTLY SAME — no change here) */}
-            {/* Your stat cards remain untouched */}
-
-          </div>
-        </div>
+        {/* ✅ REPLACED EMPTY STATS BLOCK WITH COMPONENT */}
+        <PiStatsGrid />
 
         {/* What's Included Section */}
         <div className="pi-whats-included mt-24 md:mt-16 pt-16 md:pt-24">
@@ -63,7 +55,6 @@ const PiMainContent = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
 
-                    {/* ✅ FIXED TEXT WRAPPING */}
                     <span className="font-inter text-[15px] leading-[26px] text-text-primary font-normal">
                       {item}
                     </span>
@@ -72,7 +63,7 @@ const PiMainContent = () => {
 
               </div>
 
-              {/* ✅ GREEN HIGHLIGHT LINE */}
+              {/* GREEN HIGHLIGHT LINE */}
               <div className="mt-6 bg-[#E6F4D7] text-[14px] text-[#344054] px-4 py-2 rounded-md inline-block">
                 Minimum farm size: 5 acres and above
               </div>

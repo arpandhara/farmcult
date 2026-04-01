@@ -23,7 +23,7 @@ const PiHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 1
               </div>
-              <img src="/passiveIncome/piIcon1.jpg" alt="Step 1" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/icons/17.png" alt="Step 1" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Site<br className="hidden lg:block" /> Feasibility</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Land and resource assessment</p>
@@ -35,7 +35,7 @@ const PiHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 2
               </div>
-              <img src="/passiveIncome/piIcon2.jpg" alt="Step 2" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/icons/12.png" alt="Step 2" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Capital<br className="hidden lg:block" /> Investment</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Client funds infrastructure setup</p>
@@ -47,7 +47,7 @@ const PiHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 3
               </div>
-              <img src="/passiveIncome/piIcon3.jpg" alt="Step 3" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/icons/13.png" alt="Step 3" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Farm<br className="hidden lg:block" /> Setup</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Farm built and commissioned</p>
@@ -59,7 +59,7 @@ const PiHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 4
               </div>
-              <img src="/passiveIncome/piIcon4.jpg" alt="Step 4" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/icons/14.png" alt="Step 4" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Operational<br className="hidden lg:block" /> Funding</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Working capital deployed by Farmcult</p>
@@ -71,7 +71,7 @@ const PiHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 5
               </div>
-              <img src="/passiveIncome/piIcon5.jpg" alt="Step 5" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/icons/15.png" alt="Step 5" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Full Farm<br className="hidden lg:block" /> Management</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">Seed to sale operations handled</p>
@@ -83,7 +83,7 @@ const PiHowItWorks = () => {
               <div className="absolute top-0 -left-1 w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-[0.7rem] font-bold text-gray-500 z-20">
                 6
               </div>
-              <img src="/passiveIncome/piIcon6.jpg" alt="Step 6" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/icons/16.png" alt="Step 6" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <h3 className="font-inter font-bold text-[16px] md:text-[18px] leading-[24px] text-black mb-1 md:mb-2 px-1">Profit Sharing<br className="hidden lg:block" /> & Returns</h3>
             <p className="font-inter font-normal text-[14px] md:text-[12px] leading-[24px] text-text-secondary px-2">60:40 split with tax benefits</p>
