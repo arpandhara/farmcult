@@ -46,7 +46,7 @@ const WfcTeam = () => {
               <div className="wfc-team-card flex flex-col items-center w-[250px]" key={i}>
                 
                 <div className="wfc-team-avatar-container w-full aspect-square rounded-full overflow-hidden mb-6">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-fill" />
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                 </div>
 
                 <div className="wfc-team-info-box bg-white rounded-[24px] p-5 w-full flex flex-col items-center shadow-sm">
@@ -54,7 +54,7 @@ const WfcTeam = () => {
                     <span className="font-bold text-black">{member.name}</span>
                     <img src="/icons/linkedin.png" className="w-5 h-5" />
                   </div>
-                  <div className="w-full py-2 px-4 bg-[#8DC83A]/25 rounded-[12px] text-left text-sm">
+                  <div className="w-full min-h-[52px] flex items-center py-2 px-4 bg-[#8DC83A]/25 rounded-[12px] text-left text-[14px] leading-[20px]">
                     {member.role}
                   </div>
                 </div>

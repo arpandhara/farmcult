@@ -8,7 +8,9 @@ import WfcHeader from '../components/WhyFarmcult/WfcHeader';
 import WfcHero from '../components/WhyFarmcult/WfcHero';
 import WfcFeatures from '../components/WhyFarmcult/WfcFeatures';
 import WfcFoundation from '../components/WhyFarmcult/WfcFoundation';
-import WfcBanner from '../components/WhyFarmcult/WfcBanner';
+import WfcRealStories from "../components/WhyFarmcult/WfcRealStories";
+import ParticipantsReviews from '../components/ParticipantsReviews';
+/*import WfcBanner from '../components/WhyFarmcult/WfcBanner';*/
 import WfcTeam from '../components/WhyFarmcult/WfcTeam';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
@@ -91,7 +93,8 @@ const WhyFarmcult = () => {
       <WfcHero />
       <WfcFeatures />
       <WfcFoundation />
-      <WfcBanner />
+      <WfcRealStories />
+      <ParticipantsReviews/>
       <WfcTeam />
       <ContactSection />
       <Footer />

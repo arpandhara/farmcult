@@ -10,13 +10,23 @@ const FarmcultMedia = () => {
 
   const mediaItems = [
     {
-      image: '/farmCultinMediaImg1.jpg',
-      title: 'India: Cutting down 60-70% of energy costs to make vertical farming affordable',
+      image: '/FCITM1.jpg',
+      title: 'Farmer Earns 5 Times More With Hydroponics & Saves 80% on Electricity Bills; Helps Others Switch ',
       link: '#',
     },
     {
-      image: '/farmCultinMediaImg2.jpg',
-      title: 'Farmer Earns 5 Times More With Hydroponics & Saves 80% on Electricity Bills; Helps Others Switch',
+      image: '/FCITM2.jpg',
+      title: 'MBA Grad Grows Veggies Hydroponically, Targets ₹1 Cr Revenue in FY26',
+      link: '#',
+    },
+    {
+      image: '/FCITM3.jpg',
+      title: '24 LAKH Yearly Income through Hydroponics | Soilless Hydroponics Farming in India',
+      link: '#',
+    },
+    {
+      image: '/FCITM4.jpg',
+      title: 'ET Agriculture: Farmcult - Transforming lives with clean cutivation',
       link: '#',
     },
   ];

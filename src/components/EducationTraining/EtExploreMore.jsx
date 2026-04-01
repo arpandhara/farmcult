@@ -97,7 +97,7 @@ const EtExploreMore = () => {
             className="explore-card flex-1 gap-24 relative bg-[#ECECEC] bg-cover bg-center rounded-[16px] md:rounded-[20px] h-[337px] md:h-auto md:min-h-[540px] w-full max-w-[370px] md:max-w-none mx-auto md:mx-0 flex flex-col justify-between p-[25px] md:py-10 md:px-8 text-white overflow-hidden transition-transform duration-400 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
             style={{
               backgroundImage:
-                "linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%), url('/ourSolutionCard1.jpg')",
+                "linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%), url('/passiveIncome/piHeader.jpg')",
             }}
           >
             <div className="explore-card-overlay hidden"></div>
@@ -129,7 +129,7 @@ const EtExploreMore = () => {
             className="explore-card flex-1 gap-24 relative bg-[#ECECEC] bg-cover bg-center rounded-[16px] md:rounded-[20px] h-[337px] md:h-auto md:min-h-[540px] w-full max-w-[370px] md:max-w-none mx-auto md:mx-0 flex flex-col justify-between p-[25px] md:py-10 md:px-8 text-white overflow-hidden transition-transform duration-400 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
             style={{
               backgroundImage:
-                "linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%), url('/GovernmentIncentives.jpg')",
+                "linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%), url('/passiveIncome/piTurnkeyC1.jpg')",
             }}
           >
             <div className="explore-card-overlay hidden"></div>

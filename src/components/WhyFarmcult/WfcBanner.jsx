@@ -1,9 +1,10 @@
+/*
 import React from 'react';
 
 const WfcBanner = ({ 
   title = "", 
   subtitle = "", 
-  image = "/whyFarmCult/GrowSmaterUselessBuildForTomorrow.jpg",
+  image = "",
   tag = "",
   variant = "dark"
 }) => {
@@ -15,7 +16,6 @@ const WfcBanner = ({
         isDark ? 'min-h-[400px] md:min-h-[500px] lg:min-h-[600px] py-16 lg:py-0' : 'pt-16 md:pt-24 pb-10 md:pb-14'
       }`}
     >
-      {/* Background — image (overlay removed) */}
       {isDark ? (
         <div className="absolute inset-0 z-0">
           <img 
@@ -28,7 +28,6 @@ const WfcBanner = ({
         <div className="absolute inset-0 bg-white z-0" />
       )}
 
-      {/* Content */}
       <div 
         className={`wfc-about-banner-inner relative z-10 w-full max-w-[100vw] mx-auto px-6 md:px-[5%] flex flex-col justify-center ${
           isDark ? 'text-center lg:text-left' : 'text-center'
@@ -63,3 +62,4 @@ const WfcBanner = ({
 };
 
 export default WfcBanner;
+*/

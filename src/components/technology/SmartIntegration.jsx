@@ -66,16 +66,8 @@ const SmartIntegration = () => {
   });
 
   return (
-    <section className="smart-integration-section relative flex flex-col justify-center pt-16 pb-16 md:pt-24 md:pb-16 overflow-hidden bg-black text-white">
+    <section className="smart-integration-section flex flex-col justify-center pt-16 pb-16 md:pt-24 md:pb-16 bg-white text-black">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/technology/TechnologyBGimage.jpg"
-          alt="Smart Integration Background"
-          className="si-bg-image w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/70" />
-      </div>
 
       <div className="relative z-10 mx-auto px-[5%] w-full">
         {/* Header */}
@@ -83,7 +75,7 @@ const SmartIntegration = () => {
           <h2 className="si-heading text-[28px] leading-[38px] md:text-[32px] md:leading-[48px] font-medium mb-4 md:mb-5">
             Deliver Impact With Smart Integration
           </h2>
-          <p className="si-desc text-[14px] leading-[24px] md:text-[15px] md:leading-[29px] mx-auto max-w-[90%] md:max-w-[800px]">
+          <p className="si-desc text-[14px] leading-[24px] md:text-[14px] md:leading-[29px] mx-auto max-w-[90%] md:max-w-[800px]">
             Integrated systems translate into measurable gains in water efficiency, crop stability, and operational performance.
           </p>
         </div>
@@ -97,9 +89,7 @@ const SmartIntegration = () => {
               <div
                 key={index}
                 // Added overflow-hidden to prevent bleeding
-                className={`benefit-card flex gap-4 lg:gap-6 px-6 lg:px-8 py-2 relative lg:border-l lg:border-white/50 overflow-hidden ${
-                  isLast ? 'lg:border-r' : ''
-                }`}
+                className={`benefit-card flex gap-4 lg:gap-6 px-6 lg:px-8 py-2 relative lg:border-l lg:border-[#181818] overflow-hidden $}`}
               >
                 <div className="w-full">
                   {/* Kept whitespace-nowrap and clamp() for fluid sizing */}

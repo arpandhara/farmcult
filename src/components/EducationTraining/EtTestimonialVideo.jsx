@@ -1,3 +1,5 @@
+{/*
+
 import React from 'react';
 
 const EtTestimonialVideo = () => {
@@ -9,9 +11,9 @@ const EtTestimonialVideo = () => {
         style={{ backgroundImage: "url('/Heroimg.jpg')" }}
       ></div>
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/40"></div> 
 
-      {/* Content Section */}
+     {/* Content Section 
       <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl mx-auto gap-4 md:gap-6">
         <h2 className="font-inter font-medium text-[32px] md:text-[48px] leading-[40px] md:leading-[66px] tracking-normal text-white m-0 text-center">
           testimonial video
@@ -31,9 +33,9 @@ const EtTestimonialVideo = () => {
         >
           Get Started
         </a>
-      </div>
+      </div> 
     </section>
   );
 };
 
-export default EtTestimonialVideo;
+export default EtTestimonialVideo; */}

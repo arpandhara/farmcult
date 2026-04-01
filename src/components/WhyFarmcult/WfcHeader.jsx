@@ -6,8 +6,11 @@ const WfcHeader = ({
   tag = "WHY FARMCULT?",
   title = "Cultivating for Tomorrow",
   subtitle = "Not just growing crops. Building the future of modern farming.",
+  image = "",
+  variant = "light",
 }) => {
   const headerRef = useRef(null);
+  const isDark = variant === "dark";
 
   useGSAP(
     () => {
@@ -21,32 +24,58 @@ const WfcHeader = ({
           stagger: 0.2,
           ease: "power3.out",
           delay: 0.3,
-        },
+        }
       );
     },
-    { scope: headerRef },
+    { scope: headerRef }
   );
 
   return (
     <section
       ref={headerRef}
-      className="wfc-header-section pt-[40px] md:pt-[60px] pb-[40px] md:pb-[60px] px-4 md:px-[5%] text-center max-w-[1200px] mx-auto overflow-hidden"
+      className="relative w-full overflow-hidden"
     >
-      <div className="wfc-header-inner w-full">
-        <span className="wfc-label block text-[0.8rem] md:text-[18px] font-bold text-accent mb-4 md:mb-6 uppercase">
-          {tag}
-        </span>
-        <h1 className="wfc-main-title text-[32px] md:text-[48px] font-medium leading-[40px] md:leading-[66px] mb-5 md:mb-6 text-text-primary max-w-[90vw] md:max-w-[700px] mx-auto">
-          {title.split("\n").map((line, index) => (
-            <span key={index}>
-              {line}
-              <br />
-            </span>
-          ))}
-        </h1>
-        <p className="wfc-main-subtitle text-[16px] md:text-[18px] text-text-primary font-normal max-w-[90vw] md:max-w-[800px] mx-auto leading-[1.6]">
-          {subtitle}
-        </p>
+      {/* ✅ FULL WIDTH IMAGE */}
+      {isDark && image && (
+        <div className="relative w-full h-[368px]">
+          <img
+            src={image}
+            alt="banner"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+      )}
+
+      {/* ✅ CENTERED CONTENT (ONLY THIS IS LIMITED) */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-full max-w-[1152px] h-[272px] flex flex-col items-center justify-center text-center gap-[16px] px-[16px]">
+
+          <span
+            className={`wfc-label text-[30px] font-bold uppercase ${
+              isDark ? "text-[#8DC83A]" : "text-accent"
+            }`}
+          >
+            {tag}
+          </span>
+
+          <h1
+            className={`wfc-main-title text-[50px] leading-[80px] font-thin ${
+              isDark ? "text-white" : "text-text-primary"
+            }`}
+          >
+            {title}
+          </h1>
+
+          <p
+            className={`wfc-main-subtitle text-[16px] leading-[26px] max-w-[700px] ${
+              isDark ? "text-white/90" : "text-text-primary"
+            }`}
+          >
+            {subtitle}
+          </p>
+
+        </div>
       </div>
     </section>
   );

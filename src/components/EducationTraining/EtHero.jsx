@@ -6,7 +6,7 @@ const EtHero = () => {
       <section className="pi-hero-container relative w-full min-h-[240px] md:min-h-[280px] md:h-[280px] px-[24px] py-[40px] md:pt-[24px] md:pr-[64px] md:pb-[24px] md:pl-[64px] flex flex-col justify-center overflow-hidden">
         <div
           className="pi-hero-bg absolute top-0 left-0 w-full h-full bg-cover bg-center z-0 origin-bottom"
-          style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/passiveIncome/piHeader.jpg')" }}
+          style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/piTurnkeyC2.jpg')" }}
         ></div>
 
         <div className="relative z-10 w-full flex flex-col gap-[12px] md:gap-[6px] text-left">

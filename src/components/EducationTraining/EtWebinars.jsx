@@ -34,7 +34,6 @@ const EtWebinars = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-6 mt-8 md:mt-10 md:mb-10">
-              {/* List Items */}
               {[
                 "Hydroponics fundamentals",
                 "Myths vs facts about modern farming",
@@ -50,6 +49,12 @@ const EtWebinars = () => {
                 </div>
               ))}
             </div>
+
+            
+            <p className="font-inter text-[15px] md:text-[14px] text-text-primary leading-[26px]">
+              Equal depth and detail are ensured across both on-site and online workshops.
+            </p>
+
           </div>
 
         </div>

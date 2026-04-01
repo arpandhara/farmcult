@@ -3,9 +3,9 @@ const caseStudies = [
     id: 1,
     title: "2 Acres.\n24,000 Plants.",
     description:
-      "Transforming Traditional Farmland into a High-Tech Commercial Hydroponic Farm in Garh Mukhteshwar.",
+      "What was once idle land is now a working hydroponic farm. Results from Farmcult's first operational hydroponic farm in Garhmukteshwar.",
     date: "Jan 2025",
-    image: "/case-studies/CS1.jpg",
+    image: "/CShomepage.jpg",
     location: "Garh Mukhteshwar, Uttar Pradesh",
     projectSize: "2 Acres",
     clientProfile: "Young Entrepreneur in Hospitality & Restaurant Business",

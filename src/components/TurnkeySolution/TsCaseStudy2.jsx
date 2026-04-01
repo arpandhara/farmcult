@@ -68,7 +68,7 @@ const TsCaseStudy2 = () => {
       <div className="ts-casestudy2-container relative w-full max-w-9xl h-[550px] md:h-[500px] lg:h-[600px] rounded-none md:rounded-[16px] overflow-hidden shadow-none md:shadow-xl group">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
-            src="/TsCS2.jpg"
+            src="/case-studies/pp.jpg"
             alt="Case Study"
             className="ts-casestudy2-bg w-full h-full object-cover"
           />

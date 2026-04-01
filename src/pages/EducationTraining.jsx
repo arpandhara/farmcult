@@ -13,7 +13,7 @@ import EtTrainingDifferent from '../components/EducationTraining/EtTrainingDiffe
 // import EtReviews from '../components/EducationTraining/EtReviews';
 import EtCaseStudy from '../components/EducationTraining/EtCaseStudy';
 import EtExploreMore from '../components/EducationTraining/EtExploreMore';
-import EtTestimonialVideo from '../components/EducationTraining/EtTestimonialVideo';
+//import EtTestimonialVideo from '../components/EducationTraining/EtTestimonialVideo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,7 +127,6 @@ const EducationTraining = () => {
       <EtWorkshops />
       <EtWebinars />
       <EtTrainingDifferent />
-      <EtTestimonialVideo />
       <EtCaseStudy />
       <EtExploreMore />
       <ContactSection />
