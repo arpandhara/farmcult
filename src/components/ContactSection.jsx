@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ContactSection = () => {
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [successMsg, setSuccessMsg] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    console.log(data);
+    // Validation
+    if (!data.firstName?.trim() || !data.lastName?.trim() || !data.phone?.trim()) {
+      setErrorMsg("First Name, Last Name, and Phone Number are mandatory.");
+      setTimeout(() => setErrorMsg(null), 3000);
+      return;
+    }
+
     try {
+      setIsSubmitting(true);
       const res = await fetch(
         "https://script.google.com/macros/s/AKfycbzRhD1hCyyCc5CoY_PVuRpOdfcaQ0amIh1FAUpzMiGMmYc3c5WPxCpw2PjpCpoMMt2y/exec",
         {
@@ -18,10 +30,17 @@ const ContactSection = () => {
 
       const result = await res.json();
       console.log(result);
+      
+      setSuccessMsg("Message sent successfully! We will get back to you soon.");
+      e.target.reset();
+      setTimeout(() => setSuccessMsg(null), 4000);
     } catch (err) {
       console.error(err);
+      setErrorMsg("Failed to send message. Please try again later.");
+      setTimeout(() => setErrorMsg(null), 3000);
+    } finally {
+      setIsSubmitting(false);
     }
-    // e.preventDefault();
   };
 
   const options = [
@@ -32,11 +51,37 @@ const ContactSection = () => {
   ];
 
   return (
-    <section
-      id="contact"
-      className="contact-section relative min-h-[85vh] flex items-center py-20 lg:py-32 px-[5%] overflow-hidden bg-black"
-    >
-      {/* Background Image with Overlay */}
+    <>
+      <AnimatePresence>
+        {errorMsg && (
+          <motion.div
+            initial={{ y: -50, opacity: 0, x: "-50%" }}
+            animate={{ y: 0, opacity: 1, x: "-50%" }}
+            exit={{ y: -50, opacity: 0, x: "-50%" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="fixed top-[100px] left-1/2 z-[1000] bg-red-600 text-white px-8 py-4 rounded-xl shadow-2xl font-medium text-center min-w-[300px]"
+          >
+            {errorMsg}
+          </motion.div>
+        )}
+        {successMsg && (
+          <motion.div
+            initial={{ y: -50, opacity: 0, x: "-50%" }}
+            animate={{ y: 0, opacity: 1, x: "-50%" }}
+            exit={{ y: -50, opacity: 0, x: "-50%" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="fixed top-[100px] left-1/2 z-[1000] bg-[#8DC83A] text-white px-8 py-4 rounded-xl shadow-2xl font-medium text-center min-w-[300px]"
+          >
+            {successMsg}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <section
+        id="contact"
+        className="contact-section relative min-h-[85vh] flex items-center py-20 lg:py-32 px-[5%] overflow-hidden bg-black"
+      >
+        {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-100"
         style={{ backgroundImage: 'url("/contactFromimg.jpg")' }}
@@ -188,6 +233,7 @@ const ContactSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

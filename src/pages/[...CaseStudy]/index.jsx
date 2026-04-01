@@ -138,22 +138,22 @@ const CaseStudy = () => {
             {selectedCaseStudies.map((caseStudy, i) => (
               <Link to={`/case-study/${caseStudy.id}`} className="block h-full flex-1" key={i}>
                 <div
-                  className="bg-white rounded-xl p-6 md:p-8 w-full h-full flex flex-col gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+                  className="bg-white rounded-xl p-4 sm:p-6 md:p-8 w-full h-full flex flex-col gap-4 sm:gap-6 cursor-pointer hover:scale-[1.02] transition-transform duration-300 ease-in-out"
                 >
-                  <span className="bg-[#8DC83A40] px-3 py-1 rounded-full text-sm w-fit">
+                  <span className="bg-[#8DC83A40] px-3 py-1 rounded-full text-xs sm:text-sm w-fit">
                     Case Study
                   </span>
 
                   <img
                     src={caseStudy.image}
-                    className="rounded-xl h-[250px] object-cover w-full"
+                    className="rounded-xl h-[180px] sm:h-[200px] lg:h-[250px] object-cover w-full"
                   />
 
-                  <h3 className="font-bold text-lg">{caseStudy.title}</h3>
+                  <h3 className="font-bold text-base sm:text-lg">{caseStudy.title}</h3>
 
-                  <p className="text-sm leading-7">{caseStudy.description}</p>
+                  <p className="text-sm leading-6 sm:leading-7">{caseStudy.description}</p>
 
-                  <span className="text-[#8DC83A] font-bold mt-auto">
+                  <span className="text-[#8DC83A] font-bold text-sm sm:text-base mt-auto">
                     {caseStudy.date}
                   </span>
                 </div>

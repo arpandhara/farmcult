@@ -18,7 +18,7 @@ const Blogs = () => {
       />
 
       {firstBlog && (
-        <section className="w-full py-10 md:py-3 lg:py-3 bg-[#F7F7F7] md:px-[5%] flex justify-center">
+        <section className="w-full py-10 md:py-3 lg:py-3 bg-[#F7F7F7] md:px-[5%] flex justify-center mb-12">
           <div className="relative w-full max-w-9xl h-[550px] md:h-[500px] lg:h-[600px] rounded-none md:rounded-[16px] overflow-hidden shadow-none md:shadow-xl group">
             <div className="absolute inset-0 w-full h-full overflow-hidden">
               <img
