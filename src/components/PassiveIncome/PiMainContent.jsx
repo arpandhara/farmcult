@@ -9,7 +9,7 @@ const PiMainContent = () => {
         {/* Header */}
         <div className="text-center mx-auto mb-16 md:mb-32 lg:mb-32">
           <h2 className="pi-section-title font-inter text-[24px] md:text-[32px] font-medium leading-[32px] md:leading-[48px] text-text-primary mb-3 md:mb-4">
-            Earn Tax-Free Without Moving a Finger
+            Earn Tax-Free Returns Without Moving a Finger
           </h2>
           <p className="pi-section-desc font-inter text-[16px] md:text-[15px] font-normal leading-[26px] md:leading-[29px] text-text-secondary">
             We manage setup, cultivation, monitoring, and operations enabling stable returns without day to day involvement.
@@ -48,7 +48,7 @@ const PiMainContent = () => {
                   "Crop planning & yield optimisation",
                   "Market linkage & sales coordination",
                   "Ongoing performance oversight",
-                  "FarmCult invests in day-to-day operational expenses",
+                  "Farmcult invests in day-to-day operational expenses",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-accent mt-[4px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
