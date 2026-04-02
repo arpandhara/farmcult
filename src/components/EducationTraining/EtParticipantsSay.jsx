@@ -63,7 +63,7 @@ const EtParticipantsSay = () => {
         </div>
 
         {/* Right Column: Portrait Image/Video */}
-        <div className="w-full h-[400px] md:h-[600px] lg:h-auto lg:min-h-[600px] et-participants-img-right relative group">
+        <div className="w-full h-[400px] md:h-[600px] lg:h-auto lg:max-h-[700px] et-participants-img-right relative group">
           <video
             src="/Trainingvideo.mp4"
             autoPlay
