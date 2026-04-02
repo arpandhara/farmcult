@@ -53,7 +53,7 @@ const FAQ = () => {
 
   return (
     <section className="faq-section w-full px-[5%] py-16 lg:py-24 bg-[#FAFAFA]" ref={sectionRef}>
-      <div className="max-w-[900px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <h2 className="faq-header text-[32px] md:text-[36px] font-semibold text-text-primary mb-10 text-left">
           Frequently Asked Questions
         </h2>

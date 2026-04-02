@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const EtParticipantsSay = () => {
+  const [isMuted, setIsMuted] = useState(true);
   const sectionRef = useRef(null);
 
   useGSAP(() => {
@@ -62,15 +63,35 @@ const EtParticipantsSay = () => {
         </div>
 
         {/* Right Column: Portrait Image/Video */}
-        <div className="w-full h-[400px] md:h-[600px] lg:h-auto lg:min-h-[600px] et-participants-img-right">
+        <div className="w-full h-[400px] md:h-[600px] lg:h-auto lg:min-h-[600px] et-participants-img-right relative group">
           <video
             src="/Trainingvideo.mp4"
             autoPlay
             loop
-            muted
+            muted={isMuted}
             playsInline
             className="w-full h-full object-cover rounded-[16px] md:rounded-[24px]"
           />
+
+          <button
+            onClick={() => setIsMuted(!isMuted)}
+            className="absolute bottom-4 right-4 z-10 w-10 h-10 bg-black/40 hover:bg-black/60 backdrop-blur-md flex items-center justify-center rounded-full text-white transition-all shadow-sm border border-white/20 opacity-80 group-hover:opacity-100"
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+          >
+            {isMuted ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+            )}
+          </button>
         </div>
 
       </div>
