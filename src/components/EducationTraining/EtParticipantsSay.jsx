@@ -1,0 +1,81 @@
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const EtParticipantsSay = () => {
+  const sectionRef = useRef(null);
+
+  useGSAP(() => {
+    // Reveal heading and text
+    gsap.fromTo('.et-participants-text',
+      { y: 30, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
+        y: 0, autoAlpha: 1, duration: 1, stagger: 0.15, ease: 'power3.out'
+      }
+    );
+
+    // Reveal images
+    gsap.fromTo('.et-participants-img-left',
+      { y: 40, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.et-participants-img-left', start: 'top 85%' },
+        y: 0, autoAlpha: 1, duration: 1, ease: 'power3.out'
+      }
+    );
+
+    gsap.fromTo('.et-participants-img-right',
+      { x: 30, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.et-participants-img-right', start: 'top 85%' },
+        x: 0, autoAlpha: 1, duration: 1, delay: 0.2, ease: 'power3.out'
+      }
+    );
+  }, { scope: sectionRef });
+
+  return (
+    <section className="et-participants-section w-full px-[5%] py-16 lg:py-24 bg-white" ref={sectionRef}>
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-12 lg:gap-20 items-stretch">
+
+        {/* Left Column: Text + Landscape Image */}
+        <div className="flex flex-col w-full h-full">
+          <div className="mb-10 lg:mb-16">
+            <h2 className="et-participants-text text-[32px] md:text-[40px] font-medium text-text-primary mb-6 leading-[1.2]">
+              What Participants Say
+            </h2>
+            <p className="et-participants-text text-[15px] md:text-[16px] text-text-secondary leading-[1.8] max-w-[600px]">
+              Farmcult experiences are shaped by the people who take part in them. Across both on-site and online formats, we ensure every session offers the same depth, clarity, and hands-on exposure. Participants don't just learn concepts- they engage with real practices, explore ideas freely, and build a deeper, more lasting connection with sustainable farming.
+            </p>
+          </div>
+
+          <div className="w-full mt-auto et-participants-img-left">
+            {/* TODO: Replace src with the actual landscape image of the three people from Figma */}
+            <img
+              src="/Training1.jpg"
+              alt="Participants on-site"
+              className="w-full h-[250px] sm:h-[350px] md:h-[400px] object-cover rounded-[16px] md:rounded-[24px]"
+            />
+          </div>
+        </div>
+
+        {/* Right Column: Portrait Image/Video */}
+        <div className="w-full h-[400px] md:h-[600px] lg:h-auto lg:min-h-[600px] et-participants-img-right">
+          <video
+            src="/Trainingvideo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-[16px] md:rounded-[24px]"
+          />
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default EtParticipantsSay;

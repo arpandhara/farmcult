@@ -34,9 +34,7 @@ const EtTrainingDifferent = () => {
               {/* Feature 1 */}
               <div>
                 <div className="text-accent mb-3 flex">
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M12 3v9M8 7c0 2.21 4 5 4 5m0 0s4-2.79 4-5c0-2.21-1.79-4-4-4S8 4.79 8 7zM4 19a3 3 0 003 3h10a3 3 0 003-3M4 19v-4a3 3 0 013-3h10a3 3 0 013 3v4" />
-                  </svg>
+                  <img src="/icons/practical-learning.svg" alt="Practical Learning" className="w-8 h-8 object-contain" />
                 </div>
                 <h4 className="font-bold text-text-primary text-[1.1rem] lg:text-[1.15rem] mb-2 leading-tight">Practical Learning</h4>
                 <p className="text-[#555] text-[0.95rem] leading-[1.6]">
@@ -47,9 +45,7 @@ const EtTrainingDifferent = () => {
               {/* Feature 2 */}
               <div>
                 <div className="text-accent mb-3 flex">
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M9.879 16.121A3 3 0 1012.015 11L12 11a3 3 0 01-3 3v1m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                  <img src="/icons/beginner-friendly.svg" alt="Beginner-Friendly" className="w-8 h-8 object-contain" />
                 </div>
                 <h4 className="font-bold text-text-primary text-[1.1rem] lg:text-[1.15rem] mb-2 leading-tight">Beginner-Friendly</h4>
                 <p className="text-[#555] text-[0.95rem] leading-[1.6]">
@@ -60,9 +56,7 @@ const EtTrainingDifferent = () => {
               {/* Feature 3 */}
               <div>
                 <div className="text-accent mb-3 flex">
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
+                  <img src="/icons/real-world-focused.svg" alt="Real-World Focused" className="w-8 h-8 object-contain" />
                 </div>
                 <h4 className="font-bold text-text-primary text-[1.1rem] lg:text-[1.15rem] mb-2 leading-tight">Real-World Focused</h4>
                 <p className="text-[#555] text-[0.95rem] leading-[1.6]">

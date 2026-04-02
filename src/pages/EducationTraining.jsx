@@ -10,6 +10,7 @@ import EtHero from '../components/EducationTraining/EtHero';
 import EtWorkshops from '../components/EducationTraining/EtWorkshops';
 import EtWebinars from '../components/EducationTraining/EtWebinars';
 import EtTrainingDifferent from '../components/EducationTraining/EtTrainingDifferent';
+import EtParticipantsSay from '../components/EducationTraining/EtParticipantsSay';
 // import EtReviews from '../components/EducationTraining/EtReviews';
 import EtCaseStudy from '../components/EducationTraining/EtCaseStudy';
 import EtExploreMore from '../components/EducationTraining/EtExploreMore';
@@ -127,6 +128,7 @@ const EducationTraining = () => {
       <EtWorkshops />
       <EtWebinars />
       <EtTrainingDifferent />
+      <EtParticipantsSay />
       <EtCaseStudy />
       <EtExploreMore />
       <ContactSection />

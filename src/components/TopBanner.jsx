@@ -3,7 +3,7 @@ import React from 'react';
 const TopBanner = () => {
   return (
     <div className="w-full h-[52px] bg-[#8DC83A] flex items-center justify-center px-4 relative z-[60]">
-      <a 
+      <a
         href="#contact"
         onClick={(e) => {
           e.preventDefault();

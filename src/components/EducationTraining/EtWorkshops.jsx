@@ -13,17 +13,17 @@ const EtWorkshops = () => {
               Hydroponics Workshops
             </h2>
 
-            {/* ✅ GREEN BORDER BOX */}
-            <div className="border border-[#8DC83A] rounded-md px-4 py-3 inline-flex gap-6 mb-6">
+            {/* GREEN BRACKET & BADGES */}
+            <div className="relative inline-flex gap-[150px] md:gap-[240px] mb-10 mt-6 md:mt-8">
+              {/* Bracket Line */}
+              <div className="absolute top-[-24px] left-1/2 -translate-x-1/2 w-[calc(100%-76px)] md:w-[calc(100%-80px)] h-[24px] border-t-2 border-l-2 border-r-2 border-[#8DC83A]"></div>
 
-              <span className="bg-[#8DC83A]/25 text-[#344054] px-4 py-1.5 rounded-full text-[14px] font-normal">
+              <span className="bg-[#8DC83A]/25 text-[#344054] px-5 py-1.5 rounded-full text-[14px] font-normal">
                 Online
               </span>
-
-              <span className="bg-[#8DC83A]/25 text-[#344054] px-4 py-1.5 rounded-full text-[14px] font-normal">
+              <span className="bg-[#8DC83A]/25 text-[#344054] px-5 py-1.5 rounded-full text-[14px] font-normal">
                 On-site
               </span>
-
             </div>
 
             {/* DESCRIPTION */}
@@ -66,7 +66,7 @@ const EtWorkshops = () => {
           <div className="w-full lg:w-[455px] lg:h-[396px] mt-10 lg:mt-0">
             <div className="relative w-full h-full overflow-hidden rounded-[16px]">
               <img
-                src="/HyWorkshop.jpg"
+                src="/Workshop.png"
                 alt="Hydroponics Workshop"
                 className="w-full h-full object-cover rounded-[16px]"
                 onError={(e) => { e.target.src = '/contactFromimg.jpg'; }}

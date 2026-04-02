@@ -9,7 +9,7 @@ import WfcHero from '../components/WhyFarmcult/WfcHero';
 import WfcFeatures from '../components/WhyFarmcult/WfcFeatures';
 import WfcFoundation from '../components/WhyFarmcult/WfcFoundation';
 import WfcRealStories from "../components/WhyFarmcult/WfcRealStories";
-import ParticipantsReviews from '../components/ParticipantsReviews';
+import ParticipantsReviews from '../components/Home/ParticipantsReviews';
 /*import WfcBanner from '../components/WhyFarmcult/WfcBanner';*/
 import WfcTeam from '../components/WhyFarmcult/WfcTeam';
 import ContactSection from '../components/ContactSection';
