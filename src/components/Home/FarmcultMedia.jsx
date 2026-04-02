@@ -12,22 +12,22 @@ const FarmcultMedia = () => {
     {
       image: '/FCITM1.jpg',
       title: 'Farmer Earns 5 Times More With Hydroponics & Saves 80% on Electricity Bills; Helps Others Switch ',
-      link: '#',
+      link: 'https://thebetterindia.com/356971/hydroponics-farming-without-soil-sustainable-agriculture-farmer-increases-income-solar-energy/',
     },
     {
       image: '/FCITM2.jpg',
       title: 'MBA Grad Grows Veggies Hydroponically, Targets ₹1 Cr Revenue in FY26',
-      link: '#',
+      link: 'https://startuppedia.in/startup-stories/mba-grad-grows-cucumbers-bell-peppers-and-leafy-vegetables-hydroponically-targets-rs-1-cr-revenue-in-fy25-4774058',
     },
     {
       image: '/FCITM3.jpg',
       title: '24 LAKH Yearly Income through Hydroponics | Soilless Hydroponics Farming in India',
-      link: '#',
+      link: 'https://youtu.be/VqsQ8MicHOE?si=PUl3NUi8Zk6nctJO',
     },
     {
       image: '/FCITM4.jpg',
       title: 'ET Agriculture: Farmcult - Transforming lives with clean cutivation',
-      link: '#',
+      link: '/ET Agriculture - Pages.pdf',
     },
   ];
 
